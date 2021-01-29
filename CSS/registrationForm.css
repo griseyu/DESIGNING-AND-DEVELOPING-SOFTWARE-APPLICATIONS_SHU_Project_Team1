@@ -27,12 +27,17 @@ body {
     z-index: 1;
 }
 
-.btn-facebook {
-    background-color: #405D9D;
-    color: #fff;
-}
-
-.btn-twitter {
-    background-color: #42AEEC;
-    color: #fff;
-}
+.fb {
+    background-color: #3B5998;
+    color: white;
+  }
+  
+.twitter {
+    background-color: #55ACEE;
+    color: white;
+  }
+  
+.google {
+    background-color: #dd4b39;
+    color: white;
+  }

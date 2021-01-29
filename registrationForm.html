@@ -12,18 +12,29 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
 <div class="container"> 
-<hr>
-<div class="card bg-light">
+
+<div class="card">
 <article class="card-body mx-auto" style="max-width: 400px;">
 	<h4>Registration</h4>
 	<p class="text-center">Please fill in this form to create an account or login with your social media</p>
 	<p>
-		<a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-		<a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+		<div class="col">
+            <a href="#" class="fb btn">
+              <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+            </a>
+            <a href="#" class="twitter btn">
+              <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+            </a>
+            <a href="#" class="google btn">
+              <i class="fa fa-google fa-fw"></i> Login with Google
+            </a>
+          </div>
 	</p>
 	<p class="divider-text">
-        <span class="bg-light">OR</span>
+        <span>OR</span>
     </p>
+
+<!-- form starts -->
 	<form>
     <!-- form-name -->
 	<div class="form-group input-group">
@@ -60,6 +71,9 @@
     <!-- form-login -->      
     <p class="text-center">Already have an account? <a href="">Log In</a> </p>                                                                 
 </form>
+
+<!-- form ends -->
+
 </article>
 </div> 
 

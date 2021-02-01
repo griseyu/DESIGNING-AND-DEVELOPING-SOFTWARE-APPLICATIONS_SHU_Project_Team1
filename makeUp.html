@@ -3,7 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script language="javascript" src="survey.js"></script>
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <form id="makeupIngredients">
+      <label>Select which ingredients you don't want:</label><br />
+      <input type="checkbox" name="muIngredients" value="MUIngredient1" />Make
+      Up Ingredient1<br />
+      <input type="checkbox" name="muIngredients" value="MUIngredient2" />Make
+      Up Ingredient2<br />
+      <input type="checkbox" name="muIngredients" value="MUIngredient3" />Make
+      Up Ingredient3<br />
+      <input type="checkbox" name="muIngredients" value="MUIngredient4" />Make
+      Up Ingredient4<br />
+      <p>
+        <input
+          type="button"
+          onclick="printChecked()"
+          value="Print Selected Items"
+        />
+      </p>
+      <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
+    </form>
+  </body>
+  </body>
 </html>

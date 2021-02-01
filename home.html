@@ -3,7 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script language="javascript" src="survey.js"></script>
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a href="#home" class="active">Logo</a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <form name="ProductTypeForm" onchange="selectProductType(this.value)">
+      <label for="productType">Choose a product type:</label><br />
+      <select name="productType" id="productType">
+        <option disabled selected value>-- select an option --</option>
+        <option value="Hair Care">Hair Care</option>
+        <option value="Make Up">Make Up</option>
+        <option value="Skin Care">Skin Care</option>
+      </select>
+      <br /><br />
+      <!-- <input type="submit" value="Let's Go!" /> -->
+    </form>
+  </body>
 </html>

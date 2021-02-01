@@ -5,84 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script language="javascript" src="survey.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <?php include_once("navBar.html"); ?>
     <title>Document</title>
   </head>
   <body>
-    <!-- <form name="myForm" onsubmit="return validateForm()" method="post">
+    <!--Navigation bar - Burger Menu -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a href="index.html" class="active">Ingredient Selector</a>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+        <a href="hairCare.html">Hair Care</a>
+        <a href="makeUp.html">Make Up</a>
+        <a href="skinCare.html">Skin Care</a>
+      </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-- 
+    <form name="myForm" onsubmit="return validateForm()" method="post">
       Name: <input type="text" name="fname" />
       <input type="submit" value="Click" />
     </form> -->
-
-    <form name="ProductTypeForm" onchange="selectProductType(this.value)">
-      <label for="productType">Choose a product type:</label><br />
-      <select name="productType" id="productType">
-        <option disabled selected value>-- select an option --</option>
-        <option value="Hair Care">Hair Care</option>
-        <option value="Make Up">Make Up</option>
-        <option value="Skin Care">Skin Care</option>
-      </select>
-      <br /><br />
-      <!-- <input type="submit" value="Let's Go!" /> -->
-    </form>
-
-    <form id="SkinCareIngredients" style="display: none">
-      <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="skinIngredients" value="SIngredient1" />Skin
-      Ingredient1<br />
-      <input type="checkbox" name="skinIngredients" value="SIngredient2" />Skin
-      Ingredient2<br />
-      <input type="checkbox" name="skinIngredients" value="SIngredient3" />Skin
-      Ingredient3<br />
-      <input type="checkbox" name="skinIngredients" value="SIngredient4" />Skin
-      Ingredient4<br />
-      <p>
-        <input
-          type="button"
-          onclick="printChecked()"
-          value="Print Selected Items"
-        />
-      </p>
-      <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
-    </form>
-
-    <form id="hairCareIngredients" style="display: none">
-      <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="hairIngredients" value="HIngredient1" />Hair
-      Ingredient1<br />
-      <input type="checkbox" name="hairIngredients" value="HIngredient2" />Hair
-      Ingredient2<br />
-      <input type="checkbox" name="hairIngredients" value="HIngredient3" />Hair
-      Ingredient3<br />
-      <input type="checkbox" name="hairIngredients" value="HIngredient4" />Hair
-      Ingredient4<br />
-      <p>
-        <input
-          type="button"
-          onclick="printChecked()"
-          value="Print Selected Items"
-        />
-      </p>
-      <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
-    </form>
-
-    <form id="makeupIngredients" style="display: none">
-      <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient1" />Make
-      Up Ingredient1<br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient2" />Make
-      Up Ingredient2<br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient3" />Make
-      Up Ingredient3<br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient4" />Make
-      Up Ingredient4<br />
-      <p>
-        <input
-          type="button"
-          onclick="printChecked()"
-          value="Print Selected Items"
-        />
-      </p>
-      <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
-    </form>
   </body>
 </html>

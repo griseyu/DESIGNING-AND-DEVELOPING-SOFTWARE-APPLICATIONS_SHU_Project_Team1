@@ -1,4 +1,5 @@
-## Overview
+## Overview - An app to build a prescription for the user for their personal skincare and beauty products.
+
 
 
 ## Technology Stack:
@@ -8,7 +9,8 @@
  - MongoDB - Primary database
  - GitHub - Version Control and managing the workflow
  - Visual Studio Code - Environment for the development
- - Slack and Zoom - Team communication
+ - Slack, Screen and Zoom - Team communication
+ - Trello - planning and Kanban tool
 
 ## Stakeholders
 

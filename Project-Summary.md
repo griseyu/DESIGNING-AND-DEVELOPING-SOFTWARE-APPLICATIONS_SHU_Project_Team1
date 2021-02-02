@@ -11,6 +11,13 @@
  - Visual Studio Code - Environment for the development
  - Slack, Screen and Zoom - Team communication
  - Trello - planning and Kanban tool
+ - Slack and Zoom - Team communication
+ 
+ ## Design
+ -Presentation - wire frame
+ -pexels - stock images
+ -unsplash - stock images
+ - draw.io - flowchart of pages
 
 ## Stakeholders
 

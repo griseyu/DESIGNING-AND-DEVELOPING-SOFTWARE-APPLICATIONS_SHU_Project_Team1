@@ -3,7 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script language="javascript" src="survey.js"></script>
+    <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <form id="hairCareIngredients">
+      <label>Select which ingredients you don't want:</label><br />
+      <input type="checkbox" name="hairIngredients" value="HIngredient1" />Hair
+      Ingredient1<br />
+      <input type="checkbox" name="hairIngredients" value="HIngredient2" />Hair
+      Ingredient2<br />
+      <input type="checkbox" name="hairIngredients" value="HIngredient3" />Hair
+      Ingredient3<br />
+      <input type="checkbox" name="hairIngredients" value="HIngredient4" />Hair
+      Ingredient4<br />
+      <p>
+        <input
+          type="button"
+          onclick="printChecked()"
+          value="Print Selected Items"
+        />
+      </p>
+      <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
+    </form>
+  </body>
 </html>

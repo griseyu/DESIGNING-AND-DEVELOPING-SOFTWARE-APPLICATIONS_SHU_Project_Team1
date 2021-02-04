@@ -1,27 +1,32 @@
 html {
-    align-content: center;
+  align-content: center;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #2ae9a9;
-    height: 100vh;
-  }
-
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: no-repeat 100% url("../Images/BgGreen.png");
+}
 
 #login .container #login-row #login-column #login-box {
-    margin-top: 150px;
-    max-width: 600px;
-    height: 320px;
-    border: 1px solid #9C9C9C;
-    background-color: #EAEAEA;
-  }
+  margin-top: 150px;
+  max-width: 600px;
+  height: 320px;
+  border: 3px solid #4caf50;
+  background: white;
+}
 
 #login .container #login-row #login-column #login-box #login-form {
-    padding: 20px;
-  }
+  padding: 20px;
+}
 
-#login .container #login-row #login-column #login-box #login-form #register-link {
-    margin-top: -85px;
-  }
+#login
+  .container
+  #login-row
+  #login-column
+  #login-box
+  #login-form
+  #register-link {
+  margin-top: -85px;
+}

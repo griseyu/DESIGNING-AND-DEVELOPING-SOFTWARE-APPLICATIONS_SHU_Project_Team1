@@ -1,7 +1,7 @@
 body {
-  background-image: url("leaves.jpg");
   color: white;
   font-family: helvetica;
+  background: no-repeat 100% url("../Images/BgGreen.png");
 }
 
 form {
@@ -9,20 +9,20 @@ form {
 }
 
 input {
-  background-color: green;
+  background-color: #4caf50;
   color: white;
   border-radius: 5px;
 }
 
 select {
-  background-color: green;
-  color: white;
+  background-color: white;
+  color: #4caf50;
 }
 
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: white;
   position: relative;
 }
 
@@ -42,7 +42,7 @@ select {
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: black;
+  background: #4caf50;
   display: block;
   position: absolute;
   right: 0;
@@ -51,7 +51,7 @@ select {
 
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: white;
   color: black;
 }
 

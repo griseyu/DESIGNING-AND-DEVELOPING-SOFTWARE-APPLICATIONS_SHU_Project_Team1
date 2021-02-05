@@ -1,7 +1,11 @@
 body {
-  background-image: url("leaves.jpg");
   color: white;
   font-family: helvetica;
+  background: no-repeat 100% url("../Images/BgGreen.png");
+}
+
+header {
+  display: flexbox;
 }
 
 form {
@@ -9,20 +13,20 @@ form {
 }
 
 input {
-  background-color: green;
+  background-color: #4caf50;
   color: white;
   border-radius: 5px;
 }
 
 select {
-  background-color: green;
-  color: white;
+  background-color: white;
+  color: #4caf50;
 }
 
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: white;
   position: relative;
 }
 
@@ -42,7 +46,7 @@ select {
 
 /* Style the hamburger menu */
 .topnav a.icon {
-  background: black;
+  background: #4caf50;
   display: block;
   position: absolute;
   right: 0;
@@ -51,12 +55,30 @@ select {
 
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: white;
+  color: #4caf50;
 }
 
 /* Style the active link (or home/logo) */
 .active {
   background-color: #4caf50;
   color: white;
+}
+
+.image {
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }

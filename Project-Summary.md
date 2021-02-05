@@ -9,6 +9,12 @@
  - GitHub - Version Control and managing the workflow
  - Visual Studio Code - Environment for the development
  - Slack and Zoom - Team communication
+ 
+ ## Design
+ -Presentation - wire frame
+ -pexels - stock images
+ -unsplash - stock images
+ - draw.io - flowchart of pages
 
 ## Stakeholders
 

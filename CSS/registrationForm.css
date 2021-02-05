@@ -1,3 +1,7 @@
+header {
+  padding: 50px;
+}
+
 body {
   font-family: helvetica;
   background: no-repeat 100% url("../Images/BgGreen.png");
@@ -6,8 +10,8 @@ body {
 .divider-text {
   position: relative;
   text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .divider-text span {

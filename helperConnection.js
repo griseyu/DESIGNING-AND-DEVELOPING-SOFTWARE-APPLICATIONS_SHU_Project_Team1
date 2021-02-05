@@ -15,7 +15,7 @@ const express = require("express"),
 
 var app = express(); 
 app.set("view engine", "ejs"); 
-app.use(bodyParser.urlencoded({ extended: true })); 
+app.use(bodyParser.urlencoded({ extended: true }));
   
 app.use(require("express-session")({ 
     secret: "Execute order 66",  //this is used to hash/salt our passwords in the database - this can be your own phrase

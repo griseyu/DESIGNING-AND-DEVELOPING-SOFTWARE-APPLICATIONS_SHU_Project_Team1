@@ -4,6 +4,10 @@ body {
   background: no-repeat 100% url("../Images/BgGreen.png");
 }
 
+header {
+  display: flexbox;
+}
+
 form {
   text-align: center;
 }
@@ -52,11 +56,29 @@ select {
 /* Add a grey background color on mouse-over */
 .topnav a:hover {
   background-color: white;
-  color: black;
+  color: #4caf50;
 }
 
 /* Style the active link (or home/logo) */
 .active {
   background-color: #4caf50;
   color: white;
+}
+
+.image {
+  display: inline-block;
+  position: relative;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }

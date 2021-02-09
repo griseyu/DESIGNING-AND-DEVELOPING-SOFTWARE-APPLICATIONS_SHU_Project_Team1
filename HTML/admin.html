@@ -1,0 +1,25 @@
+<!--Admin Page - needs user authorisation so only admin user can access-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/CSS/styles.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    </head>
+
+    <body>
+        <header>
+            <h1>Admin Page</h1>
+        </header>
+
+        <div class=delete-container> 
+            <h2 id=deleteUserheading>Delete a user</h2>
+            <form id=deleteUserForm>
+                <label for="deleteUser">User you wish to delete:</label> <br>
+                <input type="text" id="deleteUser" name="deleteUser" placeholder="Username"><br>     
+                <button>Delete</button>
+            </form>
+        </div>
+    </body>
+</html>

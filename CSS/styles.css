@@ -34,14 +34,26 @@ footer {
 
 input {
   padding: 10px;
-  background-color: #4caf50;
+  background-color: white;
   color: white;
   border-radius: 5px;
+  margin: 10px;
 }
 
 select {
   background-color: white;
   color: #4caf50;
+}
+
+.delete-container {
+  border-style: solid;
+  border-color: black;
+  text-align: center;
+  text-shadow: 2px 2px #444745;
+  border-radius: 5px;
+  background-color: rgb(163, 199, 164);
+  margin: 0px 80px 0px 80px ;
+  padding: 10px;
 }
 
 /* Add a black background color to the top navigation */

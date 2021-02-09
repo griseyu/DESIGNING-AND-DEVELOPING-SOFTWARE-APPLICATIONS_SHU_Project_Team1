@@ -6,10 +6,31 @@
     <script language="javascript" src="survey.js"></script>
     <link rel="stylesheet" href="CSS/styles.css" />
     <title>Makeup</title>
+
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <!--jquery to have load in common code (header and footer)-->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+    $(function(){
+      $("#header").load("navBar.html"); 
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
+
+
   </head>
   <header>MakeUp</header>
   <section>
   <body>
+
+    <!--Header from header.html file-->
+    <div id="header"></div>
+    <a href="/HTML/navBar.html"></a>
+
     <form id="makeupIngredients">
       <label>Select which ingredients you don't want:</label><br />
       <input type="checkbox" name="muIngredients" value="MUIngredient1" />Make
@@ -29,31 +50,10 @@
       <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
     </form>
 
-    <footer>
-      <div class="row">
-        <address>
-          2 North Street<br />
-          Leeds<br />
-          LS1 1AA
-        </address>
-        <div class="footerSocialLinks">
-          <ul>
-            <li>  <a href="" aria-label="Twitter"> <i class="fab fa-twitter"></i></a></li>
-            <li> <a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
-            <li> <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-            <li> <a href="" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <ul class="footerLinks">
-          <li><a href="">Terms and Conditions</a></li>
-          <li><a href="">Accessibility</a></li>
-          <li><a href="">Legal Information</a></li>
-          <li><a href="">Privacy and GDPR</a></li>
-        </ul>
-      </div>
-  </footer>
+  <!--Footer from footer.html file-->
+  <div id="footer"></div>
+  <a href="/HTML/footer.html"></a>
+
   </body>
   </body>
 </section>

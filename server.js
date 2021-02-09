@@ -104,6 +104,7 @@ const mongoose = require('mongoose')
 const User = require('./models/user')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
+const cors = require('cors');
 
 const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
@@ -116,6 +117,13 @@ mongoose.connect('mongodb://localhost:27017/ddsa-login-db', {
 const app = express()
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.json())
+
+app.use(
+    cors({
+      origin: 'http://localhost:9999',
+      credentials: true,
+    })
+  );
 
 app.post('/api/change-password', async (req, res) => {
 	const { token, newpassword: plainTextPassword } = req.body

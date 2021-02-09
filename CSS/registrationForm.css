@@ -7,6 +7,21 @@ body {
   background: no-repeat 100% url("../Images/BgGreen.png");
 }
 
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  background-color: #4caf50;
+  border-color: #4caf50;
+  border-radius: 5px;
+  border-top: white;
+  border-top-width: 20px;
+  color: white;
+}
+
 .divider-text {
   position: relative;
   text-align: center;
@@ -41,11 +56,10 @@ body {
   color: white;
 }
 
-
 /* Footer styling */
 
 footer {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   padding: 0 10px;
 }
@@ -81,7 +95,7 @@ footer .row address {
   flex-wrap: wrap-reverse;
 }
 
-.footerLinks li:last-child  {
+.footerLinks li:last-child {
   border-right: none;
 }
 

@@ -30,6 +30,7 @@ footer {
   height: 320px;
   border: 3px solid #4caf50;
   background: white;
+  color: #4caf50;
 }
 
 #login .container #login-row #login-column #login-box #login-form {
@@ -44,84 +45,4 @@ footer {
   #login-form
   #register-link {
   margin-top: -85px;
-}
-
-/* Footer styling */
-
-footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 30px;
-  text-align: center;
-  background-color: #4caf50;
-  border-color: #4caf50;
-  border-radius: 5px;
-  border-top: white;
-  border-top-width: 20px;
-  color: white;
-  margin-top: 55px;
-}
-
-footer .row {
-  display: flex;
-  flex-direction: column;
-}
-
-footer .row address {
-  padding: 15px 0 5px 5px;
-}
-
-.footerSocialLinks ul {
-  display: flex;
-  list-style: none;
-  padding-left: 5px;
-}
-
-.footerSocialLinks ul li {
-  flex-basis: 40px;
-}
-
-.footerSocialLinks ul li a i {
-  color: #fff;
-  font-size: 1.4rem;
-}
-
-.footerLinks {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-  flex-wrap: wrap-reverse;
-}
-
-.footerLinks li:last-child {
-  border-right: none;
-}
-
-.footerLinks li a {
-  font-size: 0.8rem;
-  width: 100%;
-  display: inline-block;
-  padding: 2px 5px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.footerLinks li a:hover {
-  text-decoration: underline;
-}
-
-button {
-  border: none;
-  color: white;
-  background-color: #4caf50;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
 }

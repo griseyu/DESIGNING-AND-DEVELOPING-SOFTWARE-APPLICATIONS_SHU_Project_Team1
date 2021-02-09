@@ -7,6 +7,10 @@ body {
 
 header {
   display: flexbox;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin: 10px;
   text-shadow: 2px 2px #636965;
   text-align: center;
 }

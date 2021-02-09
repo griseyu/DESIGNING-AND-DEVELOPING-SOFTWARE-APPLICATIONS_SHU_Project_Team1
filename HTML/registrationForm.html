@@ -12,38 +12,14 @@
 
     <!-- link to css -->
     <link rel="stylesheet" href="../CSS/registrationForm.css">
-    <link rel="stylesheet" href="../CSS/styles.css">
-
-    <!-- Load social media icons -->
-    <link rel="stylesheet" 
-    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
-    crossorigin="anonymous"/>
-    <!--jquery to have load in common code (header and footer)-->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-  </script>
-  <script> 
-    $(function(){
-      $("#header").load("/html/navBar.html"); 
-      $("#footer").load("/html/footer.html"); 
-    });
-    </script> 
 
     <title>Register with us!</title>
 
 
 </head>
-<header>   </header>
 <body>
     <!-- logos from fontawesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-
-    <!--Header from header.html file-->
-    <div id="header"></div>
-    <a href="/HTML/navBar.html"></a>
 
 <div class="container"> 
 
@@ -66,43 +42,76 @@
     </p>
 
 <!-- form starts -->
-	<form>
+	<form id="reg-form" action="/api/register" method="POST">
     <!-- form-name -->
 	<div class="form-group input-group">
 		<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		 </div>
-        <input name="" class="form-control" placeholder="Username" type="text">
+        <input name="" class="form-control" placeholder="Username" type="text" id=username autocomplete="off">
     </div> 
     <!-- form-email -->
-    <div class="form-group input-group">
+    <!-- <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
 		 </div>
-        <input name="" class="form-control" placeholder="Email address" type="email">
-    </div> 
-    <!-- form-email password1  -->
+        <input name="" class="form-control" placeholder="Email address" type="email" id='email' autocomplete="off">
+    </div>  -->
+    <!-- form-password  -->
     <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 		</div>
-        <input class="form-control" placeholder="Create password" type="password">
+        <input class="form-control" placeholder="Create password" type="password" id='password' autocomplete="off">
     </div> 
     <!-- form-password2 -->
-    <div class="form-group input-group">
+    <!-- <div class="form-group input-group">
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 		</div>
-        <input class="form-control" placeholder="Repeat password" type="password">
-    </div> 
+        <input class="form-control" placeholder="Repeat password" type="password" autocomplete="off">
+    </div>  -->
     <!-- form-create -->                                      
     <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+        <button type="submit" value="Submit Form" class="btn btn-primary btn-block">
+             Create Account  </button>
     </div> 
     <!-- form-login -->      
-    <p class="text-center">Already have an account? <a href="loginForm.html">Log In</a> </p>                                                                 
+    <p class="text-center">Already have an account? <a href="login.html">Log In</a> </p>                                                                 
 </form>
 
+
+<!-- send data to server as JSON -->
+
+<script>
+			const form = document.getElementById('reg-form')
+			form.addEventListener('submit', registerUser)
+
+			async function registerUser(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+                const password = document.getElementById('password').value
+
+				const result = await fetch('http://localhost:9999/api/register', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// if ok
+					alert('Success')
+				} else {
+					alert(result.error)
+				}
+			}
+        </script>
+        
 <!-- form ends -->
 
 </article>
@@ -114,13 +123,9 @@
 <!--container end -->
 
 
-    <!-- jquery and bootstrap -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- jquery, popper and bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
-
-  <!--Footer from footer.html file-->
-  <div id="footer"></div>
-  <a href="/HTML/footer.html"></a>
-
 </html>

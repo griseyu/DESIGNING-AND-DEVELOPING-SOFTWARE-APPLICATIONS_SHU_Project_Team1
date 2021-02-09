@@ -48,6 +48,7 @@ select {
 .topnav {
   background-color: #4caf50;
   overflow: hidden;
+  border-radius: 5px;
 }
 
 /* Style the links inside the navigation bar */
@@ -123,6 +124,7 @@ button {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 /*Home page images */
@@ -131,7 +133,7 @@ button {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 500px;
+  max-width: 300px;
   position: relative;
   margin: auto;
 }
@@ -156,6 +158,8 @@ button {
   border-radius: 0 3px 3px 0;
   user-select: none;
   background-color: #4caf50;
+  opacity: 50%;
+  
 }
 
 /* Position the "next button" to the right */

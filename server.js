@@ -184,6 +184,10 @@ app.post('/api/login', async (req, res) => {
 	res.json({ status: 'error', error: 'Invalid username/password' })
 })
 
+app.get('/register', function(req, res){
+	res.sendFile('static/registrationForm.html', {root: __dirname })
+})
+
 app.post('/api/register', async (req, res) => {
 	const { username, password: plainTextPassword } = req.body
 

@@ -42,7 +42,7 @@
     </p>
 
 <!-- form starts -->
-	<form id="reg-form" action="/api/register">
+	<form id="reg-form" action="/api/register" method="POST">
     <!-- form-name -->
 	<div class="form-group input-group">
 		<div class="input-group-prepend">
@@ -91,7 +91,6 @@
 				event.preventDefault()
 				const username = document.getElementById('username').value
                 const password = document.getElementById('password').value
-                console.log(username, password)
 
 				const result = await fetch('http://localhost:9999/api/register', {
 					method: 'POST',

@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script language="javascript" src="survey.js"></script>
-    <link rel="stylesheet" href="CSS/styles.css" />
-    <title>Makeup</title>
-
     <link rel="stylesheet" href="/CSS/styles.css" />
+
     <!--jquery to have load in common code (header and footer)-->
     <script
     src="https://code.jquery.com/jquery-3.3.1.js"
@@ -22,40 +20,40 @@
     </script> 
 
 
+    <title>SkinCare</title>
   </head>
-  <header>MakeUp</header>
-  <section>
+  <header>Skin Care</header>
   <body>
-    <script language="javascript" src="/survey.js"></script>
 
     <!--Header from header.html file-->
     <div id="header"></div>
     <a href="/HTML/navBar.html"></a>
+    
 
-    <form id="makeupIngredients">
+    <form id="SkinCareIngredients">
       <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient1" />Make
-      Up Ingredient1<br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient2" />Make
-      Up Ingredient2<br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient3" />Make
-      Up Ingredient3<br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient4" />Make
-      Up Ingredient4<br />
+      <input type="checkbox" name="skinIngredients" value="SIngredient1" />Skin
+      Ingredient1<br />
+      <input type="checkbox" name="skinIngredients" value="SIngredient2" />Skin
+      Ingredient2<br />
+      <input type="checkbox" name="skinIngredients" value="SIngredient3" />Skin
+      Ingredient3<br />
+      <input type="checkbox" name="skinIngredients" value="SIngredient4" />Skin
+      Ingredient4<br />
       <p>
-        <button
+        <input
+          type="button"
           onclick="printChecked()"
           value="Print Selected Items"
-        >Show Selections</button>
+        />
       </p>
       <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
     </form>
 
-  <!--Footer from footer.html file-->
-  <div id="footer"></div>
-  <a href="/HTML/footer.html"></a>
+    <!--Footer from footer.html file-->
+    <div id="footer"></div>
+    <a href="/HTML/footer.html"></a>
+
 
   </body>
-  </body>
-</section>
 </html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link to bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- link to css -->
+    <link rel="stylesheet" href="../CSS/registrationForm.css">
+
+    <title>Register with us!</title>
+
+
+</head>
+<body>
+    <!-- logos from fontawesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+<div class="container"> 
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Registration</h4>
+	<p class="text-center">Please fill in this form to create an account or login with your social media</p>
+	<p>
+		<div class="col">
+            <a href="#" class="fb btn">
+              <i class="fab fa-facebook-f"></i> Login with Facebook
+            </a>
+            <a href="#" class="google btn">
+              <i class="fab fa-google"></i> Login with Google
+            </a>
+          </div>
+	</p>
+	<p class="divider-text">
+        <span class="bg-light">OR</span>
+    </p>
+
+<!-- form starts -->
+	<form id="reg-form">
+    <!-- form-name -->
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Username" type="text" id=username autocomplete="off">
+    </div> 
+    <!-- form-email -->
+    <!-- <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="" class="form-control" placeholder="Email address" type="email" id='email' autocomplete="off">
+    </div>  -->
+    <!-- form-password  -->
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Create password" type="password" id='password' autocomplete="off">
+    </div> 
+    <!-- form-password2 -->
+    <!-- <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Repeat password" type="password" autocomplete="off">
+    </div>  -->
+    <!-- form-create -->                                      
+    <div class="form-group">
+        <button type="submit" value="Submit Form" class="btn btn-primary btn-block"> Create Account  </button>
+    </div> 
+    <!-- form-login -->      
+    <p class="text-center">Already have an account? <a href="login.html">Log In</a> </p>                                                                 
+</form>
+
+
+<!-- send data to server as JSON -->
+
+<script>
+			const form = document.getElementById('reg-form')
+			form.addEventListener('submit', registerUser)
+
+			async function registerUser(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+                // const email = document.getElementById('email').value
+                const password = document.getElementById('password').value
+
+				const result = await fetch('/api/register', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// if ok
+					alert('Success')
+				} else {
+					alert(result.error)
+				}
+			}
+        </script>
+        
+<!-- form ends -->
+
+</article>
+</div> 
+
+<!-- end of card -->
+
+</div> 
+<!--container end -->
+
+
+    <!-- jquery, popper and bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

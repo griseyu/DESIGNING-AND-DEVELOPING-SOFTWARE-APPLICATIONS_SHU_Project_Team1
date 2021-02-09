@@ -4,20 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">
     <script language="javascript" src="survey.js"></script>
-    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
     
-    <!-- Load social media icons -->
-    <link rel="stylesheet" 
-    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
-    crossorigin="anonymous"/>
+   
+    <!--jquery to have load in common code (header and footer)-->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+    $(function(){
+      $("#header").load("navBar.html"); 
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
 
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <title>Home</title>
   </head>
   <body>
+    
     <div class="containter">
       <header> 
       <h1>Welcome to Personal Prescription</h1>
@@ -25,17 +32,10 @@
       <a href="HTML/loginForm.html"><button>Login</button></a>
       <a href="HTML/registrationForm.html"><button>Register</button></a>
     </header>
-      <!-- Top Navigation Menu -->
 
-      <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
+    <!--Header from header.html file-->
+    <div id="header"></div>
+    <a href="/HTML/navBar.html"></a>
 
       <form name="ProductTypeForm" onchange="selectProductType(this.value)">
         <label for="productType">Choose a product type:</label><br />
@@ -94,31 +94,10 @@
 </div>
 
 
-    <footer>
-      <div class="row">
-        <address>
-          2 North Street<br />
-          Leeds<br />
-          LS1 1AA
-        </address>
-        <div class="footerSocialLinks">
-          <ul>
-            <li>  <a href="" aria-label="Twitter"> <i class="fab fa-twitter"></i></a></li>
-            <li> <a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
-            <li> <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-            <li> <a href="" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="row">
-        <ul class="footerLinks">
-          <li><a href="">Terms and Conditions</a></li>
-          <li><a href="">Accessibility</a></li>
-          <li><a href="">Legal Information</a></li>
-          <li><a href="">Privacy and GDPR</a></li>
-        </ul>
-      </div>
-    </footer>
+  <!--Footer from footer.html file-->
+  <div id="footer"></div>
+  <a href="/HTML/footer.html"></a>
+
   </div>
   <!-- Javascript links -->
   <script src="/js/main.js"></script>

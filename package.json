@@ -21,7 +21,6 @@
   "description": "An app to build a prescription for the user for their personal skincare and beauty products.",
   "version": "1.0.0",
   "main": "helperConnection.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jmin97/DESIGNING-AND-DEVELOPING-SOFTWARE-APPLICATIONS_SHU_Project_Team1.git"

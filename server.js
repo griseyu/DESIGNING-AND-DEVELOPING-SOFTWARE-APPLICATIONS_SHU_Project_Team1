@@ -47,8 +47,12 @@ app.use('/', router);
 
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log('Running on port 3000'))
-const express = require('express')
-const path = require('path')
+
+
+// server and routes for singup/login dbs 
+
+// const express = require('express')
+// const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const User = require('./user')
@@ -64,7 +68,7 @@ mongoose.connect('mongodb://localhost:27017/ddsa-login-db', {
 	useCreateIndex: true
 })
 
-const app = express()
+const app2 = express()
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.json())
 
@@ -135,7 +139,7 @@ app.post('/api/login', async (req, res) => {
 })
 
 app.get('/register', function(req, res){
-	res.sendFile('static/registrationForm.html', {root: __dirname })
+	res.sendFile('html/registrationForm.html', {root: __dirname })
 })
 
 app.post('/api/register', async (req, res) => {

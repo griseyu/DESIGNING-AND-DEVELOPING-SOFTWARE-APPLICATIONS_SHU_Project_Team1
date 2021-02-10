@@ -30,5 +30,6 @@
   "bugs": {
     "url": "https://github.com/jmin97/DESIGNING-AND-DEVELOPING-SOFTWARE-APPLICATIONS_SHU_Project_Team1/issues"
   },
-  "homepage": "https://github.com/jmin97/DESIGNING-AND-DEVELOPING-SOFTWARE-APPLICATIONS_SHU_Project_Team1#readme"
+  "homepage": "https://github.com/jmin97/DESIGNING-AND-DEVELOPING-SOFTWARE-APPLICATIONS_SHU_Project_Team1#readme",
+  "devDependencies": {}
 }

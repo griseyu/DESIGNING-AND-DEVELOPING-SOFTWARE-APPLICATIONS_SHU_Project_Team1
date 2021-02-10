@@ -2,11 +2,16 @@ html {
   align-content: center;
 }
 
-body {
+body html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: no-repeat 100% url("../Images/BgGreen.png");
+  font-family: helvetica;
+  height: 100%;
+  background-image: url("../Images/BgGreen.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 footer {

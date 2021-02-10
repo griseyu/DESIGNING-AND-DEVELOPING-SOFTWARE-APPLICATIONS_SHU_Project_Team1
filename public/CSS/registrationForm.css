@@ -2,9 +2,13 @@ header {
   padding: 50px;
 }
 
-body {
+body html {
   font-family: helvetica;
-  background: no-repeat 100% url("../Images/BgGreen.png");
+  height: 100%;
+  background-image: url("../Images/BgGreen.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 footer {

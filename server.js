@@ -45,8 +45,6 @@ app.use('/', router);
 
 
 
-// listen on port 3000 and return statement to console
-app.listen(3000, () => console.log('Running on port 3000'))
 
 
 // server and routes for singup/login dbs 
@@ -68,13 +66,13 @@ mongoose.connect('mongodb://localhost:27017/ddsa-login-db', {
 	useCreateIndex: true
 })
 
-const app2 = express()
+// const app2 = express()
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.json())
 
 app.use(
     cors({
-      origin: 'http://localhost:9999',
+      origin: 'http://localhost:3000',
       credentials: true,
     })
   );
@@ -183,6 +181,10 @@ app.post('/api/register', async (req, res) => {
 	res.json({ status: 'ok' })
 })
 
-app.listen(9999, () => {
-	console.log('Server up at 9999')
-})
+// app.listen(3000, () => {
+// 	console.log('Server up at')
+// })
+
+// listen on port 3000 and return statement to console
+app.listen(3000, () => console.log('Running on port 3000'))
+

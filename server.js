@@ -24,20 +24,20 @@ app.use(express.static(path.join(__dirname, '/public/Images')));
 
 // create a route for get requests for the route of our website
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname+'/public/home.html'));
+    res.sendFile(path.join(__dirname+'/public//HTML/home.html'));
 })
 // app.get('/', (req, res) => res.send('Hello World'))
 
 app.get('/makeUp', function (req, res) {
-    res.sendFile(path.join(__dirname+'/public/makeUp.html'));
+    res.sendFile(path.join(__dirname+'/public/HTML/makeUp.html'));
 })
 
 app.get('/hairCare', function (req, res) {
-    res.sendFile(path.join(__dirname+'/public/hairCare.html'));
+    res.sendFile(path.join(__dirname+'/public/HTML/hairCare.html'));
 })
 
 app.get('/skinCare', function (req, res) {
-    res.sendFile(path.join(__dirname+'/public/skinCare.html'));
+    res.sendFile(path.join(__dirname+'/public/HTML/skinCare.html'));
 })
 
 // add the router

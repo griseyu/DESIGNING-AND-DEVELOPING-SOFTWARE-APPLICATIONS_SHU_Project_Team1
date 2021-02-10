@@ -54,17 +54,30 @@ app.use('/', router);
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const User = require('./user')
+// const productDb = require('./productDb')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const cors = require('cors');
 
+
+
 const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
-mongoose.connect('mongodb://localhost:27017/ddsa-login-db', {
+// var { hairCareProducts } = require("../productDb");
+// var { skinCareProducts } = require("../productDb");
+// var { makeUpProducts } = require("../productDb");
+
+mongoose.connect('mongodb://localhost:27017/ddsa-project', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useCreateIndex: true
 })
+
+// mongoose.connect('mongodb://localhost:27017/careProducts', {
+// 	useNewUrlParser: true,
+// 	useUnifiedTopology: true,
+// 	useCreateIndex: true
+// })
 
 // const app2 = express()
 app.use('/', express.static(path.join(__dirname, 'static')))

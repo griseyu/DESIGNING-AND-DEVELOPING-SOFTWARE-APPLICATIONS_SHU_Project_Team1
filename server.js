@@ -10,7 +10,7 @@ const router = express.Router();
 // app.use('/Images', express.static('/public'));
 
 app.use(express.static(path.join(__dirname, '/public')));
-app.use(express.static(path.join(__dirname, '/public/Images')));
+// app.use(express.static(path.join(__dirname, '/public/Images')));
 
 
 // app.get('/css/styles.css', function(req, res){ 

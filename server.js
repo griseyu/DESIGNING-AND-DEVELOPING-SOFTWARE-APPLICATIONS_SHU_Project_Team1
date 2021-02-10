@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, '/public/Images')));
 
 // create a route for get requests for the route of our website
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname+'/public//HTML/home.html'));
+    res.sendFile(path.join(__dirname+'/public/HTML/home.html'));
 })
 // app.get('/', (req, res) => res.send('Hello World'))
 
@@ -137,11 +137,11 @@ app.post('/api/login', async (req, res) => {
 })
 
 app.get('/login', function(req, res){
-	res.sendFile('html/login.html', {root: __dirname })
+	res.sendFile('/public/HTML/login.html', {root: __dirname })
 })
 
 app.get('/register', function(req, res){
-	res.sendFile('html/registrationForm.html', {root: __dirname })
+	res.sendFile('/public/HTML/registrationForm.html', {root: __dirname })
 })
 
 app.post('/api/register', async (req, res) => {

@@ -181,9 +181,6 @@ app.post('/api/register', async (req, res) => {
 	res.json({ status: 'ok' })
 })
 
-// app.listen(3000, () => {
-// 	console.log('Server up at')
-// })
 
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log('Running on port 3000'))

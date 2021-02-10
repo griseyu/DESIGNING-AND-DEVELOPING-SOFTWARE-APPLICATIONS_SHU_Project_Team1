@@ -17,27 +17,12 @@ header {
   padding: 10px;
   margin: 10px;
   text-align: center;
+  border-radius: 5px;
 }
 
 form {
   padding: 10px;
   text-align: center;
-}
-
-footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 30px;
-  text-align: center;
-  background-color: #4caf50;
-  border-color: #4caf50;
-  border-radius: 5px;
-  border-top: white;
-  border-top-width: 20px;
-  color: white;
-  margin-top: 55px;
 }
 
 input {
@@ -67,6 +52,9 @@ select {
 .topnav {
   background-color: #4caf50;
   overflow: hidden;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* Style the links inside the navigation bar */
@@ -142,6 +130,7 @@ button {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 /*Home page images */
@@ -262,9 +251,19 @@ button {
 /* Footer styling */
 
 footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
   background-color: #4caf50;
-  color: #fff;
-  padding: 0 10px;
+  border-color: #4caf50;
+  border-radius: 5px;
+  border-top: white;
+  border-top-width: 20px;
+  color: white;
+  margin-top: 55px;
 }
 
 footer .row {
@@ -313,4 +312,29 @@ footer .row address {
 
 .footerLinks li a:hover {
   text-decoration: underline;
+}
+
+/* Login page styling */
+
+#login .container #login-row #login-column #login-box {
+  margin-top: 150px;
+  max-width: 600px;
+  height: 320px;
+  border: 5px solid #4caf50;
+  background: white;
+  border-radius: 5px;
+}
+
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
+
+#login
+  .container
+  #login-row
+  #login-column
+  #login-box
+  #login-form
+  #register-link {
+  margin-top: -85px;
 }

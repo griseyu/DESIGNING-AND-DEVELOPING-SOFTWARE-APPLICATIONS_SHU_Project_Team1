@@ -6,23 +6,33 @@
     <script language="javascript" src="survey.js"></script>
     <link rel="stylesheet" href="../CSS/styles.css" />
 
-    <!--jquery to have load in common code (header and footer)-->
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script> 
-    <script>
-      $(function () {
-        $("#header").load("navBar.html");
-        $("#footer").load("footer.html");
-      });
-    </script>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Load social media icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
 
     <title>HairCare</title>
   </head>
   <header>Hair Care</header>
   <body>
-    <!--Header from header.html file-->
-    <div id="header"></div>
-    <a href="/HTML/navBar.html"></a>
+    <!-- Top Navigation Menu -->
 
+    <div class="topnav" id="myTopnav">
+      <a href="/" class="active">Home</a>
+      <a href="/skinCare">Skin Care</a>
+      <a href="/hairCare">Hair Care</a>
+      <a href="/makeUp">Make Up</a>
+      <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <form id="hairCareIngredients">
       <label>Select which ingredients you don't want:</label><br />
       <input type="checkbox" name="hairIngredients" value="HIngredient1" />Hair
@@ -43,8 +53,40 @@
       <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
     </form>
 
-    <!--Footer from footer.html file-->
-    <div id="footer"></div>
-    <a href="/HTML/footer.html"></a>
+    <footer>
+      <div class="row">
+        <address>
+          2 North Street<br />
+          Leeds<br />
+          LS1 1AA
+        </address>
+        <div class="footerSocialLinks">
+          <ul>
+            <li>
+              <a href="" aria-label="Twitter"> <i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <ul class="footerLinks">
+          <li><a href="">Terms and Conditions</a></li>
+          <li><a href="">Accessibility</a></li>
+          <li><a href="">Legal Information</a></li>
+          <li><a href="">Privacy and GDPR</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>

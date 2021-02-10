@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="/CSS/styles.css" />
-    
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css" />
+
     <!-- Load social media icons -->
-    <link rel="stylesheet" 
-    href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" 
-    crossorigin="anonymous"/>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
 
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <title>Home</title>
-
   </head>
 
   <body>
     <script language="javascript" src="survey.js"></script>
     <div class="containter">
-      <header> 
-      <h1>Welcome to Personal Prescription</h1>
-      <p>Created for You</p>
-      <a href="HTML/loginForm.html"><button>Login</button></a>
-      <a href="HTML/registrationForm.html"><button>Register</button></a>
-    </header>
+      <header>
+        <h1>Welcome to Personal Prescription</h1>
+        <p>Created for You</p>
+        <a href="HTML/loginForm.html"><button>Login</button></a>
+        <a href="HTML/registrationForm.html"><button>Register</button></a>
+      </header>
       <!-- Top Navigation Menu -->
 
       <div class="topnav" id="myTopnav">
@@ -41,88 +44,99 @@
         </a>
       </div>
 
-      <form name="ProductTypeForm" onchange="selectProductType(this.value)">
-        <label for="productType">Choose a product type:</label><br />
-        <select name="productType" id="productType">
-          <option disabled selected value>-- select an option --</option>
-          <option value="Hair Care">Hair Care</option>
-          <option value="Make Up">Make Up</option>
-          <option value="Skin Care">Skin Care</option>
-        </select>
-        <br /><br />
-        <!-- <input type="submit" value="Let's Go!" /> -->
-      </form>
-
       <header>
         <h2>Featured Products</h2>
       </header>
 
-<!--Slideshow of product images-->
-<!--Replace images - these are placeholder images-->
-<!--Need to make sure images are same size-->
-<!-- Slideshow container -->
-<div class="slideshow-container">
+      <!--Slideshow of product images-->
+      <!--Replace images - these are placeholder images-->
+      <!--Need to make sure images are same size-->
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Images and captions -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            src="Images/rdn-aha-30pct-bha-2pct-peeling-solution-30ml.png"
+            style="width: 100%"
+          />
+          <div class="text"></div>
+        </div>
 
-  <!-- Images and captions -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="/leaves.jpg" style="width:100%">
-    <div class="text">Skincare product</div>
-  </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            src="Images/rdn-serum-foundation-33-n-eu-30ml.png"
+            style="width: 100%"
+          />
+          <div class="text"></div>
+        </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="/LeafyLeafy.jpg" style="width:100%">
-    <div class="text">Makeup Product</div>
-  </div>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            src="Images/rdn-100pct-organic-cold-pressed-moroccan-argan-oil-30ml.png"
+            style="width: 100%"
+          />
+          <div class="text"></div>
+        </div>
 
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="/BgGreen.png" style="width:100%">
-    <div class="text">Hair Care Product</div>
-  </div>
+        <!-- Next and previous arrow buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
 
-  <!-- Next and previous arrow buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
+      <!-- The dots underneath -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
 
-<!-- The dots underneath -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
-
-    <footer>
-      <div class="row">
-        <address>
-          2 North Street<br />
-          Leeds<br />
-          LS1 1AA
-        </address>
-        <div class="footerSocialLinks">
-          <ul>
-            <li>  <a href="" aria-label="Twitter"> <i class="fab fa-twitter"></i></a></li>
-            <li> <a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
-            <li> <a href="" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-            <li> <a href="" aria-label="Youtube"><i class="fab fa-youtube"></i></a></li>
+      <footer>
+        <div class="row">
+          <address>
+            2 North Street<br />
+            Leeds<br />
+            LS1 1AA
+          </address>
+          <div class="footerSocialLinks">
+            <ul>
+              <li>
+                <a href="" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" aria-label="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" aria-label="Youtube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <ul class="footerLinks">
+            <li><a href="">Terms and Conditions</a></li>
+            <li><a href="">Accessibility</a></li>
+            <li><a href="">Legal Information</a></li>
+            <li><a href="">Privacy and GDPR</a></li>
           </ul>
         </div>
-      </div>
-      <div class="row">
-        <ul class="footerLinks">
-          <li><a href="">Terms and Conditions</a></li>
-          <li><a href="">Accessibility</a></li>
-          <li><a href="">Legal Information</a></li>
-          <li><a href="">Privacy and GDPR</a></li>
-        </ul>
-      </div>
-    </footer>
-  </div>
-  <!-- Javascript links -->
-  <script src="/js/main.js"></script>
-</body>
+      </footer>
+    </div>
+    <!-- Javascript links -->
+    <script src="/js/main.js"></script>
+  </body>
 </html>

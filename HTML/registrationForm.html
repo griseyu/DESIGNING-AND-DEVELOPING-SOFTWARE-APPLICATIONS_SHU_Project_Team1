@@ -62,7 +62,9 @@
     	<div class="input-group-prepend">
 		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
 		</div>
-        <input class="form-control" placeholder="Create password" type="password" id='password' autocomplete="off">
+        <input class="form-control" placeholder="Create password" type="password" id='password' autocomplete="off" 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and
+         lowercase letter, and at least 8 or more characters" required>
     </div> 
     <!-- form-password2 -->
     <!-- <div class="form-group input-group">

@@ -138,6 +138,10 @@ app.post('/api/login', async (req, res) => {
 	res.json({ status: 'error', error: 'Invalid username/password' })
 })
 
+app.get('/login', function(req, res){
+	res.sendFile('html/login.html', {root: __dirname })
+})
+
 app.get('/register', function(req, res){
 	res.sendFile('html/registrationForm.html', {root: __dirname })
 })

@@ -1,4 +1,3 @@
-<!--Admin Page - needs user authorisation so only admin user can access-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,15 +14,20 @@
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
           crossorigin="anonymous"
         />
+
+        <title>My Profile</title>
     
-        <title>Admin</title>
     </head>
 
     <body>
+        
+        <header>
+            <h2>Your Prescription</h2>
+        </header>
 
           <!-- Top Navigation Menu -->
 
-        <div class="topnav" id="myTopnav">
+          <div class="topnav" id="myTopnav">
             <a href="/" class="active">Home</a>
             <a href="/skinCare">Skin Care</a>
             <a href="/hairCare">Hair Care</a>
@@ -32,19 +36,27 @@
             <i class="fa fa-bars"></i>
             </a>
         </div>
-        
-        <header>
-            <h1>Admin Page</h1>
-        </header>
 
-        <div class=delete-container> 
-            <h2 id=deleteUserheading>Delete a user</h2>
-            <form id=deleteUserForm>
-                <label for="deleteUser">User you wish to delete:</label> <br>
-                <input type="text" id="deleteUser" name="deleteUser" placeholder="Username"><br>     
-                <button>Delete</button>
-            </form>
+        <div class=profile-container>
+
+        <h3> My Hair Product Preferences</h3>
+
+        <button>Edit</button>
+
+        <h3> My Skincare Product Preferences</h3>
+
+        <button>Edit</button>
+        
+        <h3> My Makeup Product Preferences</h3>
+
+        <button>Edit</button>
+
+        <h3>Products Recommended for me</h3>
+
+        <p><a id="changePassword" href="change-password.html">Change my password</a></p>
+
         </div>
+        
         <footer>
             <div class="row">
               <address>

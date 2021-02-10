@@ -2,7 +2,8 @@ header {
   padding: 50px;
 }
 
-body html {
+body,
+html {
   font-family: helvetica;
   height: 100%;
   background-image: url("../Images/BgGreen.png");

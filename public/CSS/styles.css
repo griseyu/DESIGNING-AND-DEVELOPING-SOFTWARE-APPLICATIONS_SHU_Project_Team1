@@ -138,6 +138,16 @@ button {
   border-radius: 5px;
 }
 
+
+/*Sidebar (underneath all other content on smaller screens */
+.sideBar {
+  background-color: #4caf50;
+  border-radius: 5px;
+  height: auto;
+  width: auto;
+}
+
+
 /*Home page images */
 
 * {

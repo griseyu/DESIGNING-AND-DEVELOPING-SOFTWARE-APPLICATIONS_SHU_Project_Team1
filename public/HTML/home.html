@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" type="text/css" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/desktop.css" media="only screen and (min-width: 720px)"/>
 
      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -43,48 +44,60 @@
     </a>
   </div>
   </html>
-        
-  <header>
-    <h2>Featured Products</h2>
-  </header>
+  
 
-      <!--Slideshow of product images-->
-      <!-- Slideshow container -->
-      <div class="slideshow-container">
-        <!-- Images and captions -->
-        <div class="mySlides fade">
-          <img
-            src="/Images/rdn-aha-30pct-bha-2pct-peeling-solution-30ml.png"
-            style="width: 100%"
-          />
+
+  <div class="mainContent">
+    <main>
+    <header>
+      <h2>Featured Products</h2>
+    </header>
+        <!--Slideshow of product images-->
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+          <!-- Images and captions -->
+          <div class="mySlides fade">
+            <img
+              src="/Images/rdn-aha-30pct-bha-2pct-peeling-solution-30ml.png"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <img
+              src="/Images/rdn-serum-foundation-33-n-eu-30ml.png"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="mySlides fade">
+            <img
+              src="/Images/rdn-100pct-organic-cold-pressed-moroccan-argan-oil-30ml.png"
+              style="width: 100%"
+            />
+          </div>
+
+          <!-- Next and previous arrow buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br />
 
-        <div class="mySlides fade">
-          <img
-            src="/Images/rdn-serum-foundation-33-n-eu-30ml.png"
-            style="width: 100%"
-          />
+        <!-- The dots underneath -->
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
         </div>
+      </main>
+        <!-- Sidebar on larger screens (will just be underneath on mobile) -->
+        <div class="sideBar">
 
-        <div class="mySlides fade">
-          <img
-            src="/Images/rdn-100pct-organic-cold-pressed-moroccan-argan-oil-30ml.png"
-            style="width: 100%"
-          />
+          <p>Advert Link 1</p>
+          <p> Advert Link 2</p>
+          
         </div>
-
-        <!-- Next and previous arrow buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      <br />
-
-      <!-- The dots underneath -->
-      <div style="text-align: center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
+  </div>
 
       <footer>
         <div class="row">

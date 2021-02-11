@@ -40,6 +40,10 @@ app.get('/skinCare', function (req, res) {
     res.sendFile(path.join(__dirname+'/public/HTML/skinCare.html'));
 })
 
+app.get('/profile', function (req, res) {
+    res.sendFile(path.join(__dirname+'/public/HTML/profile.html'));
+})
+
 // add the router
 app.use('/', router);
 
@@ -48,6 +52,7 @@ app.use('/', router);
 
 
 // server and routes for singup/login dbs 
+// Bcrypt and JWT secure authentication 
 
 // const express = require('express')
 // const path = require('path')
@@ -63,9 +68,6 @@ const cors = require('cors');
 
 const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
-// var { hairCareProducts } = require("../productDb");
-// var { skinCareProducts } = require("../productDb");
-// var { makeUpProducts } = require("../productDb");
 
 mongoose.connect('mongodb://localhost:27017/ddsa-project', {
 	useNewUrlParser: true,
@@ -73,13 +75,7 @@ mongoose.connect('mongodb://localhost:27017/ddsa-project', {
 	useCreateIndex: true
 })
 
-// mongoose.connect('mongodb://localhost:27017/careProducts', {
-// 	useNewUrlParser: true,
-// 	useUnifiedTopology: true,
-// 	useCreateIndex: true
-// })
 
-// const app2 = express()
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.json())
 

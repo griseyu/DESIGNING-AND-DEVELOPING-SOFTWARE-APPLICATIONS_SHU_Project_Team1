@@ -1,4 +1,4 @@
-// Function to open burger menu
+// Function to open burger menu when clicked
 // Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon 
 function openMenu() {
   console.log("test");
@@ -9,7 +9,6 @@ function openMenu() {
     x.className = "topnav";
   }
 }
-
 
 
 //Images on home page - function to move through images

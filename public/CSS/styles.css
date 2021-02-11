@@ -17,7 +17,7 @@ header {
   padding: 10px;
   margin: 10px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 55px;
 }
 
 form {
@@ -264,25 +264,34 @@ footer {
   border-top-width: 20px;
   color: white;
   margin-top: 55px;
+  margin-bottom: 55px;
 }
 
 footer .row {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer .row address {
   padding: 15px 0 5px 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerSocialLinks ul {
   display: flex;
   list-style: none;
   padding-left: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerSocialLinks ul li {
   flex-basis: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerSocialLinks ul li a i {
@@ -295,10 +304,14 @@ footer .row address {
   list-style: none;
   padding-left: 0;
   flex-wrap: wrap-reverse;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerLinks li:last-child {
   border-right: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerLinks li a {
@@ -308,6 +321,8 @@ footer .row address {
   padding: 2px 5px;
   text-decoration: none;
   color: #fff;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerLinks li a:hover {
@@ -351,7 +366,6 @@ footer .row address {
   max-width: 600px;
 }
 
-<<<<<<< HEAD
 /*loading bar for profile choices*/
 
 #myProgress {
@@ -364,6 +378,3 @@ footer .row address {
   height: 30px;
   background-color: #4caf50;
 }
-=======
-
->>>>>>> 65e92f65959e315e74160c2b13df978c7b3f9575

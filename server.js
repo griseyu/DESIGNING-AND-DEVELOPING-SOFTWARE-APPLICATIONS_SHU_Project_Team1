@@ -85,7 +85,7 @@ app.use(
   );
 
 app.get('/changePassword', function(req, res){
-	res.sendFile('/public/HTML/change-password.html', {root: __dirname })
+	res.sendFile('/public/HTML/changePassword.html', {root: __dirname })
 })
 
 app.post('/api/changePassword', async (req, res) => {

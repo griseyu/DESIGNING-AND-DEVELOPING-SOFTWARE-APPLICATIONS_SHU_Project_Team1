@@ -67,16 +67,6 @@ function printChecked() {
 //   alert(selectedItems2);
 // }
 
-// Burger menu opening and closing when clicked
-
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
 
 /* Animated Progress Bar for results*/
 

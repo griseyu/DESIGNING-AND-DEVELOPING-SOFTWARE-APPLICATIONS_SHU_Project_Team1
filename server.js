@@ -40,6 +40,10 @@ app.get('/skinCare', function (req, res) {
     res.sendFile(path.join(__dirname+'/public/HTML/skinCare.html'));
 })
 
+app.get('/profile', function (req, res) {
+    res.sendFile(path.join(__dirname+'/public/HTML/profile.html'));
+})
+
 // add the router
 app.use('/', router);
 

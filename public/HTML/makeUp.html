@@ -9,7 +9,10 @@
 
     <link rel="stylesheet" href="/CSS/styles.css" />
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!-- Load social media icons -->
     <link
@@ -18,84 +21,87 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-
-
   </head>
   <header>MakeUp</header>
   <section>
-  <body>
-    <script language="javascript" src="/survey.js"></script>
+    <body>
+      <script language="javascript" src="../survey.js"></script>
 
-    <!-- Top Navigation Menu -->
+      <!-- Top Navigation Menu -->
 
-    <div class="topnav" id="myTopnav">
-      <a href="/" class="active">Home</a>
-      <a href="/skinCare">Skin Care</a>
-      <a href="/hairCare">Hair Care</a>
-      <a href="/makeUp">Make Up</a>
-      <a href="javascript:void(0);" class="icon" onclick="openMenu()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
+      <div class="topnav" id="myTopnav">
+        <a href="/" class="active">Home</a>
+        <a href="/skinCare">Skin Care</a>
+        <a href="/hairCare">Hair Care</a>
+        <a href="/makeUp">Make Up</a>
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
 
-    <form id="makeupIngredients">
-      <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient1" />Make
-      Up Ingredient1<br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient2" />Make
-      Up Ingredient2<br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient3" />Make
-      Up Ingredient3<br />
-      <input type="checkbox" name="muIngredients" value="MUIngredient4" />Make
-      Up Ingredient4<br />
-      <p>
-        <button
-          onclick="printChecked()"
-          value="Print Selected Items"
-        >Show Selections</button>
-      </p>
-      <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
-    </form>
+      <form id="makeupIngredients">
+        <label>Select which ingredients you don't want:</label><br />
+        <input type="checkbox" name="muIngredients" value="MUIngredient1" />Make
+        Up Ingredient1<br />
+        <input type="checkbox" name="muIngredients" value="MUIngredient2" />Make
+        Up Ingredient2<br />
+        <input type="checkbox" name="muIngredients" value="MUIngredient3" />Make
+        Up Ingredient3<br />
+        <input type="checkbox" name="muIngredients" value="MUIngredient4" />Make
+        Up Ingredient4<br />
+        <p></p>
+        <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
+      </form>
+      <br />
+      <button onclick="move()">Prescribe Me</button>
 
-    <div class="loader"></div>
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
 
-    <footer>
-      <div class="row">
-        <address>
-          2 North Street<br />
-          Leeds<br />
-          LS1 1AA
-        </address>
-        <div class="footerSocialLinks">
-          <ul>
-            <li>
-              <a href="" aria-label="Twitter"> <i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="" aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a href="" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-            </li>
+      <footer>
+        <div class="row">
+          <address>
+            2 North Street<br />
+            Leeds<br />
+            LS1 1AA
+          </address>
+          <div class="footerSocialLinks">
+            <ul>
+              <li>
+                <a href="" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" aria-label="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" aria-label="Youtube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <ul class="footerLinks">
+            <li><a href="">Terms and Conditions</a></li>
+            <li><a href="">Accessibility</a></li>
+            <li><a href="">Legal Information</a></li>
+            <li><a href="">Privacy and GDPR</a></li>
           </ul>
         </div>
-      </div>
-      <div class="row">
-        <ul class="footerLinks">
-          <li><a href="">Terms and Conditions</a></li>
-          <li><a href="">Accessibility</a></li>
-          <li><a href="">Legal Information</a></li>
-          <li><a href="">Privacy and GDPR</a></li>
-        </ul>
-      </div>
-    </footer>
+      </footer>
 
-  </body>
-  </body>
-</section>
+      <script src="../survey.js"></script>
+    </body>
+  </section>
 </html>

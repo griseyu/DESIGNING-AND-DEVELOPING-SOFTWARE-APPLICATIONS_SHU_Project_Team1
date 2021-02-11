@@ -54,12 +54,10 @@ app.use('/', router);
 // server and routes for singup/login dbs 
 // Bcrypt and JWT secure authentication 
 
-// const express = require('express')
-// const path = require('path')
+
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const User = require('./user')
-// const productDb = require('./productDb')
+const User = require('./user2')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const cors = require('cors');
@@ -181,7 +179,7 @@ app.post('/api/register', async (req, res) => {
 		console.log('User created successfully: ', response)
 	} catch (error) {
 		if (error.code === 11000) {
-			// duplicate key
+			// username already exist
 			return res.json({ status: 'error', error: 'Username already in use' })
 		}
 		throw error

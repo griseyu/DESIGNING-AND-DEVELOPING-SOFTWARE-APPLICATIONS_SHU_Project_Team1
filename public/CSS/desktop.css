@@ -1,0 +1,17 @@
+/* CSS for screens larger than 720px */
+
+.mainContent {
+    display: flex;
+}
+
+main {
+    flex-basis: 70%;
+}
+
+.sideBar {
+    background-color:   #4caf50;
+    border-radius: 5px;
+    flex-basis: 30%;
+    color: white;
+    margin:10px;
+}

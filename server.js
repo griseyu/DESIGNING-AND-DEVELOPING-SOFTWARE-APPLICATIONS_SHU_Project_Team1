@@ -84,7 +84,11 @@ app.use(
     })
   );
 
-app.post('/api/change-password', async (req, res) => {
+app.get('/changePassword', function(req, res){
+	res.sendFile('/public/HTML/change-password.html', {root: __dirname })
+})
+
+app.post('/api/changePassword', async (req, res) => {
 	const { token, newpassword: plainTextPassword } = req.body
 
 	if (!plainTextPassword || typeof plainTextPassword !== 'string') {

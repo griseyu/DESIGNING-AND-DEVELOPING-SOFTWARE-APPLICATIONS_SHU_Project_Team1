@@ -144,6 +144,7 @@ app.post('/api/login', async (req, res) => {
 		return res.json({ status: 'ok', data: token })
 		// return res.redirect('/checkout');
 		// return res.redirect(303, '/public/HTML/home.html' + querystring.stringify(data: token));
+		
 	}
 
 	res.json({ status: 'error', error: 'Invalid username/password' })

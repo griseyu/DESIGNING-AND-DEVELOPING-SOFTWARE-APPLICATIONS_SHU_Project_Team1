@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="../CSS/styles.css" />
 
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!-- Load social media icons -->
     <link
@@ -16,7 +19,6 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-
 
     <title>HairCare</title>
   </head>
@@ -30,22 +32,30 @@
       <a href="/skinCare">Skin Care</a>
       <a href="/hairCare">Hair Care</a>
       <a href="/makeUp">Make Up</a>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
       <a href="javascript:void(0);" class="icon" onclick="openMenu()">
         <i class="fa fa-bars"></i>
       </a>
     </div>
     <form id="hairCareIngredients" action="/hairCare" method="POST">
       <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="hairIngredients" value="Aqua (Water)" />Aqua (Water)<br />
-      <input type="checkbox" name="hairIngredients" value="Propanediol" />Propanediol<br />
-      <input type="checkbox" name="hairIngredients" value="Argania Spinosa Kernel Oil." />Argania Spinosa Kernel Oil.<br />
+      <input type="checkbox" name="hairIngredients" value="Aqua (Water)" />Aqua
+      (Water)<br />
+      <input
+        type="checkbox"
+        name="hairIngredients"
+        value="Propanediol"
+      />Propanediol<br />
+      <input
+        type="checkbox"
+        name="hairIngredients"
+        value="Argania Spinosa Kernel Oil."
+      />Argania Spinosa Kernel Oil.<br />
       <input type="checkbox" name="hairIngredients" value="HIngredient4" />Hair
       Ingredient4<br />
       <p>
-        <button
-          type="submit"
-          
-        >Show Products</button>
+        <button type="submit">Show Products</button>
       </p>
       <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
     </form>
@@ -60,10 +70,14 @@
         <div class="footerSocialLinks">
           <ul>
             <li>
-              <a href="" aria-label="Twitter"> <i class="fab fa-twitter"></i></a>
+              <a href="" aria-label="Twitter">
+                <i class="fab fa-twitter"></i
+              ></a>
             </li>
             <li>
-              <a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
             </li>
             <li>
               <a href="" aria-label="Instagram"

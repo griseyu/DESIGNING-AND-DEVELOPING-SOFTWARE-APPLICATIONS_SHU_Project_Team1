@@ -1,10 +1,12 @@
 // include express and create new express object to interact with the express library
+
 const express = require('express');
 const app = express();
 const path =require('path');
 const router = express.Router();
 const hairCareQueries = require('./hairCareQueries')
 const makeUpQueries = require('./makeUpQueries')
+const skinCareQueries = require('./skinCareQueries')
 // var exphbs = require('express-handlebars');
 
 // tells express where our static files are stored
@@ -42,10 +44,6 @@ app.get('/skinCare', function (req, res) {
     res.sendFile(path.join(__dirname+'/public/HTML/skinCare.html'));
 })
 
-app.get('/profile', function (req, res) {
-    res.sendFile(path.join(__dirname+'/public/HTML/profile.html'));
-})
-
 // add the router
 app.use('/', router);
 
@@ -53,23 +51,26 @@ app.use('/', router);
 
 
 
-// server and routes for singup/login dbs 
-// Bcrypt and JWT secure authentication 
-
-
+// server and routes for singup/login/product dbs 
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const User = require('./user2')
+// const hairCareModel = require('./hairCareQueries')
+
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const cors = require('cors');
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/ddsa-project";
 
+
+// import {printChecked} from './survey.js';
+// let ingredientSelection = printChecked();
 
 
 const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
-
-mongoose.connect('mongodb://localhost:27017/ddsa-project', {
+mongoose.connect(url, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useCreateIndex: true
@@ -87,11 +88,7 @@ app.use(
     })
   );
 
-app.get('/changePassword', function(req, res){
-	res.sendFile('/public/HTML/changePassword.html', {root: __dirname })
-})
-
-app.post('/api/changePassword', async (req, res) => {
+app.post('/api/change-password', async (req, res) => {
 	const { token, newpassword: plainTextPassword } = req.body
 
 	if (!plainTextPassword || typeof plainTextPassword !== 'string') {
@@ -134,7 +131,7 @@ app.post('/api/login', async (req, res) => {
 	}
 
 	if (await bcrypt.compare(password, user.password)) {
-		// the username, password combo is successful
+		// the username, password combination is successful
 
 		const token = jwt.sign(
 			{
@@ -145,9 +142,6 @@ app.post('/api/login', async (req, res) => {
 		)
 
 		return res.json({ status: 'ok', data: token })
-		// return res.redirect('/checkout');
-		// return res.redirect(303, '/public/HTML/home.html' + querystring.stringify(data: token));
-		
 	}
 
 	res.json({ status: 'error', error: 'Invalid username/password' })
@@ -189,7 +183,7 @@ app.post('/api/register', async (req, res) => {
 		console.log('User created successfully: ', response)
 	} catch (error) {
 		if (error.code === 11000) {
-			// username already exist
+			// duplicate key
 			return res.json({ status: 'error', error: 'Username already in use' })
 		}
 		throw error
@@ -209,9 +203,12 @@ app.post('/makeUp', (req,res,value) => {
 		var query = {ingredients: {$all: req.body.muIngredients}}
 		makeUpQueries.makeUpQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, makeUpProducts) {
 		if (err) return handleError(err)
-		console.log(makeUpProducts)
-		console.log('makeup')
-		res.send(makeUpProducts)
+		let productName = []
+		makeUpProducts.forEach(x => productName.push(x.product))
+		res.send(productName)
+		// console.log(makeUpProducts[0].product)
+		// console.log('makeup')
+		// res.send(makeUpProducts[0].product)
 	})
 })
 
@@ -223,10 +220,49 @@ app.post('/hairCare', (req,res,value) => {
 		var query = {ingredients: { $all: req.body.hairIngredients}}
 		hairCareQueries.hairCareQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, hairCareProducts) {
 		if (err) return handleError(err)
-		console.log(hairCareProducts)
+		hairCareProducts.forEach(x => console.log(x.product))
+		// console.log(hairCareProducts[0].product)
 		console.log('hairCare')
 	})
 })
+
+// EXPERIMENTING USING QUERYING BY ARRAY
+// app.post('/makeUp', (req,res,value) => {
+// 	// res.send('Hi')
+// 	// hairQueries.hairQuery
+// 	// console.log("coming from app.post")
+// 		console.log(req.body)
+// 		var reqBody = [req.body.muIngredients]
+// 		hairQueries.hairQueries.find({'ingredients':'reqBody'}, function (err, hairCareProducts) {
+// 		if (err) return handleError(err)
+// 		console.log(hairCareProducts)
+// 		console.log('haircare')
+// 	})
+// })
+
+
+
+
+// app.post('/makeUp', (req,res,value) => {
+// 	res.send('Hi')
+// 	MongoClient.connect(url, async function (err, client) {
+//      if(err) throw err;
+// 	console.log('here now')
+// 	const db = client.db("ddsa-project");
+// 	 try {
+// 		//db query calls
+// 		const productResult = await db.collection('hairCareProducts').find({ingredients: "Argania Spinosa Kernel Oil."})
+// 		// let cursor = productResult;
+
+// 		// cursor.forEach(item => {
+// 		 	console.log(productResult)
+// 		// })
+		
+//     }catch (err) {
+//         console.log(err)
+//     }
+// });
+// })
 
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log('Running on port 3000'))

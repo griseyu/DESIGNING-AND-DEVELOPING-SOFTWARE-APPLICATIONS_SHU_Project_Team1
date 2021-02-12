@@ -10,9 +10,9 @@ const hairCareSchema = new mongoose.Schema(
         
 
     },
-    { collection: 'makeUpProducts' });
+    { collection: 'hairCareProducts' });
 
-    const hairCareModel = mongoose.model('hairCareSchema', hairCareSchema)
+const hairCareModel = mongoose.model('hairCareSchema', hairCareSchema)
 
     module.exports = { 
         hairCareQueries: hairCareModel

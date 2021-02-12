@@ -31,9 +31,12 @@
 
       <div class="topnav" id="myTopnav">
         <a href="/" class="active">Home</a>
+        <a href="/profile">Profile</a>
         <a href="/skinCare">Skin Care</a>
         <a href="/hairCare">Hair Care</a>
         <a href="/makeUp">Make Up</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
         <a href="javascript:void(0);" class="icon" onclick="openMenu()">
           <i class="fa fa-bars"></i>
         </a>
@@ -41,22 +44,24 @@
 
       <form id="makeupIngredients" action="/makeUp" method="POST">
         <label>Select which ingredients you don't want:</label><br />
-        <input type="checkbox" name="muIngredients" value="Aqua (Water)" />Aqua (Water)<br />
-        <input type="checkbox" name="muIngredients" value="Caprylyl Methicone" />Caprylyl Methicone<br />
+        <input type="checkbox" name="muIngredients" value="Aqua (Water)" />Aqua
+        (Water)<br />
+        <input
+          type="checkbox"
+          name="muIngredients"
+          value="Caprylyl Methicone"
+        />Caprylyl Methicone<br />
         <input type="checkbox" name="muIngredients" value="MUIngredient3" />Make
         Up Ingredient3<br />
         <input type="checkbox" name="muIngredients" value="MUIngredient4" />Make
         Up Ingredient4<br />
         <p>
-          <button
-            type="submit"
-          >Show Products</button>
+          <button type="submit">Show Products</button>
         </p>
         <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
       </form>
       <br />
       <button onclick="move()">Prescribe Me</button>
-
 
       <div id="myProgress">
         <div id="myBar"></div>

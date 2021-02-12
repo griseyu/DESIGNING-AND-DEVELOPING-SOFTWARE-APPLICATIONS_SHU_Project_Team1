@@ -38,23 +38,15 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-
-    <form id="SkinCareIngredients">
+    <form id="skinCareIngredients" action="/skinCare" method="POST">
       <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="skinIngredients" value="SIngredient1" />Skin
-      Ingredient1<br />
-      <input type="checkbox" name="skinIngredients" value="SIngredient2" />Skin
-      Ingredient2<br />
-      <input type="checkbox" name="skinIngredients" value="SIngredient3" />Skin
-      Ingredient3<br />
-      <input type="checkbox" name="skinIngredients" value="SIngredient4" />Skin
-      Ingredient4<br />
+      <input type="checkbox" name="skinIngredients" value="Vegan" />Vegan<br />
+      <input type="checkbox" name="skinIngredients" value="Nut-free" />Nut-free<br />
+      <input type="checkbox" name="skinIngredients" value="Gluten-free" />Gluten-free<br />
+      <input type="checkbox" name="skinIngredients" value="Cruelty-free" />Cruelty-free<br />
+      <input type="checkbox" name="skinIngredients" value="Silicon-free" />Silicon-free<br />
       <p>
-        <input
-          type="button"
-          onclick="printChecked()"
-          value="Print Selected Items"
-        />
+        <button type="submit">Show Products</button>
       </p>
       <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
     </form>

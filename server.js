@@ -200,16 +200,17 @@ app.post('/api/register', async (req, res) => {
 app.set('view engine', 'ejs');
 
 app.post('/makeUp', (req,res,value) => {
-	// res.send('Hi')
-	// hairQueries.hairQuery
-	// console.log("coming from app.post")
+
 		console.log(req.body)
 		var query = {Content: {$all: req.body.muIngredients}}
 		makeUpQueries.makeUpQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, makeUpProducts) {
 		if (err) return handleError(err)
-		let productName = []
-		makeUpProducts.forEach(x => productName.push(x.product))
-		res.send(productName)
+		let muProductName = []
+		makeUpProducts.forEach(x1 => muProductName.push(x1.product))
+		res.send(muProductName)
+		// let muProductLink = []
+		// makeUpProducts.forEach(x2 => muProductLink.push(x2.product))
+		// res.send(muProductLink)
 		// console.log(makeUpProducts[0].product)
 		// console.log('makeup')
 		// res.send(makeUpProducts[0].product)
@@ -217,56 +218,28 @@ app.post('/makeUp', (req,res,value) => {
 })
 
 app.post('/hairCare', (req,res,value) => {
-	// res.send('Hi')
-	// hairQueries.hairQuery
-	// console.log("coming from app.post")
+	
 		console.log(req.body)
-		var query = {ingredients: { $all: req.body.hairIngredients}}
+		var query = {Content: { $all: req.body.hairIngredients}}
 		hairCareQueries.hairCareQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, hairCareProducts) {
 		if (err) return handleError(err)
-		hairCareProducts.forEach(x => console.log(x.product))
-		// console.log(hairCareProducts[0].product)
-		console.log('hairCare')
+		let hairProductName = []
+		hairCareProducts.forEach(y => hairProductName.push(y.product))
+		res.send(hairProductName)
 	})
 })
 
-// EXPERIMENTING USING QUERYING BY ARRAY
-// app.post('/makeUp', (req,res,value) => {
-// 	// res.send('Hi')
-// 	// hairQueries.hairQuery
-// 	// console.log("coming from app.post")
-// 		console.log(req.body)
-// 		var reqBody = [req.body.muIngredients]
-// 		hairQueries.hairQueries.find({'ingredients':'reqBody'}, function (err, hairCareProducts) {
-// 		if (err) return handleError(err)
-// 		console.log(hairCareProducts)
-// 		console.log('haircare')
-// 	})
-// })
-
-
-
-
-// app.post('/makeUp', (req,res,value) => {
-// 	res.send('Hi')
-// 	MongoClient.connect(url, async function (err, client) {
-//      if(err) throw err;
-// 	console.log('here now')
-// 	const db = client.db("ddsa-project");
-// 	 try {
-// 		//db query calls
-// 		const productResult = await db.collection('hairCareProducts').find({ingredients: "Argania Spinosa Kernel Oil."})
-// 		// let cursor = productResult;
-
-// 		// cursor.forEach(item => {
-// 		 	console.log(productResult)
-// 		// })
-		
-//     }catch (err) {
-//         console.log(err)
-//     }
-// });
-// })
+app.post('/skinCare', (req,res,value) => {
+	
+	console.log(req.body)
+	var query = {Content: { $all: req.body.skinIngredients}}
+	skinCareQueries.skinCareQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, skinCareProducts) {
+	if (err) return handleError(err)
+	let skinProductName = []
+	skinCareProducts.forEach(y => skinProductName.push(y.product))
+	res.send(skinProductName)
+})
+})
 
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log('Running on port 3000'))

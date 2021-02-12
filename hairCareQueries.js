@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const skinCareSchema = new mongoose.Schema(
+const hairCareSchema = new mongoose.Schema(
     {
         product: { type: String, required: true, unique: true },
        
@@ -10,8 +10,10 @@ const skinCareSchema = new mongoose.Schema(
         
 
     },
-    { collection: 'skinCareProducts' });
+    { collection: 'makeUpProducts' });
 
-    const skinCareModel = mongoose.model('skinCareSchema', skinCareSchema)
+    const hairCareModel = mongoose.model('hairCareSchema', hairCareSchema)
 
-module.exports = skinCareModel
+    module.exports = { 
+        hairCareQueries: hairCareModel
+    };

@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const path =require('path');
 const router = express.Router();
+const hairCareQueries = require('./hairCareQueries')
+const makeUpQueries = require('./makeUpQueries')
 // var exphbs = require('express-handlebars');
 
 // tells express where our static files are stored
@@ -76,6 +78,7 @@ mongoose.connect('mongodb://localhost:27017/ddsa-project', {
 
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(
     cors({
@@ -195,6 +198,35 @@ app.post('/api/register', async (req, res) => {
 	res.json({ status: 'ok' })
 })
 
+// mongodb query WORKING WORKING WORKING WORKING WORKING WORKING WORKING WORKING WORKING WORKING
+app.set('view engine', 'ejs');
+
+app.post('/makeUp', (req,res,value) => {
+	// res.send('Hi')
+	// hairQueries.hairQuery
+	// console.log("coming from app.post")
+		console.log(req.body)
+		var query = {ingredients: {$all: req.body.muIngredients}}
+		makeUpQueries.makeUpQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, makeUpProducts) {
+		if (err) return handleError(err)
+		console.log(makeUpProducts)
+		console.log('makeup')
+		res.send(makeUpProducts)
+	})
+})
+
+app.post('/hairCare', (req,res,value) => {
+	// res.send('Hi')
+	// hairQueries.hairQuery
+	// console.log("coming from app.post")
+		console.log(req.body)
+		var query = {ingredients: { $all: req.body.hairIngredients}}
+		hairCareQueries.hairCareQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, hairCareProducts) {
+		if (err) return handleError(err)
+		console.log(hairCareProducts)
+		console.log('hairCare')
+	})
+})
 
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log('Running on port 3000'))

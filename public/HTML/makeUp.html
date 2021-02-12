@@ -39,17 +39,19 @@
         </a>
       </div>
 
-      <form id="makeupIngredients">
+      <form id="makeupIngredients" action="/makeUp" method="POST">
         <label>Select which ingredients you don't want:</label><br />
-        <input type="checkbox" name="muIngredients" value="MUIngredient1" />Make
-        Up Ingredient1<br />
-        <input type="checkbox" name="muIngredients" value="MUIngredient2" />Make
-        Up Ingredient2<br />
+        <input type="checkbox" name="muIngredients" value="Aqua (Water)" />Aqua (Water)<br />
+        <input type="checkbox" name="muIngredients" value="Caprylyl Methicone" />Caprylyl Methicone<br />
         <input type="checkbox" name="muIngredients" value="MUIngredient3" />Make
         Up Ingredient3<br />
         <input type="checkbox" name="muIngredients" value="MUIngredient4" />Make
         Up Ingredient4<br />
-
+        <p>
+          <button
+            type="submit"
+          >Show Products</button>
+        </p>
         <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
       </form>
       <br />

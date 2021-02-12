@@ -34,22 +34,18 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    <form id="hairCareIngredients">
+    <form id="hairCareIngredients" action="/hairCare" method="POST">
       <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="hairIngredients" value="HIngredient1" />Hair
-      Ingredient1<br />
-      <input type="checkbox" name="hairIngredients" value="HIngredient2" />Hair
-      Ingredient2<br />
-      <input type="checkbox" name="hairIngredients" value="HIngredient3" />Hair
-      Ingredient3<br />
+      <input type="checkbox" name="hairIngredients" value="Aqua (Water)" />Aqua (Water)<br />
+      <input type="checkbox" name="hairIngredients" value="Propanediol" />Propanediol<br />
+      <input type="checkbox" name="hairIngredients" value="Argania Spinosa Kernel Oil." />Argania Spinosa Kernel Oil.<br />
       <input type="checkbox" name="hairIngredients" value="HIngredient4" />Hair
       Ingredient4<br />
       <p>
-        <input
-          type="button"
-          onclick="printChecked()"
-          value="Print Selected Items"
-        />
+        <button
+          type="submit"
+          
+        >Show Products</button>
       </p>
       <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
     </form>

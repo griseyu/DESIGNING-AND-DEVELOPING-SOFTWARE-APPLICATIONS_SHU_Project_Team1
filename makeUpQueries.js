@@ -10,7 +10,7 @@ const makeUpSchema = new mongoose.Schema(
         
 
 	},
-    { collection: 'hairCareProducts' });
+    { collection: 'makeUpProducts' });
 
 const makeUpModel = mongoose.model('makeUpSchema', makeUpSchema)
 

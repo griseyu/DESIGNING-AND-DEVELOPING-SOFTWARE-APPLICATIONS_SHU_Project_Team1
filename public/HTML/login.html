@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <!-- link to css -->
     <link rel="stylesheet" href="../CSS/styles.css" />
 
@@ -21,7 +20,10 @@
     />
 
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!-- Load social media icons -->
     <link
@@ -35,6 +37,11 @@
   </head>
 
   <body>
+    <script language="javascript" src="survey.js"></script>
+    <div class="containter">
+    <header>
+      <h1 class="title-container">Login to save your special recipe!</h1>
+    </header>
     <!-- Top Navigation Menu -->
 
     <div class="topnav" id="myTopnav">
@@ -51,11 +58,7 @@
     <!-- Start Login form -->
 
     <div id="login">
-      <header>
-      <h2 class="title-container">
-        Login to save your special recipe!
-      </h2>
-    </header>
+      
       <div class="container">
         <div
           id="login-row"
@@ -101,20 +104,19 @@
                     value="submit"
                   />
                 </div>
-
               </form>
               <div id="register-link" class="text-right">
                 <a href="http://localhost:3000/register" class="text-success"
-                  >Or Register here!</a>
-                </div>
+                  >Or Register here!</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    <!-- END login form -->
 
+    <!-- END login form -->
 
     <!-- connect to server -->
     <script>
@@ -153,42 +155,45 @@
     <!-- bootstrap and jquery -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  
-      <footer>
-    <div class="row">
-      <address>
-        2 North Street<br />
-        Leeds<br />
-        LS1 1AA
-      </address>
-      <div class="footerSocialLinks">
-        <ul>
-          <li>
-            <a href="" aria-label="Twitter"> <i class="fab fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="" aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-          </li>
-          <li>
-            <a href="" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
-          </li>
+
+    <footer>
+      <div class="row">
+        <address>
+          2 North Street<br />
+          Leeds<br />
+          LS1 1AA
+        </address>
+        <div class="footerSocialLinks">
+          <ul>
+            <li>
+              <a href="" aria-label="Twitter">
+                <i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <ul class="footerLinks">
+          <li><a href="">Terms and Conditions</a></li>
+          <li><a href="">Accessibility</a></li>
+          <li><a href="">Legal Information</a></li>
+          <li><a href="">Privacy and GDPR</a></li>
         </ul>
       </div>
-    </div>
-    <div class="row">
-      <ul class="footerLinks">
-        <li><a href="">Terms and Conditions</a></li>
-        <li><a href="">Accessibility</a></li>
-        <li><a href="">Legal Information</a></li>
-        <li><a href="">Privacy and GDPR</a></li>
-      </ul>
-    </div>
-  </footer>
-  
+    </footer>
   </body>
 </html>

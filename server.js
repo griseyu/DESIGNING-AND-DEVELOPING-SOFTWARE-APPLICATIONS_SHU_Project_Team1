@@ -200,7 +200,7 @@ app.post('/makeUp', (req,res,value) => {
 	// hairQueries.hairQuery
 	// console.log("coming from app.post")
 		console.log(req.body)
-		var query = {ingredients: {$all: req.body.muIngredients}}
+		var query = {Content: {$all: req.body.muIngredients}}
 		makeUpQueries.makeUpQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, makeUpProducts) {
 		if (err) return handleError(err)
 		let productName = []

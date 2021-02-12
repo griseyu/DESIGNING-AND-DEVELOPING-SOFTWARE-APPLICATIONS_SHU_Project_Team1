@@ -1,5 +1,12 @@
 header {
-  padding: 50px;
+  display: flexbox;
+  background: rgb(255, 255, 255, 0.7);
+  color: #4caf50;
+  font-weight: bolder;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 55px;
 }
 
 body,
@@ -11,20 +18,16 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 30px;
-  text-align: center;
-  background-color: #4caf50;
-  border-color: #4caf50;
+.topnav {
+  display: flexbox;
+  background: rgb(255, 255, 255, 0.7);
+  color: #4caf50;
+  font-weight: bolder;
+  overflow: hidden;
   border-radius: 5px;
-  border-top: white;
-  border-top-width: 20px;
-  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 30px;
 }
 
 .divider-text {
@@ -52,12 +55,12 @@ footer {
 }
 
 .fb btn {
-  background-color: #3b5998;
+  background-color: #4caf50;
   color: white;
 }
 
 .google btn {
-  background-color: #dd4b39;
+  background-color: #4caf50;
   color: white;
 }
 
@@ -65,41 +68,51 @@ footer {
 
 footer {
   position: relative;
-  margin-top: 55px;
   left: 0;
   bottom: 0;
   width: 100%;
   padding: 30px;
   text-align: center;
-  background-color: #4caf50;
   border-color: #4caf50;
   border-radius: 5px;
   border-top: white;
   border-top-width: 20px;
-  color: white;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  background: rgb(255, 255, 255, 0.7);
+  color: #4caf50;
+  font-weight: bolder;
 }
 
 footer .row {
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer .row address {
   padding: 15px 0 5px 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerSocialLinks ul {
   display: flex;
   list-style: none;
   padding-left: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerSocialLinks ul li {
   flex-basis: 40px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerSocialLinks ul li a i {
-  color: #fff;
+  color: #4caf50;
   font-size: 1.4rem;
 }
 
@@ -108,10 +121,14 @@ footer .row address {
   list-style: none;
   padding-left: 0;
   flex-wrap: wrap-reverse;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerLinks li:last-child {
   border-right: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerLinks li a {
@@ -120,7 +137,9 @@ footer .row address {
   display: inline-block;
   padding: 2px 5px;
   text-decoration: none;
-  color: #fff;
+  color: #4caf50;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footerLinks li a:hover {

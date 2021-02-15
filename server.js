@@ -222,7 +222,7 @@ app.post('/hairCare', (req,res,value) => {
 		console.log(req.body)
 		var query = {Content: { $all: req.body.hairIngredients}}
 		hairCareQueries.hairCareQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, hairCareProducts) {
-		if (err) return handleError(err)
+		if (err) return console.log(err)
 		let hairProductName = []
 		hairCareProducts.forEach(y => hairProductName.push(y.product))
 		res.send(hairProductName)

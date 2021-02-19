@@ -182,3 +182,13 @@ footer .row address {
   background: white;
   border-radius: 5px;
 }
+
+.fbbtn {
+  color: #4caf50;
+  background-color: white;
+}
+
+.googlebtn {
+  color: #4caf50;
+  background-color: white;
+}

@@ -241,6 +241,10 @@ app.post('/skinCare', (req,res,value) => {
 })
 })
 
+app.get('/profile', function(req, res){
+	res.sendFile('/public/HTML/profile.html', {root: __dirname })
+})
+
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log('Running on port 3000'))
 

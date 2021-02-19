@@ -30,7 +30,7 @@
 </head>
 <body>
   <script language="javascript" src="survey.js"></script>
-    <div class="containter">
+    <div class="container">
       <header>
         <h1>Register with us!</h1>
       </header>
@@ -52,9 +52,9 @@
     <!-- logos from fontawesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
-<div class="container"> 
 
-<div class="card bg-light">
+
+<div class="containerbody">
 <article class="card-body mx-auto" style="max-width: 400px;">
 	<h4 class="card-title mt-3 text-center">Registration</h4>
 	<p class="text-center">Please fill in this form to create an account or login with your social media</p>
@@ -71,7 +71,8 @@
 	<p class="divider-text">
         <span class="bg-light">OR</span>
     </p>
-
+    
+  
 <!-- form starts -->
 	<form id="reg-form" action="/api/register" method="POST">
     <!-- form-name -->
@@ -119,7 +120,9 @@
     </div> 
     <!-- form-login -->      
     <p class="text-center">Already have an account? <a href="http://localhost:3000/login">Log In</a> </p>                                                                 
-</form>
+
+  </form>
+</div>
 
 
 <!-- send data to server as JSON -->

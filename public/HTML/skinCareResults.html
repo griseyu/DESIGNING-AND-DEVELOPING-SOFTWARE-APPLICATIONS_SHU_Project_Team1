@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" src="../main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+        <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+  
+      <!-- Load social media icons -->
+      <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous"
+      />
+    <title>Hair Care Results</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="/" class="active">Home</a>
+        <a href="/profile">Profile</a>
+        <a href="/skinCare">Skin Care</a>
+        <a href="/hairCare">Hair Care</a>
+        <a href="/makeUp">Make Up</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="javascript:void(0);" class="icon" onclick="openMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+    <script>
+        // document.getElementById("hairCareIngredients").onclick = function() {
+        // var count = document.querySelectorAll("#hairCareIngredients :checked").length;
+        // console.log(count)
+
+        // };
+        CreateTableFromJSONskin()
+         
+    </script>
+    <div id='myDataS'></div>
+
+    <button onclick="goBack()">Back to Hair Care</button>
+
+    <footer>
+        <div class="row">
+          <address>
+            2 North Street<br />
+            Leeds<br />
+            LS1 1AA
+          </address>
+          <div class="footerSocialLinks">
+            <ul>
+              <li>
+                <a href="" aria-label="Twitter">
+                  <i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" aria-label="Facebook"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <ul class="footerLinks">
+            <li><a href="">Terms and Conditions</a></li>
+            <li><a href="">Accessibility</a></li>
+            <li><a href="">Legal Information</a></li>
+            <li><a href="">Privacy and GDPR</a></li>
+          </ul>
+        </div>
+      </footer>
+  
+
+</body>
+
+</html>

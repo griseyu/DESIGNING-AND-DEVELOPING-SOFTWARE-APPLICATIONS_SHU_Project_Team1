@@ -17,6 +17,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-decoration: none;
 }
 .topnav {
   display: flexbox;
@@ -144,6 +145,8 @@ footer .row address {
 
 .footerLinks li a:hover {
   text-decoration: underline;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-group button {
@@ -186,9 +189,11 @@ footer .row address {
 .fbbtn {
   color: #4caf50;
   background-color: white;
+  text-decoration: none;
 }
 
 .googlebtn {
   color: #4caf50;
   background-color: white;
+  text-decoration: none;
 }

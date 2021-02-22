@@ -42,23 +42,43 @@
         </a>
       </div>
 
-      <form id="makeupIngredients" action="/makeUp" method="POST">
+      <form id="makeupIngredients" action="/makeUpResults" method="GET">
         <label>Select which ingredients you don't want:</label><br />
-        <input type="checkbox" name="muIngredients" value="Vegan" />Vegan<br />
-        <input
-          type="checkbox"
-          name="muIngredients"
-          value="Nut-free"
-        />Nut-free<br />
-        <input type="checkbox" name="muIngredients" value="Gluten-free" />Gluten-free<br />
-        <input type="checkbox" name="muIngredients" value="Cruelty-free" />Cruelty-free<br />
-        <input type="checkbox" name="muIngredients" value="Silicon-free" />Silicon-free<br />
-        <input type="checkbox" name="muIngredients" value="Animal-tested" />Animal-tested<br />
+        <input type="checkbox" name="makeUpIngredients" value="Vegan" oninvalid="this.setCustomValidity('Please make a selection')" onchange="this.setCustomValidity('')"/>Vegan<br />
+        <input type="checkbox" name="makeUpIngredients" value="Nut-free" />Nut-free<br />
+        <input type="checkbox" name="makeUpIngredients" value="Gluten-free" />Gluten-free<br />
+        <input type="checkbox" name="makeUpIngredients" value="Cruelty-free" />Cruelty-free<br />
+        <input type="checkbox" name="makeUpIngredients" value="Silicon-free" />Silicon-free<br />
+        <input type="checkbox" name="makeUpIngredients" value="Animal-tested" />Animal-tested<br />
         <p>
-          <button type="submit">Show Products</button>
+          <button type="submit" onclick="valthisform()">Show Products</button>
         </p>
         <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
       </form>
+
+      <script>
+        function valthisform(){
+        var checkboxes=document.getElementsByName("makeUpIngredients");
+        var okay=false;
+        for(var i=0; i<checkboxes.length; i++){
+            if(checkboxes[i].checked===true){
+                okay=true;
+            }
+            } 
+    
+            if (okay===true) {
+              for(var i=0; i<checkboxes.length; i++) {
+              checkboxes[i].required=false;
+            }
+          }
+            else {
+              for(var i=0; i<checkboxes.length; i++) {
+                  checkboxes[i].required=true; 
+            }
+          }
+        }
+        </script>
+
       <br />
       <button onclick="move()">Prescribe Me</button>
 

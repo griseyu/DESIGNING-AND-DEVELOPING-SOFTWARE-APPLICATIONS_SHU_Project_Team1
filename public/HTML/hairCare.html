@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script language="javascript" src="survey.js"></script>
+    <script language="javascript" src="../survey.js"></script>
+
     <link rel="stylesheet" href="../CSS/styles.css" />
 
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
@@ -38,20 +39,43 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    <form id="hairCareIngredients" action="/hairCare" method="POST">
+    <form id="hairCareIngredients" action="/hairCareResults" method="GET" required='required'>
       <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="hairIngredients" value="Vegan" />Vegan<br />
+      <input type="checkbox" name="hairIngredients" value="Gluten-free" oninvalid="this.setCustomValidity('Please make a selection')" onchange="this.setCustomValidity('')"/>Gluten-free<br />
       <input type="checkbox" name="hairIngredients" value="Nut-free" />Nut-free<br />
-      <input type="checkbox" name="hairIngredients" value="Gluten-free" />Gluten-free<br />
+      <input type="checkbox" name="hairIngredients" value="Vegan" />Vegan<br />
       <input type="checkbox" name="hairIngredients" value="Cruelty-free" />Cruelty-free<br />
       <input type="checkbox" name="hairIngredients" value="Parabens-free" />Parabens-free<br />
-      <input  type="checkbox"  name="hairIngredients"  value="SLS-free" />SLS-free<br />
+      <input type="checkbox" name="hairIngredients" value="SLS-free" />SLS-free<br />
       <input type="checkbox" name="hairIngredients" value="Silicon-free" />Silicon-free<br />
       <p>
-        <button type="submit">Show Products</button>
+        <button type="submit" onclick="valthisform()">Show Products</button>
       </p>
       <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
     </form>
+
+    <script>
+    function valthisform(){
+    var checkboxes=document.getElementsByName("hairIngredients");
+    var okay=false;
+    for(var i=0; i<checkboxes.length; i++){
+        if(checkboxes[i].checked===true){
+            okay=true;
+        }
+        } 
+
+        if (okay===true) {
+          for(var i=0; i<checkboxes.length; i++) {
+          checkboxes[i].required=false;
+        }
+      }
+        else {
+          for(var i=0; i<checkboxes.length; i++) {
+              checkboxes[i].required=true; 
+        }
+      }
+    }
+    </script>
 
     <footer>
       <div class="row">

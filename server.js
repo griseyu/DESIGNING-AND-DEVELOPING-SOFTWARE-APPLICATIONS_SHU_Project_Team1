@@ -1,5 +1,4 @@
 // include express and create new express object to interact with the express library
-
 const express = require('express');
 const app = express();
 const path =require('path');
@@ -197,49 +196,68 @@ app.post('/api/register', async (req, res) => {
 })
 
 // mongodb query WORKING WORKING WORKING WORKING WORKING WORKING WORKING WORKING WORKING WORKING
-app.set('view engine', 'ejs');
 
-app.post('/makeUp', (req,res,value) => {
-
-		console.log(req.body)
-		var query = {Content: {$all: req.body.muIngredients}}
-		makeUpQueries.makeUpQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, makeUpProducts) {
-		if (err) return handleError(err)
-		let muProductName = []
-		makeUpProducts.forEach(x1 => muProductName.push(x1.product))
-		res.send(muProductName)
-		// let muProductLink = []
-		// makeUpProducts.forEach(x2 => muProductLink.push(x2.product))
-		// res.send(muProductLink)
-		// console.log(makeUpProducts[0].product)
-		// console.log('makeup')
-		// res.send(makeUpProducts[0].product)
-	})
-})
-
-app.post('/hairCare', (req,res,value) => {
+// Opens new page to display the table with the suggested products on
+// Sends to an API
+app.get('/hairCareResultsAPI', async function (req, res) {
 	
-		console.log(req.body)
-		var query = {Content: { $all: req.body.hairIngredients}}
-		hairCareQueries.hairCareQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, hairCareProducts) {
-		if (err) return console.log(err)
-		let hairProductName = []
-		hairCareProducts.forEach(y => hairProductName.push(y.product))
-		res.send(hairProductName)
-	})
+	// Check if req.query.hairIngredients is an array
+	const hairArray = Array.isArray(req.query.hairIngredients) ? 
+	// writes the contents of req.query.hairIngredients to an array to be used in the MongodB query
+	req.query.hairIngredients : [req.query.hairIngredients]
+	
+	// testing line to ensure array is populated -- to be removed
+	console.log(hairArray)
+
+		var query = {Content: { $all: hairArray}}
+		const hairResults = await hairCareQueries.hairCareQueries.find(query, {_id: 0, product: 1, link: 1})
+		res.json(hairResults)
+
+
+});
+
+app.get('/hairCareResults', function (req,res) {
+	res.sendFile(path.join(__dirname+'/public/HTML/hairCareResults.html'));
 })
 
-app.post('/skinCare', (req,res,value) => {
+
+
+app.get('/skinCareResults', function (req,res) {
+	res.sendFile(path.join(__dirname+'/public/HTML/skinCareResults.html'));
+})
+
+app.get('/skinCareResultsAPI', async function (req, res) {
+		 
+	const skinArray = Array.isArray(req.query.skinIngredients) ? 
+	req.query.skinIngredients : [req.query.skinIngredients]
 	
-	console.log(req.body)
-	var query = {Content: { $all: req.body.skinIngredients}}
-	skinCareQueries.skinCareQueries.find(query, {_id: 0, product: 1, link: 1}, function (err, skinCareProducts) {
-	if (err) return handleError(err)
-	let skinProductName = []
-	skinCareProducts.forEach(y => skinProductName.push(y.product))
-	res.send(skinProductName)
+	console.log(skinArray)
+	var query = {Content: { $all: skinArray}}
+	const skinResults = await skinCareQueries.skinCareQueries.find(query, {_id: 0, product: 1, link: 1})
+	res.json(skinResults)
+
+});
+
+app.get('/makeUpResults', function (req,res) {
+	res.sendFile(path.join(__dirname+'/public/HTML/makeUpResults.html'));
 })
-})
+
+app.get('/makeUpResultsAPI', async function (req, res) {
+		 
+	const makeUpArray = Array.isArray(req.query.makeUpIngredients) ? 
+	req.query.makeUpIngredients : [req.query.makeUpIngredients]
+	
+	console.log(makeUpArray)
+	var query = {Content: { $all: makeUpArray}}
+	const makeUpResults = await makeUpQueries.makeUpQueries.find(query, {_id: 0, product: 1, link: 1})
+	res.json(makeUpResults)
+
+});
+
+
+
+
+
 
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log('Running on port 3000'))

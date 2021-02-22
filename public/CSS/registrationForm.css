@@ -17,6 +17,7 @@ html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  text-decoration: none;
 }
 .topnav {
   display: flexbox;
@@ -144,12 +145,15 @@ footer .row address {
 
 .footerLinks li a:hover {
   text-decoration: underline;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-button {
+.form-group button {
   border: none;
   color: white;
   background-color: #4caf50;
+  font-weight: bolder;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -158,4 +162,38 @@ button {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.cardbg-light {
+  background-color: white;
+  color: #4caf50;
+}
+
+.form-group {
+  background-color: white;
+  color: #4caf50;
+}
+
+.containerbody {
+  color: #4caf50;
+  text-align: center;
+  margin-top: 150px;
+  max-width: auto;
+  height: auto;
+  border: 5px solid #4caf50;
+  background: white;
+  border-radius: 5px;
+}
+
+.fbbtn {
+  color: #4caf50;
+  background-color: white;
+  text-decoration: none;
+}
+
+.googlebtn {
+  color: #4caf50;
+  background-color: white;
+  text-decoration: none;
 }

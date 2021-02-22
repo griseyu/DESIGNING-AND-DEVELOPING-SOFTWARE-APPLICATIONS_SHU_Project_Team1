@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script language="javascript" src="survey.js"></script>
     <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Makeup</title>
 
     <link rel="stylesheet" href="/CSS/styles.css" />
@@ -44,12 +49,14 @@
 
       <form id="makeupIngredients" action="/makeUpResults" method="GET">
         <label>Select which ingredients you don't want:</label><br />
+
         <input type="checkbox" name="makeUpIngredients" value="Vegan" oninvalid="this.setCustomValidity('Please make a selection')" onchange="this.setCustomValidity('')"/>Vegan<br />
         <input type="checkbox" name="makeUpIngredients" value="Nut-free" />Nut-free<br />
         <input type="checkbox" name="makeUpIngredients" value="Gluten-free" />Gluten-free<br />
         <input type="checkbox" name="makeUpIngredients" value="Cruelty-free" />Cruelty-free<br />
         <input type="checkbox" name="makeUpIngredients" value="Silicon-free" />Silicon-free<br />
         <input type="checkbox" name="makeUpIngredients" value="Animal-tested" />Animal-tested<br />
+
         <p>
           <button type="submit" onclick="valthisform()">Show Products</button>
         </p>
@@ -82,8 +89,16 @@
       <br />
       <button onclick="move()">Prescribe Me</button>
 
+      <!-- Progress bar (blanked out currently) / thinking circles -->
+
+      <!--
       <div id="myProgress">
         <div id="myBar"></div>
+        -->
+
+      </div>
+      <div class="w3-container">
+        <p><i class="fa fa-spinner w3-spin" style="font-size: 64px"></i></p>
       </div>
 
       <footer>

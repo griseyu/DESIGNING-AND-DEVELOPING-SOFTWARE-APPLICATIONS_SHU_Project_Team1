@@ -254,11 +254,6 @@ app.get('/makeUpResultsAPI', async function (req, res) {
 
 });
 
-
-
-
-
-
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log('Running on port 3000'))
 

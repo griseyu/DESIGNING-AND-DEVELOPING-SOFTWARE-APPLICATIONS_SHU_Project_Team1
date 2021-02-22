@@ -10,6 +10,7 @@
     "express-session": "^1.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.14",
+    "node": "^15.8.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.1.0"
@@ -30,6 +31,5 @@
   "bugs": {
     "url": "https://github.com/jmin97/DESIGNING-AND-DEVELOPING-SOFTWARE-APPLICATIONS_SHU_Project_Team1/issues"
   },
-  "homepage": "https://github.com/jmin97/DESIGNING-AND-DEVELOPING-SOFTWARE-APPLICATIONS_SHU_Project_Team1#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/jmin97/DESIGNING-AND-DEVELOPING-SOFTWARE-APPLICATIONS_SHU_Project_Team1#readme"
 }

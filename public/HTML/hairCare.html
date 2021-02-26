@@ -23,7 +23,7 @@
 
     <title>HairCare</title>
   </head>
-  <header>Hair Care</header>
+  <header><h1>Hair Care</h1></header>
   <body>
     <!-- Top Navigation Menu -->
 
@@ -39,6 +39,8 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
+    
+
     <form id="hairCareIngredients" action="/hairCareResults" method="GET" required='required'>
       <label>Select which ingredients you don't want:</label><br />
       <input type="checkbox" name="hairIngredients" value="Gluten-free" oninvalid="this.setCustomValidity('Please make a selection')" onchange="this.setCustomValidity('')"/>Gluten-free<br />
@@ -76,6 +78,7 @@
       }
     }
     </script>
+
 
     <footer>
       <div class="row">

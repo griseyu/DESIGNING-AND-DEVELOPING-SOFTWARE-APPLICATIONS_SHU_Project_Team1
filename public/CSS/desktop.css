@@ -1,5 +1,10 @@
 /* CSS for screens larger than 720px */
 
+:root {
+  --green: #255f28;
+}
+
+
 .mainContent {
   display: flex;
 }
@@ -10,7 +15,7 @@ main {
 
 .sideBar {
   background: rgb(255, 255, 255, 0.7);
-  color: #4caf50;
+  color: var(--green);
   font-weight: bolder;
   border-radius: 20px;
   flex-basis: 30%;
@@ -18,4 +23,11 @@ main {
   margin-top: 150px;
   margin-bottom: 150px;
   padding: 30px 30px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
 }

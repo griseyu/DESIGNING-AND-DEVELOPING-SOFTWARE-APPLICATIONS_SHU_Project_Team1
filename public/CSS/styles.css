@@ -1,3 +1,7 @@
+:root {
+  --green: #255f28;
+}
+
 body,
 html {
   color: white;
@@ -13,7 +17,7 @@ html {
 header {
   display: flexbox;
   background: rgb(255, 255, 255, 0.7);
-  color: #4caf50;
+  color: var(--green);
   font-weight: bolder;
   padding: 10px;
   margin: 10px;
@@ -36,14 +40,14 @@ input {
 
 select {
   background-color: white;
-  color: #4caf50;
+  color: var(--green);
 }
 
 /* Admin and change password containters */
 .white-container {
   border-style: solid;
-  border-color: #4caf50;
-  color: #4caf50;
+  border-color: var(--green);
+  color: var(--green);
   text-align: center;
   border-radius: 5px;
   background-color: white;
@@ -57,7 +61,7 @@ select {
 .topnav {
   display: flexbox;
   background: rgb(255, 255, 255, 0.7);
-  color: #4caf50;
+  color: var(--green);
   font-weight: bolder;
   overflow: hidden;
   border-radius: 5px;
@@ -69,7 +73,7 @@ select {
 .topnav a {
   float: left;
   display: flexbox;
-  color: #4caf50;
+  color: var(--green);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -78,13 +82,13 @@ select {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #4caf50;
+  background-color: var(--green);
   color: white;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  background-color: #4caf50;
+  background-color: var(--green);
   color: white;
 }
 
@@ -131,7 +135,7 @@ select {
 button {
   border: none;
   color: white;
-  background: #4caf50;
+  background: var(--green);
   font-weight: bolder;
   padding: 16px 32px;
   text-align: center;
@@ -149,12 +153,10 @@ button:hover {
   color: white;
 }
 
-
-
 /* Buttons in forms */
 .button {
   border: none;
-  color: #4caf50;
+  color: var(--green);
   background: transparent;
   font-weight: bolder;
   padding: 16px 32px;
@@ -185,7 +187,7 @@ div.sidebar {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 500px;
+  max-width: 70%;
   position: relative;
   margin: auto;
 }
@@ -209,7 +211,7 @@ div.sidebar {
   border-radius: 0 3px 3px 0;
   user-select: none;
   background: rgb(255, 255, 255, 0.9);
-  color: #4caf50;
+  color: var(--green);
   font-weight: bolder;
 }
 
@@ -236,7 +238,7 @@ div.sidebar {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #4caf50;
+  background-color: var(--green);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -282,14 +284,14 @@ footer {
   width: 100%;
   padding: 10px 10px;
   text-align: center;
-  border-color: #4caf50;
+  border-color: var(--green);
   border-radius: 5px;
   border-top: white;
   border-top-width: 20px;
   margin-top: 55px;
   margin-bottom: 55px;
   background: rgb(255, 255, 255, 0.7);
-  color: #4caf50;
+  color: var(--green);
   font-weight: bolder;
 }
 
@@ -321,7 +323,7 @@ footer .row address {
 }
 
 .footerSocialLinks ul li a i {
-  color: #4caf50;
+  color: var(--green);
   font-size: 1.4rem;
 }
 
@@ -346,7 +348,7 @@ footer .row address {
   display: inline-block;
   padding: 2px 5px;
   text-decoration: none;
-  color: #4caf50;
+  color: var(--green);
   margin-left: auto;
   margin-right: auto;
 }
@@ -361,7 +363,7 @@ footer .row address {
   margin-top: 150px;
   max-width: 600px;
   height: 320px;
-  border: 5px solid #4caf50;
+  border: 5px solid var(--green);
   background: white;
   border-radius: 5px;
 }
@@ -382,8 +384,8 @@ footer .row address {
 
 .profile-container {
   background-color: white;
-  color: #4caf50;
-  border-color: #4caf50;
+  color: var(--green);
+  border-color: var(--green);
   border-style: solid;
   border-radius: 5px;
   margin: auto;
@@ -402,7 +404,7 @@ footer .row address {
 #myBar {
   width: 1%;
   height: 30px;
-  background-color: #4caf50;
+  background-color: var(--green);
 }
 
 /* tr:nth-child(even) td {

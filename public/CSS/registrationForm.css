@@ -65,6 +65,12 @@ html {
   color: white;
 }
 
+.text-center {
+  color: #255f28;
+  text-decoration: none;
+
+}
+
 /* Footer styling */
 
 footer {

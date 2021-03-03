@@ -249,6 +249,44 @@ div.sidebar {
   background-color: white;
 }
 
+.styled-table {
+  text-align: center;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  color: var(--green);
+}
+
+.styled-table td,
+.styled-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.styled-table tr:hover {
+  background-color: #ddd;
+}
+
+.styled-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--green);
+  color: white;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 /* Fading animation when image is changed */
 .fade {
   -webkit-animation-name: fade;

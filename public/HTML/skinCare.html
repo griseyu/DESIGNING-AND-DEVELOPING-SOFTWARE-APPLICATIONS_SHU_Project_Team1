@@ -40,11 +40,33 @@
     </div>
     <form id="skinCareIngredients" action="/skinCareResults" method="GET">
       <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="skinIngredients" value="Vegan" oninvalid="this.setCustomValidity('Please make a selection')" onchange="this.setCustomValidity('')"/>Vegan<br />
-      <input type="checkbox" name="skinIngredients" value="Nut-free" />Nut-free<br />
-      <input type="checkbox" name="skinIngredients" value="Gluten-free" />Gluten-free<br />
-      <input type="checkbox" name="skinIngredients" value="Cruelty-free" />Cruelty-free<br />
-      <input type="checkbox" name="skinIngredients" value="Silicon-free" />Silicon-free<br />
+      <input
+        type="checkbox"
+        name="skinIngredients"
+        value="Vegan"
+        oninvalid="this.setCustomValidity('Please make a selection')"
+        onchange="this.setCustomValidity('')"
+      />Vegan<br />
+      <input
+        type="checkbox"
+        name="skinIngredients"
+        value="Nut-free"
+      />Nut-free<br />
+      <input
+        type="checkbox"
+        name="skinIngredients"
+        value="Gluten-free"
+      />Gluten-free<br />
+      <input
+        type="checkbox"
+        name="skinIngredients"
+        value="Cruelty-free"
+      />Cruelty-free<br />
+      <input
+        type="checkbox"
+        name="skinIngredients"
+        value="Silicon-free"
+      />Silicon-free<br />
       <p>
         <button type="submit" onclick="valthisform()">Show Products</button>
       </p>
@@ -52,29 +74,28 @@
     </form>
 
     <script>
-      function valthisform(){
-      var checkboxes=document.getElementsByName("skinIngredients");
-      var okay=false;
-      for(var i=0; i<checkboxes.length; i++){
-          if(checkboxes[i].checked===true){
-              okay=true;
-          }
-          } 
-  
-          if (okay===true) {
-            for(var i=0; i<checkboxes.length; i++) {
-            checkboxes[i].required=false;
+      function valthisform() {
+        var checkboxes = document.getElementsByName("skinIngredients");
+        var okay = false;
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked === true) {
+            okay = true;
           }
         }
-          else {
-            for(var i=0; i<checkboxes.length; i++) {
-                checkboxes[i].required=true; 
+
+        if (okay === true) {
+          for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].required = false;
+          }
+        } else {
+          for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].required = true;
           }
         }
       }
-      </script>
+    </script>
 
-    <footer>
+    <footer class="footer">
       <div class="row">
         <address>
           2 North Street<br />

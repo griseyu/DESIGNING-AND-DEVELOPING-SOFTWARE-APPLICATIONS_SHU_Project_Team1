@@ -6,30 +6,13 @@ const router = express.Router();
 const hairCareQueries = require('./hairCareQueries')
 const makeUpQueries = require('./makeUpQueries')
 const skinCareQueries = require('./skinCareQueries')
-// var exphbs = require('express-handlebars');
-
-// tells express where our static files are stored
-// app.use(express.static(path.join(__dirname, '/CSS')));
-// app.use('/Images', express.static('/public'));
 
 app.use(express.static(path.join(__dirname, '/public')));
-// app.use(express.static(path.join(__dirname, '/public/Images')));
-
-
-// app.get('/css/styles.css', function(req, res){ 
-//     res.send('css/styles.css'); res.end(); });
-
-// app.use("/", express.static("../CSS"));
-
-// sets the view engine to use handlebars
-// app.engine('handlebars', exphbs({defaultLayout: 'main'}));
-// app.set('view engine', 'handlebars');
 
 // create a route for get requests for the route of our website
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname+'/public/HTML/home.html'));
 })
-// app.get('/', (req, res) => res.send('Hello World'))
 
 app.get('/makeUp', function (req, res) {
     res.sendFile(path.join(__dirname+'/public/HTML/makeUp.html'));
@@ -50,15 +33,10 @@ app.get('/profile', function (req, res) {
 // add the router
 app.use('/', router);
 
-
-
-
-
 // server and routes for singup/login/product dbs 
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const User = require('./user2')
-// const hairCareModel = require('./hairCareQueries')
 
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
@@ -66,11 +44,7 @@ const cors = require('cors');
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/ddsa-project";
 
-
-// import {printChecked} from './survey.js';
-// let ingredientSelection = printChecked();
-
-
+//secret for crypt
 const JWT_SECRET = 'sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk'
 
 mongoose.connect(url, {
@@ -78,7 +52,6 @@ mongoose.connect(url, {
 	useUnifiedTopology: true,
 	useCreateIndex: true
 })
-
 
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.use(bodyParser.json())
@@ -91,6 +64,7 @@ app.use(
     })
   );
 
+  //changing password
 app.post('/api/change-password', async (req, res) => {
 	const { token, newpassword: plainTextPassword } = req.body
 
@@ -125,6 +99,7 @@ app.post('/api/change-password', async (req, res) => {
 	}
 })
 
+//handling login
 app.post('/api/login', async (req, res) => {
 	const { username, password } = req.body
 	const user = await User.findOne({ username }).lean()
@@ -134,6 +109,7 @@ app.post('/api/login', async (req, res) => {
 	}
 
 	if (await bcrypt.compare(password, user.password)) {
+		
 		// the username, password combination is successful
 
 		const token = jwt.sign(
@@ -150,14 +126,17 @@ app.post('/api/login', async (req, res) => {
 	res.json({ status: 'error', error: 'Invalid username/password' })
 })
 
+// to login page
 app.get('/login', function(req, res){
 	res.sendFile('/public/HTML/login.html', {root: __dirname })
 })
 
+//to register page
 app.get('/register', function(req, res){
 	res.sendFile('/public/HTML/registrationForm.html', {root: __dirname })
 })
 
+//post data to db for registration and password handling
 app.post('/api/register', async (req, res) => {
 	const { username, password: plainTextPassword } = req.body
 
@@ -195,7 +174,10 @@ app.post('/api/register', async (req, res) => {
 	res.json({ status: 'ok' })
 })
 
-// mongodb query WORKING WORKING WORKING WORKING WORKING WORKING WORKING WORKING WORKING WORKING
+//logout
+router.get('/logout',(req,res)=>{
+ })
+module.exports  = router;
 
 // Opens new page to display the table with the suggested products on
 // Sends to an API

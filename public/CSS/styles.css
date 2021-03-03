@@ -187,7 +187,7 @@ div.sidebar {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 70%;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -274,6 +274,24 @@ div.sidebar {
     opacity: 1;
   }
 }
+
+.rating {
+  color: #255f28;
+  background-color: white;
+}
+
+.card {
+  border:#255f28 ;
+  border-radius: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 
 /* Footer styling */
 
@@ -456,4 +474,9 @@ table thead {
 
 .styled-table tbody tr:last-of-type {
   border-bottom: 2px solid #009879;
+}
+
+
+a {
+  color:var(--green);
 }

@@ -314,12 +314,15 @@ div.sidebar {
 }
 
 /* Footer styling */
-
-footer {
-  position: relative;
+.footer {
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
+  padding: 0;
+}
+
+footer {
   padding: 10px 10px;
   text-align: center;
   border-color: var(--green);

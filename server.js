@@ -135,7 +135,7 @@ app.post("/topsecret", (req, res) => {
 		if (err) {
 			res.json({status:"fail"})
 		} else {
-			res.json({status:"success", message:`Hello, ${decoded.username}`})
+			res.json({status:"success", username:decoded.username})
 		}
 	})
 })

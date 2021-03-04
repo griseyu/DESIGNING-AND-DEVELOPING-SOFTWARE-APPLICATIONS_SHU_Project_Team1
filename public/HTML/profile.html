@@ -60,12 +60,16 @@
           <p><a href="/makeUp">Retake the quiz</a></p>
         </div>
       </div>
+      <p id="welcome">
+
+      </p>
 
       <p>
         <a id="changePassword" href="/changePassword">Change my password</a>
       </p>
       <button>Log out</button>
     </div>
+
 
     <footer>
       <div class="row">
@@ -108,3 +112,7 @@
     </footer>
   </body>
 </html>
+
+<script>
+      document.getElementById("welcome").textContent = "Hello, " + localStorage.getItem("username");
+</script>

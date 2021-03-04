@@ -126,6 +126,16 @@ app.post('/api/login', async (req, res) => {
 	res.json({ status: 'error', error: 'Invalid username/password' })
 })
 
+app.post("/topsecret", (req, res) => {
+	jwt.verify(req.body.token, JWT_SECRET, function (err,decoded) {
+		if (err) {
+			res.json({status:"fail"})
+		} else {
+			res.json({status:"success", message:`Hello, ${decoded.username}`})
+		}
+	})
+})
+
 // to login page
 app.get('/login', function(req, res){
 	res.sendFile('/public/HTML/login.html', {root: __dirname })

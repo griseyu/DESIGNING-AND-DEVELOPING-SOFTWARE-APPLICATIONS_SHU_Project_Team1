@@ -152,6 +152,15 @@
           alert(result.error);
         }
       }
+
+      document.getElementById("getsecret".addEventListener("click", async function() {
+      const response = await axios.post("/topsecret", {token: localStorage.getItem("token")})
+      if (response.data.status == "ok") {
+        document.getElementById("message-area").textContent = response.data.message
+      } else {
+        document.getElementById("message-area").textContent = "Log In please"
+      }
+      }
     </script>
 
     <!-- END connect to server -->

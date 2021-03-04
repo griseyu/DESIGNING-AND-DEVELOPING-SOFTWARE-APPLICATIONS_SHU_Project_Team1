@@ -102,6 +102,10 @@ app.post('/api/change-password', async (req, res) => {
 //handling login
 app.post('/api/login', async (req, res) => {
 	const { username, password } = req.body
+
+	// const sessionToken = createSessionToken(user.id);
+    // res.cookie("sessionID", sessionToken, { httpOnly: true, maxAge:1800000})//, secure: true})
+
 	const user = await User.findOne({ username }).lean()
 
 	if (!user) {

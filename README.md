@@ -4,9 +4,9 @@
 
 
 Things need to run the application: 
-*Node 
-*MongoDB 
-*IDE/Shell
+* Node 
+* MongoDB 
+* IDE/Shell
 
 Install node
 

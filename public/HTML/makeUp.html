@@ -40,9 +40,9 @@
           <i class="fa fa-bars"></i>
         </a>
       </div>
-
+      <div class=white-container> 
       <form id="makeupIngredients" action="/makeUpResults" method="GET">
-        <label>Select which ingredients you don't want:</label><br />
+        <label id="questionaire-title">Select which ingredients you don't want:</label><br />
 
         <input type="checkbox" name="makeUpIngredients" value="Vegan" oninvalid="this.setCustomValidity('Please make a selection')" onchange="this.setCustomValidity('')"/>Vegan<br />
         <input type="checkbox" name="makeUpIngredients" value="Nut-free" />Nut-free<br />
@@ -94,8 +94,8 @@
       <div class="w3-container">
         <p><i class="fa fa-spinner w3-spin" style="font-size: 64px"></i></p>
       </div>
-
-      <footer class="footer">
+  
+      <footer>
         <div class="row">
           <address>
             2 North Street<br />

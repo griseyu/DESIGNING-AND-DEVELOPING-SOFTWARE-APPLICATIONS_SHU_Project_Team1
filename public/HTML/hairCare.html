@@ -39,17 +39,47 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-    
 
-    <form id="hairCareIngredients" action="/hairCareResults" method="GET" required='required'>
+    <form
+      id="hairCareIngredients"
+      action="/hairCareResults"
+      method="GET"
+      required="required"
+    >
       <label>Select which ingredients you don't want:</label><br />
-      <input type="checkbox" name="hairIngredients" value="Gluten-free" oninvalid="this.setCustomValidity('Please make a selection')" onchange="this.setCustomValidity('')"/>Gluten-free<br />
-      <input type="checkbox" name="hairIngredients" value="Nut-free" />Nut-free<br />
+      <input
+        type="checkbox"
+        name="hairIngredients"
+        value="Gluten-free"
+        oninvalid="this.setCustomValidity('Please make a selection')"
+        onchange="this.setCustomValidity('')"
+      />Gluten-free<br />
+      <input
+        type="checkbox"
+        name="hairIngredients"
+        value="Nut-free"
+      />Nut-free<br />
       <input type="checkbox" name="hairIngredients" value="Vegan" />Vegan<br />
-      <input type="checkbox" name="hairIngredients" value="Cruelty-free" />Cruelty-free<br />
-      <input type="checkbox" name="hairIngredients" value="Parabens-free" />Parabens-free<br />
-      <input type="checkbox" name="hairIngredients" value="SLS-free" />SLS-free<br />
-      <input type="checkbox" name="hairIngredients" value="Silicon-free" />Silicon-free<br />
+      <input
+        type="checkbox"
+        name="hairIngredients"
+        value="Cruelty-free"
+      />Cruelty-free<br />
+      <input
+        type="checkbox"
+        name="hairIngredients"
+        value="Parabens-free"
+      />Parabens-free<br />
+      <input
+        type="checkbox"
+        name="hairIngredients"
+        value="SLS-free"
+      />SLS-free<br />
+      <input
+        type="checkbox"
+        name="hairIngredients"
+        value="Silicon-free"
+      />Silicon-free<br />
       <p>
         <button type="submit" onclick="valthisform()">Show Products</button>
       </p>
@@ -57,30 +87,28 @@
     </form>
 
     <script>
-    function valthisform(){
-    var checkboxes=document.getElementsByName("hairIngredients");
-    var okay=false;
-    for(var i=0; i<checkboxes.length; i++){
-        if(checkboxes[i].checked===true){
-            okay=true;
+      function valthisform() {
+        var checkboxes = document.getElementsByName("hairIngredients");
+        var okay = false;
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked === true) {
+            okay = true;
+          }
         }
-        } 
 
-        if (okay===true) {
-          for(var i=0; i<checkboxes.length; i++) {
-          checkboxes[i].required=false;
+        if (okay === true) {
+          for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].required = false;
+          }
+        } else {
+          for (var i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].required = true;
+          }
         }
       }
-        else {
-          for(var i=0; i<checkboxes.length; i++) {
-              checkboxes[i].required=true; 
-        }
-      }
-    }
     </script>
 
-
-    <footer>
+    <footer class="footer">
       <div class="row">
         <address>
           2 North Street<br />

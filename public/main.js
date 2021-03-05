@@ -1,4 +1,3 @@
-
 // Function to open burger menu
 // Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon
 
@@ -11,7 +10,6 @@ function openMenu() {
     x.className = "topnav";
   }
 }
-
 
 //Images on home page - function to move through images
 var slideIndex = 1;
@@ -47,180 +45,171 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
 }
 
-
 async function CreateTableFromJSONhair() {
- 
-         // CreateTableFromJSON()
-         await fetch('http://localhost:3000/hairCareResultsAPI' + window.location.search)
-         .then(function (response) {
-             return response.json();
-         })
-         .then(function (data) {
-             appendData(data);
-         })
-         .catch(function (err) {
-             console.log('error: ' + err);
-         });
-
-     function appendData(data) {
-  
-      var col = [];
-      for (var i = 0; i < data.length; i++) {
-        for (var key in data[i]) {
-          if (col.indexOf(key) === -1) {
-            col.push(key);
-          }
-        }
-      }
-  
-      // CREATE DYNAMIC TABLE.
-      var table = document.createElement("table");
-      table.setAttribute("class", "styled-table");
-      // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-  
-      var tr = table.insertRow(-1);                   // TABLE ROW.
-  
-      for (var i = 0; i < col.length; i++) {
-        var th = document.createElement("th");      // TABLE HEADER.
-        th.innerHTML = col[i];
-        tr.appendChild(th);
-      }
-  
-      // ADD JSON DATA TO THE TABLE AS ROWS.
-      for (var i = 0; i < data.length; i++) {
-  
-        tr = table.insertRow(-1);
-  
-        for (var j = 0; j < col.length; j++) {
-          var tabCell = tr.insertCell(-1);
-          tabCell.innerHTML = data[i][col[j]];
-        }
-      }
-  
-      // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-      var divContainer = document.getElementById("myDataH");
-      divContainer.innerHTML = "";
-      divContainer.appendChild(table);
-     }
-    
-      }
-  
-      async function CreateTableFromJSONskin() {
- 
-        // CreateTableFromJSON()
-        await fetch('http://localhost:3000/skinCareResultsAPI' + window.location.search)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            appendData(data);
-        })
-        .catch(function (err) {
-            console.log('error: ' + err);
-        });
-
-    function appendData(data) {
- 
-     var col = [];
-     for (var i = 0; i < data.length; i++) {
-       for (var key in data[i]) {
-         if (col.indexOf(key) === -1) {
-           col.push(key);
-         }
-       }
-     }
- 
-     // CREATE DYNAMIC TABLE.
-     var table = document.createElement("table");
-     table.setAttribute("class", "styled-table");
-     // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
- 
-     var tr = table.insertRow(-1);                   // TABLE ROW.
- 
-     for (var i = 0; i < col.length; i++) {
-       var th = document.createElement("th");      // TABLE HEADER.
-       th.innerHTML = col[i];
-       tr.appendChild(th);
-     }
- 
-     // ADD JSON DATA TO THE TABLE AS ROWS.
-     for (var i = 0; i < data.length; i++) {
- 
-       tr = table.insertRow(-1);
- 
-       for (var j = 0; j < col.length; j++) {
-         var tabCell = tr.insertCell(-1);
-         tabCell.innerHTML = data[i][col[j]];
-       }
-     }
- 
-     // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-     var divContainer = document.getElementById("myDataS");
-     divContainer.innerHTML = "";
-     divContainer.appendChild(table);
-    }
-   
-     }
- 
-     async function CreateTableFromJSONmakeUp() {
- 
-      // CreateTableFromJSON()
-      await fetch('http://localhost:3000/makeUpResultsAPI' + window.location.search)
-      .then(function (response) {
-          return response.json();
-      })
-      .then(function (data) {
-          appendData(data);
-      })
-      .catch(function (err) {
-          console.log('error: ' + err);
-      });
+  // CreateTableFromJSON()
+  await fetch(
+    "http://localhost:3000/hairCareResultsAPI" + window.location.search
+  )
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      appendData(data);
+    })
+    .catch(function (err) {
+      console.log("error: " + err);
+    });
 
   function appendData(data) {
+    var col = [];
+    for (var i = 0; i < data.length; i++) {
+      for (var key in data[i]) {
+        if (col.indexOf(key) === -1) {
+          col.push(key);
+        }
+      }
+    }
 
-   var col = [];
-   for (var i = 0; i < data.length; i++) {
-     for (var key in data[i]) {
-       if (col.indexOf(key) === -1) {
-         col.push(key);
-       }
-     }
-   }
+    // CREATE DYNAMIC TABLE.
+    var table = document.createElement("table");
+    table.setAttribute("class", "styled-table");
+    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
 
-   // CREATE DYNAMIC TABLE.
-   var table = document.createElement("table");
-   table.setAttribute("class", "styled-table");
+    var tr = table.insertRow(-1); // TABLE ROW.
 
-   // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+    for (var i = 0; i < col.length; i++) {
+      var th = document.createElement("th"); // TABLE HEADER.
+      th.innerHTML = col[i];
+      tr.appendChild(th);
+    }
 
-   var tr = table.insertRow(-1);                   // TABLE ROW.
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (var i = 0; i < data.length; i++) {
+      tr = table.insertRow(-1);
 
-   for (var i = 0; i < col.length; i++) {
-     var th = document.createElement("th");      // TABLE HEADER.
-     th.innerHTML = col[i];
-     tr.appendChild(th);
-   }
+      for (var j = 0; j < col.length; j++) {
+        var tabCell = tr.insertCell(-1);
+        tabCell.innerHTML = data[i][col[j]];
+      }
+    }
 
-   // ADD JSON DATA TO THE TABLE AS ROWS.
-   for (var i = 0; i < data.length; i++) {
-
-     tr = table.insertRow(-1);
-
-     for (var j = 0; j < col.length; j++) {
-       var tabCell = tr.insertCell(-1);
-       tabCell.innerHTML = data[i][col[j]];
-     }
-   }
-
-   // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-   var divContainer = document.getElementById("myDataM");
-   divContainer.innerHTML = "";
-   divContainer.appendChild(table);
+    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+    var divContainer = document.getElementById("myDataH");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
   }
- 
-   }
+}
 
-   function goBack() {
-    window.history.back();
+async function CreateTableFromJSONskin() {
+  // CreateTableFromJSON()
+  await fetch(
+    "http://localhost:3000/skinCareResultsAPI" + window.location.search
+  )
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      appendData(data);
+    })
+    .catch(function (err) {
+      console.log("error: " + err);
+    });
+
+  function appendData(data) {
+    var col = [];
+    for (var i = 0; i < data.length; i++) {
+      for (var key in data[i]) {
+        if (col.indexOf(key) === -1) {
+          col.push(key);
+        }
+      }
+    }
+
+    // CREATE DYNAMIC TABLE.
+    var table = document.createElement("table");
+    table.setAttribute("class", "styled-table");
+    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+    var tr = table.insertRow(-1); // TABLE ROW.
+
+    for (var i = 0; i < col.length; i++) {
+      var th = document.createElement("th"); // TABLE HEADER.
+      th.innerHTML = col[i];
+      tr.appendChild(th);
+    }
+
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (var i = 0; i < data.length; i++) {
+      tr = table.insertRow(-1);
+
+      for (var j = 0; j < col.length; j++) {
+        var tabCell = tr.insertCell(-1);
+        tabCell.innerHTML = data[i][col[j]];
+      }
+    }
+
+    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+    var divContainer = document.getElementById("myDataS");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
   }
+}
 
+async function CreateTableFromJSONmakeUp() {
+  // CreateTableFromJSON()
+  await fetch("http://localhost:3000/makeUpResultsAPI" + window.location.search)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      appendData(data);
+    })
+    .catch(function (err) {
+      console.log("error: " + err);
+    });
+
+  function appendData(data) {
+    var col = [];
+    for (var i = 0; i < data.length; i++) {
+      for (var key in data[i]) {
+        if (col.indexOf(key) === -1) {
+          col.push(key);
+        }
+      }
+    }
+
+    // CREATE DYNAMIC TABLE.
+    var table = document.createElement("table");
+    table.setAttribute("class", "styled-table");
+
+    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+    var tr = table.insertRow(-1); // TABLE ROW.
+
+    for (var i = 0; i < col.length; i++) {
+      var th = document.createElement("th"); // TABLE HEADER.
+      th.innerHTML = col[i];
+      tr.appendChild(th);
+    }
+
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (var i = 0; i < data.length; i++) {
+      tr = table.insertRow(-1);
+
+      for (var j = 0; j < col.length; j++) {
+        var tabCell = tr.insertCell(-1);
+        tabCell.innerHTML =
+          '<a href="' + data + '">' + data[i][col[j]] + "</a>";
+      }
+    }
+
+    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+    var divContainer = document.getElementById("myDataM");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+  }
+}
+
+function goBack() {
+  window.history.back();
+}

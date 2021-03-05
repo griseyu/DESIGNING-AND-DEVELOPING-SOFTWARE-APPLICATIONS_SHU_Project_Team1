@@ -12,16 +12,16 @@
 
 
 - [x] To run the application:
-* Make sure you have above installed (check node version by putting **node -v** into terminal), 
-* Open project in IDE or terminal/shell 
-* put **node server.js** into terminal/shell or terminal section of IDE
-* load localhost:3000 on your browser
+1. Make sure you have above installed (check node version by putting **node -v** into terminal), 
+2. Open project in IDE or terminal/shell 
+3. put **node server.js** into terminal/shell or terminal section of IDE
+4. load localhost:3000 on your browser
 
 
 - [x] To set up a database in MongoDB:
 1. Copy a folder ... into your Desktop.
 2. In your terminal/shell copy the code below, substitute "groupOne" with any name you want to set for our database and "Name" and "Users" with your higher-level path to Desktop. 
 
-mongorestore --db=groupOne --dir=/Users/!Name!/Desktop/backup/ddsa-project
+**mongorestore --db=groupOne --dir=/Users/!Name!/Desktop/backup/ddsa-project**
 
 

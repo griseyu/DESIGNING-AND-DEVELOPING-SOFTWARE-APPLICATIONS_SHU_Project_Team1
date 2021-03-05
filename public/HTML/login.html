@@ -101,6 +101,7 @@
                   ><br />
                   <input
                     type="submit"
+                    id="getsecret"
                     name="submit"
                     class="btn btn-success btn-md"
                     value="submit"
@@ -122,6 +123,11 @@
 
     <!-- connect to server -->
     <script>
+      // const express = require("express")
+      // const jwt = require("jsonwebtoken")
+      // const app= express()
+
+
       const form = document.getElementById("login");
       form.addEventListener("submit", login);
 
@@ -145,16 +151,38 @@
           // everythign went fine
           console.log("Got the token: ", result.data);
           localStorage.setItem("token", result.data);
-          document.location.href = 'http://localhost:3000/profile';
+          // document.location.href = 'http://localhost:3000/profile';
           alert("Success!");
+          const response = await axios.post("/topsecret", {token: localStorage.getItem("token")})
+        if (response.data.status == "success") {
+          // document.getElementById("message-area").textContent = response.data.username
+          localStorage.setItem("username", response.data.username);
+          window.location.href = "/profile";
+
+  
+        } else {
+          document.getElementById("message-area").textContent = "Log In please"
+        }
 
         } else {
           alert(result.error);
         }
       }
+
+      // document.getElementById("getsecret").addEventListener("click", async function() {
+      // });
+
+
     </script>
 
     <!-- END connect to server -->
+
+    <div class="container pt-5">
+      <button id="getsecret" class="btn btn-success btn-lg">Get Your Prescription</button>
+      <p class="lead pt-3" id="message-area"></p>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- bootstrap and jquery -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

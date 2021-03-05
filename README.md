@@ -1,6 +1,6 @@
 # SHU_Project1
 
-#An app to build a prescription for the user for their personal skincare and beauty products.
+An app to build a prescription for the user for their personal skincare and beauty products.
 
 
 Things need to run the application: Node, MongoDB, IDE

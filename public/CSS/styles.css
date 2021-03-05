@@ -1,5 +1,6 @@
 :root {
   --green: #255f28;
+  --background: rgb(255, 255, 255, 0.7);
 }
 
 body,
@@ -50,7 +51,7 @@ select {
   color: var(--green);
   text-align: center;
   border-radius: 5px;
-  background-color: white;
+  background-color: var(--background);
   margin: auto;
   margin-top: 20px;
   max-width: 600px;
@@ -405,7 +406,7 @@ footer .row address {
   max-width: 600px;
   height: 320px;
   border: 5px solid var(--green);
-  background: white;
+  background: var(--background);
   border-radius: 5px;
 }
 
@@ -424,7 +425,7 @@ footer .row address {
 }
 
 .profile-container {
-  background-color: white;
+  background-color: var(--background);
   color: var(--green);
   border-color: var(--green);
   border-style: solid;
@@ -463,3 +464,8 @@ table th {
 table thead {
   background: #ccc;
 } */
+
+
+#questionaire-title {
+  font-weight: bold;
+}

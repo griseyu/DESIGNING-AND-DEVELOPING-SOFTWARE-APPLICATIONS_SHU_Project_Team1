@@ -111,26 +111,15 @@ input {
     color: #255f28;
   }
   
-  .containerbody {
-    color: #255f28;
-    text-align: center;
-    margin-top: 150px;
-    max-width: auto;
-    height: auto;
-    border: 5px solid #255f28;
-    background: white;
-    border-radius: 5px;
-  }
-  
   .fbbtn {
     color: #255f28;
-    background-color: white;
+    background-color:transparent;
     text-decoration: none;
   }
   
   .googlebtn {
     color: #255f28;
-    background-color: white;
+    background-color: transparent;
     text-decoration: none;
   }
   

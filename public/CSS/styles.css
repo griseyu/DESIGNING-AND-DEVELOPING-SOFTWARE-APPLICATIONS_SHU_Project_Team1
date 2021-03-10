@@ -424,6 +424,13 @@ footer .row address {
   margin-top: -85px;
 }
 
+.form-group {
+  background-color: transparent;
+  color: #255f28;
+}
+
+/*Profile*/
+
 .profile-container {
   background-color: var(--background);
   color: var(--green);

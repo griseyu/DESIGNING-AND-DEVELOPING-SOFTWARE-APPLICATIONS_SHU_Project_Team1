@@ -188,7 +188,7 @@ div.sidebar {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 70%;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
@@ -313,6 +313,24 @@ div.sidebar {
     opacity: 1;
   }
 }
+
+.rating {
+  color: #255f28;
+  background-color: white;
+}
+
+.card {
+  border:#255f28 ;
+  border-radius: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
 
 /* Footer styling */
 .footer {
@@ -471,6 +489,48 @@ table th {
 table thead {
   background: #ccc;
 } */
+
+
+
+.styled-table {
+  text-align: center;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+
+a {
+  color:var(--green);
+}
 
 
 #questionnaire-title {

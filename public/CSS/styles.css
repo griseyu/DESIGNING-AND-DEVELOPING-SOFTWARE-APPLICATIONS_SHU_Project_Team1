@@ -315,8 +315,11 @@ div.sidebar {
 }
 
 .rating {
+  color: white ;
+ 
+}
+.checked {
   color: #255f28;
-  background-color: white;
 }
 
 .card {

@@ -475,6 +475,8 @@ footer .row address {
   width: 1%;
   height: 30px;
   background-color: var(--green);
+ 
+  
 }
 
 /* tr:nth-child(even) td {

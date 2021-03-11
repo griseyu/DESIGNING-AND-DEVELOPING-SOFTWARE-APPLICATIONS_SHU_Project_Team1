@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script language="javascript" src="survey.js"></script>
     <link rel="stylesheet" href="../CSS/styles.css" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <title>Makeup</title>
 
-    <link rel="stylesheet" href="/CSS/styles.css" />
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link
       rel="stylesheet"
@@ -26,9 +19,10 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+
+    <title>Make Up</title>
   </head>
-  <header><h1>Makeup</h1></header>
-  <section>
+  <header><h1>Make Up</h1></header>
     <body>
       <script language="javascript" src="../survey.js"></script>
 
@@ -46,9 +40,9 @@
           <i class="fa fa-bars"></i>
         </a>
       </div>
-
+      <div class=white-container> 
       <form id="makeupIngredients" action="/makeUpResults" method="GET">
-        <label>Select which ingredients you don't want:</label><br />
+        <label id="questionnaire-title">Select which ingredients you don't want:</label><br />
 
         <input type="checkbox" name="makeUpIngredients" value="Vegan" oninvalid="this.setCustomValidity('Please make a selection')" onchange="this.setCustomValidity('')"/>Vegan<br />
         <input type="checkbox" name="makeUpIngredients" value="Nut-free" />Nut-free<br />
@@ -85,22 +79,22 @@
           }
         }
         </script>
+    <div class="w3-container">
+      <p><i class="fa fa-spinner w3-spin" style="font-size: 64px"></i></p>
+    </div>
+      </div>
 
       <br />
       <button onclick="move()">Prescribe Me</button>
+      <div id="myProgress">
+        <div id="myBar"></div>
 
       <!-- Progress bar (blanked out currently) / thinking circles -->
 
-      <!--
-      <div id="myProgress">
-        <div id="myBar"></div>
-        -->
+      
+    
 
-      </div>
-      <div class="w3-container">
-        <p><i class="fa fa-spinner w3-spin" style="font-size: 64px"></i></p>
-      </div>
-
+  
       <footer>
         <div class="row">
           <address>
@@ -142,8 +136,8 @@
           </ul>
         </div>
       </footer>
-
+      
       <script src="../survey.js"></script>
+      <script src="../main.js"></script>
     </body>
-  </section>
 </html>

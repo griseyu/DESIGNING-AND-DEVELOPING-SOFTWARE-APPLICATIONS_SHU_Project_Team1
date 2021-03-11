@@ -1,5 +1,6 @@
 :root {
   --green: #255f28;
+  --background: rgb(255, 255, 255, 0.7);
 }
 
 body,
@@ -50,7 +51,7 @@ select {
   color: var(--green);
   text-align: center;
   border-radius: 5px;
-  background-color: white;
+  background-color: var(--background);
   margin: auto;
   margin-top: 20px;
   max-width: 600px;
@@ -156,8 +157,8 @@ button:hover {
 /* Buttons in forms */
 .button {
   border: none;
-  color: var(--green);
-  background: transparent;
+  color: white;
+  background: var(--green);
   font-weight: bolder;
   padding: 16px 32px;
   text-align: center;
@@ -332,12 +333,15 @@ div.sidebar {
 
 
 /* Footer styling */
-
-footer {
-  position: relative;
+.footer {
+  position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
+  padding: 0;
+}
+
+footer {
   padding: 10px 10px;
   text-align: center;
   border-color: var(--green);
@@ -420,7 +424,7 @@ footer .row address {
   max-width: 600px;
   height: 320px;
   border: 5px solid var(--green);
-  background: white;
+  background: var(--background);
   border-radius: 5px;
 }
 
@@ -438,8 +442,15 @@ footer .row address {
   margin-top: -85px;
 }
 
+.form-group {
+  background-color: transparent;
+  color: #255f28;
+}
+
+/*Profile*/
+
 .profile-container {
-  background-color: white;
+  background-color: var(--background);
   color: var(--green);
   border-color: var(--green);
   border-style: solid;
@@ -478,6 +489,7 @@ table th {
 table thead {
   background: #ccc;
 } */
+
 
 
 .styled-table {
@@ -520,3 +532,7 @@ a {
   color:var(--green);
 }
 
+
+#questionnaire-title {
+  font-weight: bold;
+}

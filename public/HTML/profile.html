@@ -3,7 +3,10 @@
   <head>
     <link rel="stylesheet" href="../CSS/styles.css" />
     <link rel="stylesheet" href="../CSS/profile.css" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../main.js"></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
@@ -42,7 +45,8 @@
         <i class="fa fa-bars"></i>
       </a>
     </div>
-
+    <p id="welcome">
+    </p>
     <div class="profile-container">
       <div class="row">
         <div class="column">
@@ -97,7 +101,8 @@
       
     </div>
 
-    <footer>
+
+    <footer class="footer">
       <div class="row">
         <address>
           2 North Street<br />
@@ -138,3 +143,7 @@
     </footer>
   </body>
 </html>
+
+<script>
+      document.getElementById("welcome").textContent = "Hello, " + localStorage.getItem("username");
+</script>

@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="../CSS/styles.css" />
     
 
+    <!-- link to JS -->
+    <script language="javascript" src="../main.js"></script>
+
     <!-- meta data -->
     <meta charset="UTF-8" />
     <meta
@@ -12,13 +15,13 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
 
-    <!-- link to bootstrap css -->
+    <!-- link to bootstrap css 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
       crossorigin="anonymous"
-    />
+    />-->
 
     <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
     <link
@@ -62,7 +65,7 @@
 
     <div id="login">
       
-      <div class="container">
+      <div class="white-container">
         <div
           id="login-row"
           class="row justify-content-center align-items-center"
@@ -70,7 +73,7 @@
           <div id="login-column" class="col-md-6">
             <div id="login-box" class="col-md-12">
               <form id="login-form" class="form" action="" method="post">
-                <h3 class="text-center text-success">Login</h3>
+                <h2 class="text-center text-success">Login</h2>
 
                 <div class="form-group">
                   <label for="username" class="text-success">Username:</label
@@ -100,11 +103,12 @@
                         name="remember-me"
                         type="checkbox" /></span></label
                   ><br />
-                  <input
+                  <input class="button"
                     type="submit"
+                    id="getsecret"
                     name="submit"
                     class="btn btn-success btn-md"
-                    value="submit"
+                    value="Submit"
                   />
                 </div>
               </form>
@@ -124,6 +128,11 @@
 
     <!-- connect to server -->
     <script>
+      // const express = require("express")
+      // const jwt = require("jsonwebtoken")
+      // const app= express()
+
+
       const form = document.getElementById("login");
       form.addEventListener("submit", login);
 
@@ -147,20 +156,42 @@
           // everythign went fine
           console.log("Got the token: ", result.data);
           localStorage.setItem("token", result.data);
-          document.location.href = 'http://localhost:3000/profile';
+          // document.location.href = 'http://localhost:3000/profile';
           alert("Success!");
+          const response = await axios.post("/topsecret", {token: localStorage.getItem("token")})
+        if (response.data.status == "success") {
+          // document.getElementById("message-area").textContent = response.data.username
+          localStorage.setItem("username", response.data.username);
+          window.location.href = "/profile";
+
+  
+        } else {
+          document.getElementById("message-area").textContent = "Log In please"
+        }
 
         } else {
           alert(result.error);
         }
       }
+
+      // document.getElementById("getsecret").addEventListener("click", async function() {
+      // });
+
+
     </script>
 
     <!-- END connect to server -->
 
+    <!--<div class="container pt-5">
+      <button id="getsecret" class="btn btn-success btn-lg">Get Your Prescription</button>
+      <p class="lead pt-3" id="message-area"></p>
+    </div>-->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <!-- bootstrap and jquery -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
 
     <footer>
       <div class="row">

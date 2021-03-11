@@ -1,5 +1,6 @@
-## Overview - An app to build a prescription for the user for their personal skincare and beauty products.
+## Overview - An app to build a prescription for the user for their personal skincare and beauty products
 
+### Team: @Hillryan95 @AlmostLorelai @heidiwilliams1 @jmin97
 
 
 ## Technology Stack:
@@ -12,7 +13,8 @@
  - Slack, Screen and Zoom - Team communication
  - Trello - planning and Kanban tool
  - Slack and Zoom - Team communication
- - draw.io , canva - Design tools
+ - Screen - Pair Programming
+ - draw.io, canva, pexels, unsplash, Presentation - Design tools
  
  ## Design
  -Presentation - wire frame

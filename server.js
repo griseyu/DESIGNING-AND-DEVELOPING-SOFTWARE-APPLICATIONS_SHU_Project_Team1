@@ -102,6 +102,10 @@ app.post('/api/change-password', async (req, res) => {
 //handling login
 app.post('/api/login', async (req, res) => {
 	const { username, password } = req.body
+
+	// const sessionToken = createSessionToken(user.id);
+    // res.cookie("sessionID", sessionToken, { httpOnly: true, maxAge:1800000})//, secure: true})
+
 	const user = await User.findOne({ username }).lean()
 
 	if (!user) {
@@ -124,6 +128,16 @@ app.post('/api/login', async (req, res) => {
 	}
 
 	res.json({ status: 'error', error: 'Invalid username/password' })
+})
+
+app.post("/topsecret", (req, res) => {
+	jwt.verify(req.body.token, JWT_SECRET, function (err,decoded) {
+		if (err) {
+			res.json({status:"fail"})
+		} else {
+			res.json({status:"success", username:decoded.username})
+		}
+	})
 })
 
 // to login page

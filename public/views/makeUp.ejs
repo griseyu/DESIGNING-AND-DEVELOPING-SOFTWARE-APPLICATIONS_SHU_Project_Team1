@@ -7,27 +7,72 @@
     <link rel="stylesheet" href="../CSS/styles.css" />
 
     <!-- Spinner -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
     <title>Make Up</title>
   </head>
   <header><h1>Make Up</h1></header>
-    <body>
-      <script language="javascript" src="../survey.js"></script>
+  <body>
+    <script language="javascript" src="../survey.js"></script>
 
-      <%- include('partials/navBar.ejs') %>
+    <%- include('partials/navBar.ejs') %>
 
-      <div class=white-container> 
-      <form id="makeupIngredients" action="/makeUpResults" method="GET">
-        <label id="questionnaire-title">Select which ingredients you don't want:</label><br />
+    <div class="white-container">
+      <form
+        id="makeupIngredients"
+        action="/makeUpResults"
+        method="GET"
+        required="required"
+      >
+        <label id="questionnaire-title"
+          >Select which ingredients you don't want:</label
+        ><br />
 
-        <input type="checkbox" name="makeUpIngredients" value="Vegan" oninvalid="this.setCustomValidity('Please make a selection')" onchange="this.setCustomValidity('')"/>Vegan<br />
-        <input type="checkbox" name="makeUpIngredients" value="Nut-free" />Nut-free<br />
-        <input type="checkbox" name="makeUpIngredients" value="Gluten-free" />Gluten-free<br />
-        <input type="checkbox" name="makeUpIngredients" value="Cruelty-free" />Cruelty-free<br />
-        <input type="checkbox" name="makeUpIngredients" value="Silicon-free" />Silicon-free<br />
-        <input type="checkbox" name="makeUpIngredients" value="Animal-tested" />Animal-tested<br />
+        <input
+          id="c1"
+          type="checkbox"
+          name="makeUpIngredients"
+          value="Vegan"
+          oninvalid="this.setCustomValidity('Please make a selection')"
+          onchange="this.setCustomValidity('')"
+        />
+        <label for="c">Vegan</label><br />
+        <input
+          id="c2"
+          type="checkbox"
+          name="makeUpIngredients"
+          value="Nut-free"
+        />
+        <label for="c">Nut-free</label><br />
+        <input
+          id="c3"
+          type="checkbox"
+          name="makeUpIngredients"
+          value="Gluten-free"
+        />
+        <label for="c">Gluten-free</label><br />
+        <input
+          id="c4"
+          type="checkbox"
+          name="makeUpIngredients"
+          value="Cruelty-free"
+        />
+        <label for="c">Cruelty-free</label><br />
+        <input
+          id="c5"
+          type="checkbox"
+          name="makeUpIngredients"
+          value="Silicon-free"
+        />
+        <label for="c">Silicon-free</label><br />
+        <input
+          id="c6"
+          type="checkbox"
+          name="makeUpIngredients"
+          value="Animal-tested"
+        />
+        <label for="c">Animal-tested</label><br />
 
         <p>
           <button type="submit" onclick="valthisform()">Show Products</button>
@@ -36,41 +81,40 @@
       </form>
 
       <script>
-        function valthisform(){
-        var checkboxes=document.getElementsByName("makeUpIngredients");
-        var okay=false;
-        for(var i=0; i<checkboxes.length; i++){
-            if(checkboxes[i].checked===true){
-                okay=true;
-            }
-            } 
-    
-            if (okay===true) {
-              for(var i=0; i<checkboxes.length; i++) {
-              checkboxes[i].required=false;
+        function valthisform() {
+          var checkboxes = document.getElementsByName("makeUpIngredients");
+          var okay = false;
+          for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked === true) {
+              okay = true;
             }
           }
-            else {
-              for(var i=0; i<checkboxes.length; i++) {
-                  checkboxes[i].required=true; 
+
+          if (okay === true) {
+            for (var i = 0; i < checkboxes.length; i++) {
+              checkboxes[i].required = false;
+            }
+          } else {
+            for (var i = 0; i < checkboxes.length; i++) {
+              checkboxes[i].required = true;
             }
           }
         }
-        </script>
-    <div class="w3-container">
+      </script>
+      <!-- <div class="w3-container">
       <p><i class="fa fa-spinner w3-spin" style="font-size: 64px"></i></p>
+    </div> -->
     </div>
-      </div>
 
-      <br />
-      <button onclick="move()">Prescribe Me</button>
-      <div id="myProgress">
-        <div id="myBar"></div>
+    <!-- <br /> -->
+    <!-- <button onclick="move()">Prescribe Me</button> -->
+    <!-- <div id="myProgress"></div>
+    <div id="myBar"></div> -->
 
-      <!-- Progress bar (blanked out currently) / thinking circles -->
+    <!-- Progress bar (blanked out currently) / thinking circles -->
 
-      <%- include('partials/footer.ejs') %>
-      <script src="../survey.js"></script>
-      <script src="../main.js"></script>
-    </body>
+    <%- include('partials/footer.ejs') %>
+    <script src="../survey.js"></script>
+    <script src="../main.js"></script>
+  </body>
 </html>

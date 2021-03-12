@@ -52,9 +52,7 @@ const cors = require("cors");
 var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/ddsa-project";
 
-//secret for crypt
-const JWT_SECRET =
-  "sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk";
+const zxh = "sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk";
 
 mongoose.connect(url, {
   useNewUrlParser: true,
@@ -89,7 +87,7 @@ app.post("/api/change-password", async (req, res) => {
   }
 
   try {
-    const user = jwt.verify(token, JWT_SECRET);
+    const user = jwt.verify(token, zxh);
 
     const _id = user.id;
 
@@ -129,7 +127,7 @@ app.post("/api/login", async (req, res) => {
         id: user._id,
         username: user.username,
       },
-      JWT_SECRET
+      zxh
     );
 
     return res.json({ status: "ok", data: token });
@@ -139,7 +137,7 @@ app.post("/api/login", async (req, res) => {
 });
 
 app.post("/topsecret", (req, res) => {
-  jwt.verify(req.body.token, JWT_SECRET, function (err, decoded) {
+  jwt.verify(req.body.token, zxh, function (err, decoded) {
     if (err) {
       res.json({ status: "fail" });
     } else {

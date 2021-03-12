@@ -12,16 +12,18 @@ input {
   /* The message box when the user clicks on the password field */
   #message {
     display:none;
-    background: #f1f1f1;
-    color: #000;
+    background: rgb(247, 247, 247);
+    color: var(--green);
     position: relative;
-    padding: 20px;
-    margin-top: 10px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: left;
   }
   
   #message p {
-    padding: 10px 35px;
-    font-size: 18px;
+    padding: 0;
+    font-size: 15px;
   }
   
   /* Add a green text color and a checkmark when the requirements are right */
@@ -32,7 +34,7 @@ input {
   .valid:before {
     position: relative;
     left: -35px;
-    content: "&#10004;";
+    /* content: "&#10004;"; */
   }
   
   /* Add a red text color and an "x" icon when the requirements are wrong */
@@ -43,13 +45,13 @@ input {
   .invalid:before {
     position: relative;
     left: -35px;
-    content: "&#10006;";
+    /* content: "&#10006;"; */
   }
   .divider-text {
     position: relative;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
   
   .divider-text span {

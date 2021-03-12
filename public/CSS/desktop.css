@@ -20,8 +20,8 @@ main {
   border-radius: 20px;
   flex-basis: 30%;
   margin: 10px;
-  margin-top: 150px;
-  margin-bottom: 150px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   padding: 30px 30px;
 }
 

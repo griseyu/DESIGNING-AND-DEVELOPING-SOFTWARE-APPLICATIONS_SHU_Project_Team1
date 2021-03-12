@@ -173,7 +173,6 @@ button:hover {
 
 /*Sidebar (underneath all other content on smaller screens */
 div.sidebar {
-  display: flexbox;
   background: rgb(255, 255, 255, 0.7);
   border-radius: 5px;
   height: auto;

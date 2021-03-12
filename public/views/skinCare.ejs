@@ -13,41 +13,48 @@
   <body>
     <%- include('partials/navBar.ejs') %>
     <div class="white-container">
-      <form id="skinCareIngredients" action="/skinCareResults" method="GET">
+      <form
+        id="skinCareIngredients"
+        action="/skinCareResults"
+        method="GET"
+        required="required"
+      >
         <label id="questionnaire-title"
           >Select which ingredients you don't want:</label
         ><br />
         <input
+          id="c1"
           type="checkbox"
           name="skinIngredients"
           value="Vegan"
-          oninvalid="this.setCustomValidity('Please make a selection')"
-          onchange="this.setCustomValidity('')"
-        />Vegan<br />
+        /><label for="c1">Vegan</label><br />
         <input
+          id="c2"
           type="checkbox"
           name="skinIngredients"
           value="Nut-free"
-        />Nut-free<br />
+        /><label for="c2">Nut-free</label><br />
         <input
+          id="c3"
           type="checkbox"
           name="skinIngredients"
           value="Gluten-free"
-        />Gluten-free<br />
+        /><label for="c3">Gluten-free</label><br />
         <input
+          id="c4"
           type="checkbox"
           name="skinIngredients"
           value="Cruelty-free"
-        />Cruelty-free<br />
+        /><label for="c4">Cruelty-free</label><br />
         <input
+          id="c5"
           type="checkbox"
           name="skinIngredients"
           value="Silicon-free"
-        />Silicon-free<br />
+        /><label for="c5">Silicon-free</label><br />
         <p>
           <button type="submit" onclick="valthisform()">Show Products</button>
         </p>
-        <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
       </form>
 
       <script>

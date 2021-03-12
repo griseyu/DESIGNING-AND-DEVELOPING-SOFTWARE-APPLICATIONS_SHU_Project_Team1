@@ -7,27 +7,35 @@ const hairCareQueries = require('./hairCareQueries')
 const makeUpQueries = require('./makeUpQueries')
 const skinCareQueries = require('./skinCareQueries')
 
+//Setting templating engine
+app.set('views', path.join(__dirname, 'public/views'));
+app.set('view engine', 'ejs');
+
 app.use(express.static(path.join(__dirname, '/public')));
 
 // create a route for get requests for the route of our website
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname+'/public/HTML/home.html'));
+    res.render('home');
 })
 
 app.get('/makeUp', function (req, res) {
-    res.sendFile(path.join(__dirname+'/public/HTML/makeUp.html'));
+    res.render('makeUp');
 })
 
 app.get('/hairCare', function (req, res) {
-    res.sendFile(path.join(__dirname+'/public/HTML/hairCare.html'));
+    res.render('hairCare');
 })
 
 app.get('/skinCare', function (req, res) {
-    res.sendFile(path.join(__dirname+'/public/HTML/skinCare.html'));
+    res.render('skinCare');
 })
 
 app.get('/profile', function (req, res) {
-    res.sendFile(path.join(__dirname+'/public/HTML/profile.html'));
+    res.render('profile');
+})
+
+app.get('/admin', function (req,res) {
+	res.render('admin');
 })
 
 // add the router
@@ -142,12 +150,12 @@ app.post("/topsecret", (req, res) => {
 
 // to login page
 app.get('/login', function(req, res){
-	res.sendFile('/public/HTML/login.html', {root: __dirname })
+	res.render('login', {root: __dirname })
 })
 
 //to register page
 app.get('/register', function(req, res){
-	res.sendFile('/public/HTML/registrationForm.html', {root: __dirname })
+	res.render('registrationForm', {root: __dirname })
 })
 
 //post data to db for registration and password handling
@@ -213,13 +221,11 @@ app.get('/hairCareResultsAPI', async function (req, res) {
 });
 
 app.get('/hairCareResults', function (req,res) {
-	res.sendFile(path.join(__dirname+'/public/HTML/hairCareResults.html'));
+	res.render('hairCareResults');
 })
 
-
-
 app.get('/skinCareResults', function (req,res) {
-	res.sendFile(path.join(__dirname+'/public/HTML/skinCareResults.html'));
+	res.render('skinCareResults');
 })
 
 app.get('/skinCareResultsAPI', async function (req, res) {
@@ -235,7 +241,7 @@ app.get('/skinCareResultsAPI', async function (req, res) {
 });
 
 app.get('/makeUpResults', function (req,res) {
-	res.sendFile(path.join(__dirname+'/public/HTML/makeUpResults.html'));
+	res.render('makeUpResults');
 })
 
 app.get('/makeUpResultsAPI', async function (req, res) {

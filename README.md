@@ -34,4 +34,4 @@ To copy code locally, in your shell/terminal copy following:
 
 **mongorestore --db=ddsa-project --dir=/Users/!Name!/Desktop/backup/ddsa-project**
 
-
+Alternatively : download JSONS from jsonsBackup folder in this ropository and populate your MongoDB manually 

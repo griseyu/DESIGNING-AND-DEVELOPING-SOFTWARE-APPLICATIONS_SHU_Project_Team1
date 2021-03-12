@@ -31,6 +31,6 @@ To copy code locally, in your shell/terminal copy following:
 1. Copy a folder ... into your Desktop.
 2. In your terminal/shell copy the code below, substitute "groupOne" with any name you want to set for our database and "Name" and "Users" with your higher-level path to Desktop. 
 
-**mongorestore --db=groupOne --dir=/Users/!Name!/Desktop/backup/ddsa-project**
+**mongorestore --db=ddsa-project --dir=/Users/!Name!/Desktop/backup/ddsa-project**
 
 

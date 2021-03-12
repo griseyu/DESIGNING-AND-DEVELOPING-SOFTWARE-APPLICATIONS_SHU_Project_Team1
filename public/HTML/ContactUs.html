@@ -56,6 +56,7 @@
       </div>
       <div class="column">
         <form action="/action_page.php">
+          <form onsubmit="return false"></form>
           <label for="fname">First Name</label>
           <input type="text" id="fname" name="firstname" placeholder="Your name..">
           <label for="lname">Last Name</label>
@@ -63,19 +64,26 @@
           <label for="email">Email</label>
           <input type="text" id="email" name="email" placeholder="Enter your email">
           <br> 
-          <label for="country">Country</label>
-          <select id="country" name="country">
+          <label for="Region">Region</label>
+          <select id="Region" name="Region">
+            <option disabled selected value> -- Select a Region -- </option>
             <option value="australia">Australia</option>
             <option value="canada">Canada</option>
-            <option value="usa">Europe</option>
-            <option value="usa">United Kingdom</option>
+            <option value="Europe">Europe</option>
+            <option value="East Asia">East Asia</option>
+            <option value="South America">South America</option>
+            <option value="United Kingdom">United Kingdom</option>
             <option value="usa">USA</option>
+            <option value="West Asia">West Asia</option>
+            <option value="Vulcan">Vulcan</option>
             
             
           </select>
           <label for="subject">Subject</label>
           <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-          <input type="submit" value="Submit">
+          <input type="checkbox" id="newsletter" />Send me monthly newsletter
+          <br><br>
+          <button onclick="sendContact();">Submit</button>
         </form>
       </div>
     </div>

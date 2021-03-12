@@ -12,74 +12,84 @@
   <header><h1>Hair Care</h1></header>
   <body>
     <%- include('partials/navBar.ejs') %>
-    <div class=white-container>
-    <form
-      id="hairCareIngredients"
-      action="/hairCareResults"
-      method="GET"
-      required="required"
-    >
-      <label id="questionnaire-title">Select which ingredients you don't want:</label><br />
-      <input
-        type="checkbox"
-        name="hairIngredients"
-        value="Gluten-free"
-        oninvalid="this.setCustomValidity('Please make a selection')"
-        onchange="this.setCustomValidity('')"
-      />Gluten-free<br />
-      <input
-        type="checkbox"
-        name="hairIngredients"
-        value="Nut-free"
-      />Nut-free<br />
-      <input type="checkbox" name="hairIngredients" value="Vegan" />Vegan<br />
-      <input
-        type="checkbox"
-        name="hairIngredients"
-        value="Cruelty-free"
-      />Cruelty-free<br />
-      <input
-        type="checkbox"
-        name="hairIngredients"
-        value="Parabens-free"
-      />Parabens-free<br />
-      <input
-        type="checkbox"
-        name="hairIngredients"
-        value="SLS-free"
-      />SLS-free<br />
-      <input
-        type="checkbox"
-        name="hairIngredients"
-        value="Silicon-free"
-      />Silicon-free<br />
-      <p>
-        <button type="submit" onclick="valthisform()">Show Products</button>
-      </p>
-      <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
-    </form>
+    <div class="white-container">
+      <form
+        id="hairCareIngredients"
+        action="/hairCareResults"
+        method="GET"
+        required="required"
+      >
+        <label id="questionnaire-title"
+          >Select which ingredients you don't want:</label
+        ><br />
+        <input
+          id="c1"
+          type="checkbox"
+          name="hairIngredients"
+          value="Gluten-free"
+        /><label for="c1">Gluten-free</label><br />
+        <input
+          id="c2"
+          type="checkbox"
+          name="hairIngredients"
+          value="Nut-free"
+        /><label for="c2">Nut-free</label><br />
+        <input
+          id="c3"
+          type="checkbox"
+          name="hairIngredients"
+          value="Vegan"
+        /><label for="c3">Vegan</label><br />
+        <input
+          id="c4"
+          type="checkbox"
+          name="hairIngredients"
+          value="Cruelty-free"
+        /><label for="c4">Cruelty-free</label><br />
+        <input
+          id="c5"
+          type="checkbox"
+          name="hairIngredients"
+          value="Parabens-free"
+        /><label for="c5">Parabens-free</label><br />
+        <input
+          id="c6"
+          type="checkbox"
+          name="hairIngredients"
+          value="SLS-free"
+        /><label for="c6">SLS-free</label><br />
+        <input
+          id="c7"
+          type="checkbox"
+          name="hairIngredients"
+          value="Silicon-free"
+        /><label for="c7"></label>Silicon-free<br />
+        <p>
+          <button type="submit" onclick="valthisform()">Show Products</button>
+        </p>
+      </form>
 
-    <script>
-      function valthisform() {
-        var checkboxes = document.getElementsByName("hairIngredients");
-        var okay = false;
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].checked === true) {
-            okay = true;
+      <script>
+        function valthisform() {
+          var checkboxes = document.getElementsByName("hairIngredients");
+          var okay = false;
+          for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked === true) {
+              okay = true;
+            }
+          }
+
+          if (okay === true) {
+            for (var i = 0; i < checkboxes.length; i++) {
+              checkboxes[i].required = false;
+            }
+          } else {
+            for (var i = 0; i < checkboxes.length; i++) {
+              checkboxes[i].required = true;
+            }
           }
         }
-
-        if (okay === true) {
-          for (var i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].required = false;
-          }
-        } else {
-          for (var i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].required = true;
-          }
-        }
-      }
-    </script>
+      </script>
     </div>
     <%- include('partials/footer.ejs') %>
   </body>

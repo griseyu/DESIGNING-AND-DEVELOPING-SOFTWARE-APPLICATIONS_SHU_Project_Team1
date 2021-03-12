@@ -315,15 +315,14 @@ div.sidebar {
 }
 
 .rating {
-  color: white ;
- 
+  color: white;
 }
 .checked {
   color: #255f28;
 }
 
 .card {
-  border:#255f28 ;
+  border: #255f28;
   border-radius: 5px;
   padding-right: 10px;
   padding-left: 10px;
@@ -331,9 +330,8 @@ div.sidebar {
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 
 /* Footer styling */
 .footer {
@@ -475,8 +473,6 @@ footer .row address {
   width: 1%;
   height: 30px;
   background-color: var(--green);
- 
-  
 }
 
 /* tr:nth-child(even) td {
@@ -494,8 +490,6 @@ table th {
 table thead {
   background: #ccc;
 } */
-
-
 
 .styled-table {
   text-align: center;
@@ -532,11 +526,9 @@ table thead {
   border-bottom: 2px solid #009879;
 }
 
-
 a {
-  color:var(--green);
+  color: var(--green);
 }
-
 
 #questionnaire-title {
   font-weight: bold;

@@ -28,8 +28,8 @@ To copy code locally, in your shell/terminal copy following:
 
 
 - [x] To set up a database in MongoDB:
-1. Copy a folder ... into your Desktop.
-2. In your terminal/shell copy the code below, substitute "groupOne" with any name you want to set for our database and "Name" and "Users" with your higher-level path to Desktop. 
+1. Download backup.zip and unzip it in your Desktop (so it is a folder called backup)
+2. In your terminal/shell copy the code below, substitute "Name" and "Users" with your higher-level path to Desktop 
 
 **mongorestore --db=ddsa-project --dir=/Users/!Name!/Desktop/backup/ddsa-project**
 

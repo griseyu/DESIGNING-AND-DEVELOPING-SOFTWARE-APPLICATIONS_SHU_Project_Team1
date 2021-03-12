@@ -12,64 +12,66 @@
   <header><h1>Skin Care</h1></header>
   <body>
     <%- include('partials/navBar.ejs') %>
-    <div class=white-container> 
-    <form id="skinCareIngredients" action="/skinCareResults" method="GET">
-      <label id="questionnaire-title">Select which ingredients you don't want:</label><br />
-      <input
-        type="checkbox"
-        name="skinIngredients"
-        value="Vegan"
-        oninvalid="this.setCustomValidity('Please make a selection')"
-        onchange="this.setCustomValidity('')"
-      />Vegan<br />
-      <input
-        type="checkbox"
-        name="skinIngredients"
-        value="Nut-free"
-      />Nut-free<br />
-      <input
-        type="checkbox"
-        name="skinIngredients"
-        value="Gluten-free"
-      />Gluten-free<br />
-      <input
-        type="checkbox"
-        name="skinIngredients"
-        value="Cruelty-free"
-      />Cruelty-free<br />
-      <input
-        type="checkbox"
-        name="skinIngredients"
-        value="Silicon-free"
-      />Silicon-free<br />
-      <p>
-        <button type="submit" onclick="valthisform()">Show Products</button>
-      </p>
-      <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
-    </form>
+    <div class="white-container">
+      <form id="skinCareIngredients" action="/skinCareResults" method="GET">
+        <label id="questionnaire-title"
+          >Select which ingredients you don't want:</label
+        ><br />
+        <input
+          type="checkbox"
+          name="skinIngredients"
+          value="Vegan"
+          oninvalid="this.setCustomValidity('Please make a selection')"
+          onchange="this.setCustomValidity('')"
+        />Vegan<br />
+        <input
+          type="checkbox"
+          name="skinIngredients"
+          value="Nut-free"
+        />Nut-free<br />
+        <input
+          type="checkbox"
+          name="skinIngredients"
+          value="Gluten-free"
+        />Gluten-free<br />
+        <input
+          type="checkbox"
+          name="skinIngredients"
+          value="Cruelty-free"
+        />Cruelty-free<br />
+        <input
+          type="checkbox"
+          name="skinIngredients"
+          value="Silicon-free"
+        />Silicon-free<br />
+        <p>
+          <button type="submit" onclick="valthisform()">Show Products</button>
+        </p>
+        <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
+      </form>
 
-    <script>
-      function valthisform() {
-        var checkboxes = document.getElementsByName("skinIngredients");
-        var okay = false;
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].checked === true) {
-            okay = true;
+      <script>
+        function valthisform() {
+          var checkboxes = document.getElementsByName("skinIngredients");
+          var okay = false;
+          for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].checked === true) {
+              okay = true;
+            }
+          }
+
+          if (okay === true) {
+            for (var i = 0; i < checkboxes.length; i++) {
+              checkboxes[i].required = false;
+            }
+          } else {
+            for (var i = 0; i < checkboxes.length; i++) {
+              checkboxes[i].required = true;
+            }
           }
         }
-
-        if (okay === true) {
-          for (var i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].required = false;
-          }
-        } else {
-          for (var i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].required = true;
-          }
-        }
-      }
-    </script>
-  </div>
-  <%- include('partials/footer.ejs') %>
+      </script>
+    </div>
+    <%- include('partials/footer.ejs') %>
   </body>
 </html>

@@ -72,6 +72,10 @@ app.use(
 );
 
 //changing password
+app.get("/change-password", function (req, res) {
+  res.render("change-password", { root: __dirname });
+});
+
 app.post("/api/change-password", async (req, res) => {
   const { token, newpassword: plainTextPassword } = req.body;
 

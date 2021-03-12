@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/profile.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../main.js"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Profile</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Your Prescription</h1>
+    </header>
+
+    <%- include('partials/navBar.ejs') %>
+
+    <div class="white-container">
+      <h2><p id="welcome">
+      </p></h2>
+      <div class="row">
+        <div class="column">
+          <h4>Your recommended hair care product is...</h4>
+          <div class="card">
+            <img src="../Images/cardleaf.jpg" alt="card" style="width:100%">
+            </div>
+          <p><a href="/hairCare">Retake the quiz</a></p>
+        </div>
+        <div class="column">
+          <h4>Your recommended skin care product is...</h4>
+          <div class="card">
+            <img src="../Images/cardleaf.jpg" alt="card" style="width:100%">
+            </div>
+          <p><a href="/skinCare">Retake the quiz</a></p>
+        </div>
+        <div class="column">
+          <h4>Your recommended make up product is...</h4>
+          <div class="card">
+            <img src="../Images/cardleaf.jpg" alt="card" style="width:100%">
+            </div>
+          </div>
+          <div>
+            
+          </div>
+          <p><a href="/makeUp">Retake the quiz</a>
+            <p>
+    
+            </p>
+            <a id="changePassword" href="/changePassword">Change my password</a>
+          </p>
+          <p>
+    
+          </p>
+          <button>Log out</button>
+          <p>
+            Rate Us Before You Leave
+          </p>
+    
+          <div class="rating">
+    
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+      
+          
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>
+
+<script>
+  document.getElementById("welcome").textContent = "Hello, " + localStorage.getItem("username");
+</script>

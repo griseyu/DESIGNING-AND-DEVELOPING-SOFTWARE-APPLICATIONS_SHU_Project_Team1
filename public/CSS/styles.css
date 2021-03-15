@@ -58,6 +58,11 @@ select {
   padding: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .white-container {
+    max-width: 95%;
+  }
+}
 /* Add a black background color to the top navigation */
 .topnav {
   display: flexbox;
@@ -192,7 +197,7 @@ div.sidebar {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
+  max-width: 75%;
   position: relative;
   margin: auto;
 }
@@ -354,7 +359,6 @@ footer {
   border-top: white;
   border-top-width: 20px;
   margin-top: 55px;
-  margin-bottom: 55px;
   background: rgb(255, 255, 255, 0.7);
   color: var(--green);
   font-weight: bolder;

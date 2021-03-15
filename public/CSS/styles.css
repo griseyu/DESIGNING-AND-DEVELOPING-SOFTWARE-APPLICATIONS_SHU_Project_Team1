@@ -54,7 +54,7 @@ select {
   background-color: var(--background);
   margin: auto;
   margin-top: 20px;
-  max-width: 600px;
+  max-width: 65%;
   padding: 10px;
 }
 
@@ -169,6 +169,11 @@ button:hover {
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.button:hover {
+  background-color: rgb(76, 175, 80, 0.6);
+  color: white;
 }
 
 /*Sidebar (underneath all other content on smaller screens */

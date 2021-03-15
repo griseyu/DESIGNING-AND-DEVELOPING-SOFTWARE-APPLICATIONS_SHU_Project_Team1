@@ -15,6 +15,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const zxh = "sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk";
 const cors = require("cors");
+// const authRoutes = require("auth-routes");
 var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/ddsa-project";
 
@@ -145,11 +146,6 @@ app.get("/login", function (req, res) {
 //handling login
 app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
-
-  // trying to store in httpOnly cookie in the future:
-  // const sessionToken = createSessionToken(user.id);
-  // res.cookie("sessionID", sessionToken, { httpOnly: true, maxAge:1800000})//, secure: true})
-
   const user = await User.findOne({ username }).lean();
 
   if (!user) {
@@ -166,6 +162,32 @@ app.post("/api/login", async (req, res) => {
       },
       zxh
     );
+
+    res.cookie("token", token, {
+      maxAge: 60 * 60 * 24 * 30 * 1000,
+      httpOnly: true,
+    });
+
+    res.cookie("username", username, {
+      maxAge: 60 * 60 * 24 * 30 * 1000,
+    });
+
+    const validateToken = (req, res, next) => {
+      const token = req.cookies["token"];
+
+      if (!token)
+        return res.status(400).json({ error: "User not Authenticated!" });
+
+      try {
+        const validToken = verify(token, "zxh");
+        if (validToken) {
+          req.authenticated = true;
+          return next();
+        }
+      } catch (err) {
+        return res.status(400).json({ error: err });
+      }
+    };
 
     return res.json({ status: "ok", data: token });
   }
@@ -228,8 +250,20 @@ app.post("/api/register", async (req, res) => {
 });
 
 //logout
-router.get("/logout", (req, res) => {});
-module.exports = router;
+app.get("/logout", (req, res) => {
+  res.cookie("token", {
+    maxAge: 0,
+  });
+
+  res.cookie("username", {
+    maxAge: 0,
+  });
+
+  res.clearCookie("token");
+  res.clearCookie("username");
+
+  res.render("login", { root: __dirname });
+});
 
 //changing password
 app.get("/change-password", function (req, res) {

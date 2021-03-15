@@ -7,6 +7,26 @@ const hairCareQueries = require("./models/hairCareQueries");
 const makeUpQueries = require("./models/makeUpQueries");
 const skinCareQueries = require("./models/skinCareQueries");
 
+// server and routes for singup/login/product dbs
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const User = require("./models/user2");
+const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const zxh = "sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk";
+const cors = require("cors");
+var MongoClient = require("mongodb").MongoClient;
+var url = "mongodb://localhost:27017/ddsa-project";
+
+//connect through mongoose
+mongoose.connect(url, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+});
+
+// Routes start
+
 //Setting templating engine
 app.set("views", path.join(__dirname, "public/views"));
 app.set("view engine", "ejs");
@@ -40,167 +60,6 @@ app.get("/admin", function (req, res) {
 
 // add the router
 app.use("/", router);
-
-// server and routes for singup/login/product dbs
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const User = require("./models/user2");
-
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const cors = require("cors");
-var MongoClient = require("mongodb").MongoClient;
-var url = "mongodb://localhost:27017/ddsa-project";
-
-const zxh = "sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk";
-
-mongoose.connect(url, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
-
-app.use("/", express.static(path.join(__dirname, "static")));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
-
-//changing password
-app.get("/change-password", function (req, res) {
-  res.render("change-password", { root: __dirname });
-});
-
-app.post("/api/change-password", async (req, res) => {
-  const { token, newpassword: plainTextPassword } = req.body;
-
-  if (!plainTextPassword || typeof plainTextPassword !== "string") {
-    return res.json({ status: "error", error: "Invalid password" });
-  }
-
-  if (plainTextPassword.length < 7) {
-    return res.json({
-      status: "error",
-      error: "Password is too short! 8+ characters pls",
-    });
-  }
-
-  try {
-    const user = jwt.verify(token, zxh);
-
-    const _id = user.id;
-
-    const password = await bcrypt.hash(plainTextPassword, 10);
-
-    await User.updateOne(
-      { _id },
-      {
-        $set: { password },
-      }
-    );
-    res.json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-    res.json({ status: "error", error: ";))" });
-  }
-});
-
-//handling login
-app.post("/api/login", async (req, res) => {
-  const { username, password } = req.body;
-
-  // const sessionToken = createSessionToken(user.id);
-  // res.cookie("sessionID", sessionToken, { httpOnly: true, maxAge:1800000})//, secure: true})
-
-  const user = await User.findOne({ username }).lean();
-
-  if (!user) {
-    return res.json({ status: "error", error: "Invalid username/password" });
-  }
-
-  if (await bcrypt.compare(password, user.password)) {
-    // the username, password combination is successful
-
-    const token = jwt.sign(
-      {
-        id: user._id,
-        username: user.username,
-      },
-      zxh
-    );
-
-    return res.json({ status: "ok", data: token });
-  }
-
-  res.json({ status: "error", error: "Invalid username/password" });
-});
-
-app.post("/topsecret", (req, res) => {
-  jwt.verify(req.body.token, zxh, function (err, decoded) {
-    if (err) {
-      res.json({ status: "fail" });
-    } else {
-      res.json({ status: "success", username: decoded.username });
-    }
-  });
-});
-
-// to login page
-app.get("/login", function (req, res) {
-  res.render("login", { root: __dirname });
-});
-
-//to register page
-app.get("/register", function (req, res) {
-  res.render("registrationForm", { root: __dirname });
-});
-
-//post data to db for registration and password handling
-app.post("/api/register", async (req, res) => {
-  const { username, password: plainTextPassword } = req.body;
-
-  if (!username || typeof username !== "string") {
-    return res.json({ status: "error", error: "Invalid username" });
-  }
-
-  if (!plainTextPassword || typeof plainTextPassword !== "string") {
-    return res.json({ status: "error", error: "Invalid password" });
-  }
-
-  if (plainTextPassword.length < 7) {
-    return res.json({
-      status: "error",
-      error: "Password is too short! 8+ characters pls",
-    });
-  }
-
-  const password = await bcrypt.hash(plainTextPassword, 10);
-
-  try {
-    const response = await User.create({
-      username,
-      password,
-    });
-    console.log("User created successfully: ", response);
-  } catch (error) {
-    if (error.code === 11000) {
-      // duplicate key
-      return res.json({ status: "error", error: "Username already in use" });
-    }
-    throw error;
-  }
-
-  res.json({ status: "ok" });
-});
-
-//logout
-router.get("/logout", (req, res) => {});
-module.exports = router;
 
 // Opens new page to display the table with the suggested products on
 // Sends to an API
@@ -263,6 +122,152 @@ app.get("/makeUpResultsAPI", async function (req, res) {
     link: 1,
   });
   res.json(makeUpResults);
+});
+
+// Authorization
+
+app.use("/", express.static(path.join(__dirname, "static")));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    credentials: true,
+  })
+);
+
+//Route to login page
+app.get("/login", function (req, res) {
+  res.render("login", { root: __dirname });
+});
+
+//handling login
+app.post("/api/login", async (req, res) => {
+  const { username, password } = req.body;
+
+  // trying to store in httpOnly cookie in the future:
+  // const sessionToken = createSessionToken(user.id);
+  // res.cookie("sessionID", sessionToken, { httpOnly: true, maxAge:1800000})//, secure: true})
+
+  const user = await User.findOne({ username }).lean();
+
+  if (!user) {
+    return res.json({ status: "error", error: "Invalid username/password" });
+  } // if no username in the db - error message
+
+  if (await bcrypt.compare(password, user.password)) {
+    // the username, password combination is successful
+
+    const token = jwt.sign(
+      {
+        id: user._id,
+        username: user.username,
+      },
+      zxh
+    );
+
+    return res.json({ status: "ok", data: token });
+  }
+
+  res.json({ status: "error", error: "Invalid username/password" });
+});
+
+//Secret page to login
+app.post("/topsecret", (req, res) => {
+  jwt.verify(req.body.token, zxh, function (err, decoded) {
+    if (err) {
+      res.json({ status: "fail" });
+    } else {
+      res.json({ status: "success", username: decoded.username });
+    }
+  });
+});
+
+//Route to register page
+app.get("/register", function (req, res) {
+  res.render("registrationForm", { root: __dirname });
+});
+
+//post data to db for registration and password handling
+app.post("/api/register", async (req, res) => {
+  const { username, password: plainTextPassword } = req.body;
+
+  if (!username || typeof username !== "string") {
+    return res.json({ status: "error", error: "Invalid username" });
+  } //only accepts string for username
+
+  if (!plainTextPassword || typeof plainTextPassword !== "string") {
+    return res.json({ status: "error", error: "Invalid password" });
+  }
+
+  if (plainTextPassword.length < 7) {
+    return res.json({
+      status: "error",
+      error: "Password is too short! 8+ characters pls",
+    });
+  } //some security measures for the passwords
+
+  const password = await bcrypt.hash(plainTextPassword, 10);
+
+  try {
+    const response = await User.create({
+      username,
+      password,
+    });
+    console.log("User created successfully: ", response);
+  } catch (error) {
+    if (error.code === 11000) {
+      // duplicate key
+      return res.json({ status: "error", error: "Username already in use" });
+    }
+    throw error;
+  }
+
+  res.json({ status: "ok" });
+});
+
+//logout
+router.get("/logout", (req, res) => {});
+module.exports = router;
+
+//changing password
+app.get("/change-password", function (req, res) {
+  res.render("change-password", { root: __dirname });
+});
+
+app.post("/api/change-password", async (req, res) => {
+  const { token, newpassword: plainTextPassword } = req.body;
+
+  if (!plainTextPassword || typeof plainTextPassword !== "string") {
+    return res.json({ status: "error", error: "Invalid password" });
+  }
+
+  if (plainTextPassword.length < 7) {
+    return res.json({
+      status: "error",
+      error: "Password is too short! 8+ characters pls",
+    });
+  }
+
+  try {
+    const user = jwt.verify(token, zxh);
+
+    const _id = user.id;
+
+    const password = await bcrypt.hash(plainTextPassword, 10);
+
+    await User.updateOne(
+      { _id },
+      {
+        $set: { password },
+      }
+    );
+    res.json({ status: "ok" });
+  } catch (error) {
+    console.log(error);
+    res.json({ status: "error", error: ";))" });
+  }
 });
 
 // listen on port 3000 and return statement to console

@@ -58,6 +58,18 @@ app.get("/admin", function (req, res) {
   res.render("admin");
 });
 
+app.get("/hairCareResults", function (req, res) {
+  res.render("hairCareResults");
+});
+
+app.get("/skinCareResults", function (req, res) {
+  res.render("skinCareResults");
+});
+
+app.get("/makeUpResults", function (req, res) {
+  res.render("makeUpResults");
+});
+
 // add the router
 app.use("/", router);
 
@@ -82,14 +94,6 @@ app.get("/hairCareResultsAPI", async function (req, res) {
   res.json(hairResults);
 });
 
-app.get("/hairCareResults", function (req, res) {
-  res.render("hairCareResults");
-});
-
-app.get("/skinCareResults", function (req, res) {
-  res.render("skinCareResults");
-});
-
 app.get("/skinCareResultsAPI", async function (req, res) {
   const skinArray = Array.isArray(req.query.skinIngredients)
     ? req.query.skinIngredients
@@ -103,10 +107,6 @@ app.get("/skinCareResultsAPI", async function (req, res) {
     link: 1,
   });
   res.json(skinResults);
-});
-
-app.get("/makeUpResults", function (req, res) {
-  res.render("makeUpResults");
 });
 
 app.get("/makeUpResultsAPI", async function (req, res) {

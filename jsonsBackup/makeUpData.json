@@ -1,36 +1,46 @@
 [
-     {
-       "product": "High-Adherence Silicone Primer",
-       "target": "Primer", 
-       "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free"],
-       "link": "https://theordinary.deciem.com/product/rdn-high-adherence-silicone-primer-30ml#siliconlink"
-     },
-     {
-       "product": "Concealer (3.2 Y)",
-       "target": "Concealer", 
-       "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free", "Silicon-free"],
-       "link": "https://theordinary.deciem.com/product/rdn-concealer-32-y-8ml"
-     },
-     {
-       "product": "Coverage Foundation (1.0 N)",
-       "target": "Foundation",
-       "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free", "Silicon-free"], 
-       "link": "https://theordinary.deciem.com/product/rdn-coverage-foundation-10-n-eu-30ml?redir=1"
-     },
-    
-     {
-       "product": "NAKED WILD WEST Eyeshadow Palette",
-       "target": "Eyeshadows", 
-       "Content": ["Nut-free", "Silicon-free"],
-       "link": "https://www.urbandecay.co.uk/en_GB/eyes/eyeshadow/naked-wild-west/ud1054.html#gclid=CjwKCAiA65iBBhB-EiwAW253W4SSIKNCe-HgxtNULjKT__fpYIorzkcyHp55tC0KzfR2uGq0IwG7ShoCLXsQAvD_BwE&gclsrc=aw.ds&start=2&cgid=vegan-products"
-     },
-    
-     {
-       "product": "MAC Matte Lipstick",
-       "target": "Lipstick",
-       "Content": "Animal-tested",
-       "link": "https://www.maccosmetics.co.uk/product/13854/310/products/makeup/lips/lipstick/matte-lipstick#/shade/Velvet_Teddy"
-    }
-]
+  {
+    "product": "High-Adherence Silicone Primer",
+    "target": "Primer",
+    "Content": ["Vegan", "Nut-free", "Gluten-free", "Cruelty-free"],
+    "link": "<a href='https://theordinary.deciem.com/product/rdn-high-adherence-silicone-primer-30ml#siliconlink'>Shop Here</a> "
+  },
+  {
+    "product": "Concealer (3.2 Y)",
+    "target": "Concealer",
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Gluten-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https://theordinary.deciem.com/product/rdn-high-adherence-silicone-primer-30ml#siliconlink'>Shop Here</a> "
+  },
+  {
+    "product": "Coverage Foundation (1.0 N)",
+    "target": "Foundation",
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Gluten-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https://theordinary.deciem.com/product/rdn-coverage-foundation-10-n-eu-30ml?redir=1'>Shop Here</a> "
+  },
 
-    
+  {
+    "product": "NAKED WILD WEST Eyeshadow Palette",
+    "target": "Eyeshadows",
+    "Content": ["Nut-free", "Silicon-free"],
+    "link": "<a href='https://www.urbandecay.co.uk/en_GB/eyes/eyeshadow/naked-wild-west/ud1054.html#gclid=CjwKCAiA65iBBhB-EiwAW253W4SSIKNCe-HgxtNULjKT__fpYIorzkcyHp55tC0KzfR2uGq0IwG7ShoCLXsQAvD_BwE&gclsrc=aw.ds&start=2&cgid=vegan-products'>Shop Here</a>"
+  },
+
+  {
+    "product": "MAC Matte Lipstick",
+    "target": "Lipstick",
+    "Content": "Animal-tested",
+    "link": "<a href='https://www.maccosmetics.co.uk/product/13854/310/products/makeup/lips/lipstick/matte-lipstick#/shade/Velvet_Teddy'>Shop Here</a>"
+  }
+]

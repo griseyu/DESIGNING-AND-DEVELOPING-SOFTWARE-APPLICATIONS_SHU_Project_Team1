@@ -1,36 +1,64 @@
 [
-    {
-      "product": "TO Niacinamide 10% + Zinc 1%",
-      "target": ["Serum","Oily", "Acne"], 
-      "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free","Silicon-free"],
-      "link": "https://theordinary.deciem.com/product/rdn-niacinamide-10pct-zinc-1pct-30ml?redir=1"
-    },
-    {
-      "product": "TO Salicylic Acid 2% Masque",
-      "target": ["Treatment", "Oily", "Acne"], 
-      "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free", "Silicon-free"],
-      "link": "https://theordinary.deciem.com/product/rdn-salicylic-acid-2pct-masque-50ml?redir=1"
-    },
-    {
-      "product": "TO “Buffet”",
-      "target": ["Serum","Aging", "Dry", "Normal"],
-      "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free", "Silicon-free"], 
-      "link": "https://theordinary.deciem.com/product/rdn-buffet-30ml?redir=1"
-    },
-   
-    {
-      "product": "CeraVe Hydrating Cleanser",
-      "target": ["Cleanser", "Sensitive", "Dry", "Normal"], 
-      "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free", "Silicon-free"], 
-      "link": "https://www.boots.com/cerave-hydrating-cleanser-236ml-10246701-"
-    },
-   
-    {
-      "product": "Cetaphil Daily Defence Moisturiser SPF50+",
-      "target": ["Moisturiser", "SPF", "Sensitive", "Normal"],
-      "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free", "Silicon-free"], 
-      "link": "https://www.boots.com/cetaphil-daily-defence-moisturiser-10246697"
-   }
-]
+  {
+    "product": "TO Niacinamide 10% + Zinc 1%",
+    "target": ["Serum", "Oily", "Acne"],
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Gluten-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https://theordinary.deciem.com/product/rdn-niacinamide-10pct-zinc-1pct-30ml?redir=1'>Shop Here</a>"
+  },
+  {
+    "product": "TO Salicylic Acid 2% Masque",
+    "target": ["Treatment", "Oily", "Acne"],
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Gluten-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https://theordinary.deciem.com/product/rdn-salicylic-acid-2pct-masque-50ml?redir=1'>Shop Here</a>"
+  },
+  {
+    "product": "TO “Buffet”",
+    "target": ["Serum", "Aging", "Dry", "Normal"],
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Gluten-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https://theordinary.deciem.com/product/rdn-buffet-30ml?redir=1'>Shop Here</a>"
+  },
 
-   
+  {
+    "product": "CeraVe Hydrating Cleanser",
+    "target": ["Cleanser", "Sensitive", "Dry", "Normal"],
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Gluten-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https://www.boots.com/cerave-hydrating-cleanser-236ml-10246701-'>Shop Here</a>"
+  },
+
+  {
+    "product": "Cetaphil Daily Defence Moisturiser SPF50+",
+    "target": ["Moisturiser", "SPF", "Sensitive", "Normal"],
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Gluten-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https://www.boots.com/cetaphil-daily-defence-moisturiser-10246697'>Shop Here</a>"
+  }
+]

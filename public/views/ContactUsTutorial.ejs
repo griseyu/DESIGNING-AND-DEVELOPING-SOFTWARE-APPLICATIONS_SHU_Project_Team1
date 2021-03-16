@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="../CSS/desktop.css" media="only screen and (min-width: 720px)"/>
+
+
+    <title>Contact Us</title>
+  </head>
+
+
+  <body>
+    <script language="javascript" src="survey.js"></script>
+    <div class="containter">
+      <header>
+        <h1>Contact Us</h1>
+      </header>
+
+      <%- include('partials/navBar.ejs') %>
+      <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <form
+              id="contact-form"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input
+                      placeholder="Name"
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                    />
+                  </div>
+                  <br> 
+                  <div class="col-md-6">
+                    <div class="row">
+                    <input
+                      placeholder="Email"
+                      id="email"
+                      type="email"
+                      name="email"
+                      aria-describedby="emailHelp"
+                      required
+                    />
+                  </div>
+                  </div>
+                </div>
+              <div class="form-group">
+                <input
+                  placeholder="Subject"
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="Message"
+                  id="message"
+                  name="message"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <br> 
+              <button type="submit" value="submit" class="btn btn-primary">
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    </footer>
+    <!-- Footer -->
+    <%- include('partials/footer.ejs') %>
+
+    <script src="../index.js"></script>
+  </body>
+</html>

@@ -173,10 +173,12 @@ button:hover {
 
 /*Sidebar (underneath all other content on smaller screens */
 div.sidebar {
+  display: flexbox;
   background: rgb(255, 255, 255, 0.7);
   border-radius: 5px;
   height: auto;
   width: auto;
+
 }
 
 /*Home page images */
@@ -447,6 +449,10 @@ footer .row address {
 .form-group {
   background-color: transparent;
   color: #255f28;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
 }
 
 /*Profile*/
@@ -539,4 +545,30 @@ a {
 
 #questionnaire-title {
   font-weight: bold;
+}
+
+
+/* Contact Form */
+
+
+.col-md-12 {
+  border-radius: 20px;
+    background: rgb(255, 255, 255, 0.7);
+    padding: 30px;
+    color:#255f28;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    border-color: var(--green);
+    border-width: 5px;
+
+
+}
+
+.btn-primary {
+
+  background-color:var(--green);
+  color: white;
+  border: none;
 }

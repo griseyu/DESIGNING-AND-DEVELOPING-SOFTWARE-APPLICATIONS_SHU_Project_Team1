@@ -6,6 +6,10 @@ const router = express.Router();
 const hairCareQueries = require("./models/hairCareQueries");
 const makeUpQueries = require("./models/makeUpQueries");
 const skinCareQueries = require("./models/skinCareQueries");
+//Contact Us Form 
+const nodemailer = require("nodemailer");
+const multiparty = require("multiparty");
+require("dotenv").config();
 
 //Setting templating engine
 app.set("views", path.join(__dirname, "public/views"));
@@ -267,3 +271,72 @@ app.get("/makeUpResultsAPI", async function (req, res) {
 
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log("Running on port 3000"));
+
+
+//contact us form
+
+const PORT = process.env.PORT || 3000;
+
+//let EMAIL = "c0049747@my.shu.ac.uk"
+// instantiate an express app
+// cors
+app.use(cors({ origin: "*" }));
+
+
+// const transporter = nodemailer.createTransport({
+//   host: "smtp.gmail.com",
+//   port: 587,
+//   service: "gmail",
+//   auth: {
+//     user: process.env.EMAIL,
+//     pass: process.env.PASS,
+//   },
+// });
+
+// verify connection configuration
+// transporter.verify(function (error, success) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log("Server is ready to take our messages");
+//   }
+// });
+
+app.post("/ContactUsTutorial/send", (req, res) => {
+  let form = new multiparty.Form();
+  let data = {};
+  form.parse(req, function (err, fields) {
+    console.log("fields",fields);
+    Object.keys(fields).forEach(function (property) {
+      data[property] = fields[property].toString();
+    });
+    console.log("data",data);
+    const mail = {
+      sender: `${data.name} <${data.email}>`,
+      to: "almostlorelai@gmail.com", // receiver email,
+      subject: data.subject,
+      text: `${data.name} <${data.email}> \n${data.message}`,
+    };
+
+    console.log("sendmail",mail);
+    // transporter.sendMail(mail, (err, data) => {
+  
+    // });
+  });
+    if (true) {
+    return res.status(200).send("Email successfully sent to recipient!");
+        
+      } else {
+       return res.status(500).send("Something went wrong.");
+      }
+});
+
+//Index page (static HTML)
+app.get("/ContactUsTutorial", function (req, res) {
+  res.render("ContactUsTutorial");
+});
+
+// app.get("/ContactUsTutorial/send", function (req, res) {
+//   res.render("ContactUsTutorial");
+// });
+/*************************************************/

@@ -102,12 +102,36 @@
   }
   return "";
 }
-window.onload = checkCookie();
 
 
+// function checkCookie() {
+//   var user=getCookie("username");
+//   if (user != "") {
+//     window.location.href = "/profile";
+//   } else {
+//     window.location.href = "/login";
+//      if (user != "" && user != null) {
+//        setCookie("username", user, 30);
+//      }
+//   }
+// }
 
-  document.getElementById("welcome").textContent = " " + getCookie("username");
+// remember to add in onload="checkCookie()" in the body
 
+// window.addEventListener("load", checkCookie)
+
+
+// document.addEventListener("DOMContentLoaded", function(event) { 
+//   var user=getCookie("username");
+//   if (user != "") {
+//     window.location.href = "/profile";
+//   } else {
+//     window.location.href = "/login";
+//      if (user != "" && user != null) {
+//        setCookie("username", user, 30);
+//      }
+//   }
+// });
 
 
 </script>

@@ -95,5 +95,19 @@
   }
   return "";
 }
-  document.getElementById("welcome").textContent = "Hello, " + getCookie("username");
+
+function authUser(req, res, next) {
+  if (getCookie == null) {
+    res.status(403);
+    return res.send("You need to sign in");
+  } 
+
+  next();
+}
+
+module.exports = authUser;
+
+
+  document.getElementById("welcome").textContent = " " + getCookie("username");
+
 </script>

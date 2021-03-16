@@ -18,6 +18,7 @@ const cors = require("cors");
 // const authRoutes = require("auth-routes");
 var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/ddsa-project";
+const { authUser, authRole } = require("./Auth");
 
 //connect through mongoose
 mongoose.connect(url, {

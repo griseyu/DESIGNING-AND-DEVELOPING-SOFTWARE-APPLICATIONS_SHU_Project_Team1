@@ -76,6 +76,10 @@ app.get("/makeUpResults", function (req, res) {
   res.render("makeUpResults");
 });
 
+app.get("/AboutUs", function (req, res) {
+  res.render("AboutUs");
+});
+
 // add the router
 app.use("/", router);
 

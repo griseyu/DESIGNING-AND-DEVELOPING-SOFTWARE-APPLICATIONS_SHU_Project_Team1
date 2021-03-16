@@ -574,3 +574,12 @@ a {
   border: none;
 
 }
+
+.createUsername {
+  text-align: left;
+}
+
+.createPassword {
+  text-align: left;
+}
+

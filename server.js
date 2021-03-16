@@ -311,7 +311,7 @@ app.post("/ContactUsTutorial/send", (req, res) => {
   let form = new multiparty.Form();
   let data = {};
   form.parse(req, function (err, fields) {
-    console.log("fields",fields);
+    //console.log("fields",fields);
     Object.keys(fields).forEach(function (property) {
       data[property] = fields[property].toString();
     });
@@ -323,7 +323,7 @@ app.post("/ContactUsTutorial/send", (req, res) => {
       text: `${data.name} <${data.email}> \n${data.message}`,
     };
 
-    console.log("sendmail",mail);
+    //console.log("sendmail",mail);
     // transporter.sendMail(mail, (err, data) => {
   
     // });
@@ -341,7 +341,11 @@ app.get("/ContactUsTutorial", function (req, res) {
   res.render("ContactUsTutorial");
 });
 
-// app.get("/ContactUsTutorial/send", function (req, res) {
-//   res.render("ContactUsTutorial");
-// });
+app.get("/ContactUsTutorialSubmit", function (req, res) {
+ res.render("ContactUsTutorialSubmit");
+ });
+
+ app.get("/ContactUsTutorialError", function (req, res) {
+  res.render("ContactUsTutorialError");
+  });
 /*************************************************/

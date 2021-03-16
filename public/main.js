@@ -212,3 +212,15 @@ async function CreateTableFromJSONmakeUp() {
 function goBack() {
   window.history.back();
 }
+
+function checkCookie() {
+  var user=getCookie("username");
+  if (user != "") {
+    window.location.href = "/profile";
+  } else {
+    window.location.href = "/login";
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}

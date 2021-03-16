@@ -86,6 +86,7 @@
 </html>
 
 <script>
+
   function getCookie(cname) {
   const name = cname + "=";
   const decodedCookie = decodeURIComponent(document.cookie);
@@ -101,8 +102,12 @@
   }
   return "";
 }
+window.onload = checkCookie();
+
 
 
   document.getElementById("welcome").textContent = " " + getCookie("username");
+
+
 
 </script>

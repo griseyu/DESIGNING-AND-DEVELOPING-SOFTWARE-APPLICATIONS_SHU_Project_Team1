@@ -129,13 +129,13 @@
         if (result.status === "ok") {
           // everythign went fine
           console.log("Got the token: ", result.data);
-          localStorage.setItem("token", result.data);
+          // localStorage.setItem("token", result.data);
           // document.location.href = 'http://localhost:3000/profile';
           alert("Success!");
           const response = await axios.post("/topsecret", {token: localStorage.getItem("token")})
         if (response.data.status == "success") {
           // document.getElementById("message-area").textContent = response.data.username
-          localStorage.setItem("username", response.data.username);
+          // localStorage.setItem("username", response.data.username);
           window.location.href = "/profile";
 
   

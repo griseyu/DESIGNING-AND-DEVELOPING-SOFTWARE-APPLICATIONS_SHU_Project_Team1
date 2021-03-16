@@ -49,12 +49,20 @@
           <div class="card">
             <img src="../Images/cardleaf.jpg" alt="card" style="width:100%">
             </div>
-            <p><a href="/makeUp">Retake the quiz</a></p>
-          </div><br>
-          <br>
-          <a id="changePassword" href="/change-password">Change my password</a><br>
-          <br>
-          <button>Log out</button>
+          </div>
+          <div>
+            
+          </div>
+          <p><a href="/makeUp">Retake the quiz</a>
+            <p>
+    
+            </p>
+            <a id="changePassword" href="/change-password">Change my password</a>
+          </p>
+          <p>
+    
+          </p>
+          <a href="/logout">Log out</a>
           <p>
             Rate Us Before You Leave
           </p>
@@ -78,5 +86,23 @@
 </html>
 
 <script>
-  document.getElementById("welcome").textContent = "Hello, " + localStorage.getItem("username");
+  function getCookie(cname) {
+  const name = cname + "=";
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+
+  document.getElementById("welcome").textContent = " " + getCookie("username");
+
 </script>

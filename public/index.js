@@ -15,11 +15,11 @@ const sendMail = (mail) => {
   
      if(response.status === 200) {
        // Good path
-         window.location.href = "/ContactUsTutorial";
+         window.location.href = "/ContactUsTutorialSubmit";
          //create submitted page here with link to home
      } else {
        //Bad path
-       window.location.href = "/bad-submit";
+       window.location.href = "/ContactUsTutorialError";
        //create something has gone wrong page
      }
     

@@ -1,36 +1,62 @@
 [
-    {
-      "product": "Maui Moisture Revive & Hydrate Shea Butter Mask",
-      "target": ["Mask","Dry", "Damaged"], 
-      "Content": ["Vegan", "Parabens-free", "SLS-free","Cruelty-free","Silicon-free"],
-      "link": "https://www.boots.com/maui-moisture-revive-hydrate-shea-butter-mask-340g-10231852"
-    },
-    {
-      "product": "Pantene Grow Strong Shampoo With Bamboo And Biotin ",
-      "target": ["Shampoo", "Thinning", "Add Volume"], 
-      "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free", "Silicon-free"],
-      "link": "https://theordinary.deciem.com/product/rdn-salicylic-acid-2pct-masque-50ml?redir=1"
-    },
-    {
-      "product": "Head & Shoulders Itchy Scalp Anti Dandruff Shampoo ",
-      "target": ["Shampoo","Dandruff", "Dry", "Normal"],
-      "Content": ["Vegan", "Parabens-free", "Gluten-free", "Silicon-free"], 
-      "link": "https://www.boots.com/head-and-shoulders-shampoo-itchy-scalp-500ml-10106846"
-    },
-   
-    {
-      "product": "OGX Damage Remedy+ Coconut Miracle Oil Extra Strength pH Balanced Shampoo",
-      "target": ["Shampoo", "Damaged", "Dry", "Normal"], 
-      "Content": ["Vegan", "Nut-free", "Parabens-free", "SLS-free","Cruelty-free", "Silicon-free"], 
-      "link": "https://www.boots.com/ogx-extra-strength-damage-remedy-coconut-miracle-oil-shampoo-385ml-10238214"
-    },
-   
-    {
-      "product": "TO 100% Cold Pressed Virgin Marula Oil 30ml",
-      "target": ["Oil", "Dry", "Normal"],
-      "Content": ["Vegan", "Nut-free", "Gluten-free","Cruelty-free", "Silicon-free", "SLS-free", "Parabens-free"], 
-      "link": "https://www.boots.com/the-ordinary-100-cold-pressed-virgin-marula-oil-30ml-10279245"
-   }
+  {
+    "product": "Maui Moisture Revive & Hydrate Shea Butter Mask",
+    "target": ["Mask", "Dry", "Damaged"],
+    "Content": [
+      "Vegan",
+      "Parabens-free",
+      "SLS-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https:\/\/www.boots.com\/maui-moisture-revive-hydrate-shea-butter-mask-340g-10231852'>Shop Here</a>"
+  },
+  {
+    "product": "Pantene Grow Strong Shampoo With Bamboo And Biotin ",
+    "target": ["Shampoo", "Thinning", "Add Volume"],
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Gluten-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https:\/\/theordinary.deciem.com\/product\/rdn-salicylic-acid-2pct-masque-50ml?redir=1'>Shop Here</a> "
+  },
+  {
+    "product": "Head & Shoulders Itchy Scalp Anti Dandruff Shampoo ",
+    "target": ["Shampoo", "Dandruff", "Dry", "Normal"],
+    "Content": ["Vegan", "Parabens-free", "Gluten-free", "Silicon-free"],
+    "link": "<a href='https:\/\/www.boots.com\/head-and-shoulders-shampoo-itchy-scalp-500ml-10106846'>Shop Here</a> "
+  },
+
+  {
+    "product": "OGX Damage Remedy+ Coconut Miracle Oil Extra Strength pH Balanced Shampoo",
+    "target": ["Shampoo", "Damaged", "Dry", "Normal"],
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Parabens-free",
+      "SLS-free",
+      "Cruelty-free",
+      "Silicon-free"
+    ],
+    "link": "<a href='https:\/\/www.boots.com\/ogx-extra-strength-damage-remedy-coconut-miracle-oil-shampoo-385ml-10238214'>Shop Here</a> "
+  },
+
+  {
+    "product": "TO 100% Cold Pressed Virgin Marula Oil 30ml",
+    "target": ["Oil", "Dry", "Normal"],
+    "Content": [
+      "Vegan",
+      "Nut-free",
+      "Gluten-free",
+      "Cruelty-free",
+      "Silicon-free",
+      "SLS-free",
+      "Parabens-free"
+    ],
+    "link": "<a href='https:\/\/www.boots.com\/the-ordinary-100-cold-pressed-virgin-marula-oil-30ml-10279245'>Shop Here</a> "
+  }
 ]
 
-   

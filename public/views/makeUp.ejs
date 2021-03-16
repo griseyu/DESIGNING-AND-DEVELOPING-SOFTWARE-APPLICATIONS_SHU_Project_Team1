@@ -28,62 +28,59 @@
         <label id="questionnaire-title"
           >Select which ingredients you don't want:</label
         ><br />
-
         <input
           id="c1"
           type="checkbox"
           name="makeUpIngredients"
           value="Vegan"
-          oninvalid="this.setCustomValidity('Please make a selection')"
-          onchange="this.setCustomValidity('')"
+          required="required"
         />
-        <label for="c">Vegan</label><br />
+        <label for="c1">Vegan</label><br />
         <input
           id="c2"
           type="checkbox"
           name="makeUpIngredients"
           value="Nut-free"
         />
-        <label for="c">Nut-free</label><br />
+        <label for="c2">Nut-free</label><br />
         <input
           id="c3"
           type="checkbox"
           name="makeUpIngredients"
           value="Gluten-free"
         />
-        <label for="c">Gluten-free</label><br />
+        <label for="c3">Gluten-free</label><br />
         <input
           id="c4"
           type="checkbox"
           name="makeUpIngredients"
           value="Cruelty-free"
         />
-        <label for="c">Cruelty-free</label><br />
+        <label for="c4">Cruelty-free</label><br />
         <input
           id="c5"
           type="checkbox"
           name="makeUpIngredients"
           value="Silicon-free"
         />
-        <label for="c">Silicon-free</label><br />
+        <label for="c5">Silicon-free</label><br />
         <input
           id="c6"
           type="checkbox"
           name="makeUpIngredients"
           value="Animal-tested"
         />
-        <label for="c">Animal-tested</label><br />
+        <label for="c6">Animal-tested</label><br />
 
         <p>
           <button type="submit" onclick="valthisform()">Show Products</button>
         </p>
-        <!-- <input type="submit" value="Let's Go!" onclick="letsGo()" /> -->
       </form>
 
       <script>
         function valthisform() {
-          var checkboxes = document.getElementsByName("makeUpIngredients");
           var okay = false;
+          var checkboxes = document.getElementsByName("makeUpIngredients");
           for (var i = 0; i < checkboxes.length; i++) {
             if (checkboxes[i].checked === true) {
               okay = true;

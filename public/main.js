@@ -198,8 +198,7 @@ async function CreateTableFromJSONmakeUp() {
 
       for (var j = 0; j < col.length; j++) {
         var tabCell = tr.insertCell(-1);
-        tabCell.innerHTML =
-          '<a href="' + data + '">' + data[i][col[j]] + "</a>";
+        tabCell.innerHTML = data[i][col[j]];
       }
     }
 

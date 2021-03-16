@@ -54,10 +54,15 @@ select {
   background-color: var(--background);
   margin: auto;
   margin-top: 20px;
-  max-width: 600px;
+  max-width: 65%;
   padding: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .white-container {
+    max-width: 95%;
+  }
+}
 /* Add a black background color to the top navigation */
 .topnav {
   display: flexbox;
@@ -171,6 +176,11 @@ button:hover {
   border-radius: 5px;
 }
 
+.button:hover {
+  background-color: rgb(76, 175, 80, 0.6);
+  color: white;
+}
+
 /*Sidebar (underneath all other content on smaller screens */
 div.sidebar {
   display: flexbox;
@@ -189,7 +199,7 @@ div.sidebar {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 100%;
+  max-width: 75%;
   position: relative;
   margin: auto;
 }
@@ -316,15 +326,14 @@ div.sidebar {
 }
 
 .rating {
-  color: white ;
- 
+  color: white;
 }
 .checked {
   color: #255f28;
 }
 
 .card {
-  border:#255f28 ;
+  border: #255f28;
   border-radius: 5px;
   padding-right: 10px;
   padding-left: 10px;
@@ -332,9 +341,8 @@ div.sidebar {
 
 /* On mouse-over, add a deeper shadow */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 
 /* Footer styling */
 .footer {
@@ -353,7 +361,6 @@ footer {
   border-top: white;
   border-top-width: 20px;
   margin-top: 55px;
-  margin-bottom: 55px;
   background: rgb(255, 255, 255, 0.7);
   color: var(--green);
   font-weight: bolder;
@@ -480,8 +487,6 @@ footer .row address {
   width: 1%;
   height: 30px;
   background-color: var(--green);
- 
-  
 }
 
 /* tr:nth-child(even) td {
@@ -499,8 +504,6 @@ table th {
 table thead {
   background: #ccc;
 } */
-
-
 
 .styled-table {
   text-align: center;
@@ -537,11 +540,9 @@ table thead {
   border-bottom: 2px solid #009879;
 }
 
-
 a {
-  color:var(--green);
+  color: var(--green);
 }
-
 
 #questionnaire-title {
   font-weight: bold;
@@ -571,4 +572,5 @@ a {
   background-color:var(--green);
   color: white;
   border: none;
+
 }

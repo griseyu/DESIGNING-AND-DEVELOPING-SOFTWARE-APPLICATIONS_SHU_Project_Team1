@@ -6,7 +6,7 @@ const router = express.Router();
 const hairCareQueries = require("./models/hairCareQueries");
 const makeUpQueries = require("./models/makeUpQueries");
 const skinCareQueries = require("./models/skinCareQueries");
-//Contact Us Form 
+//Contact Us Form
 const nodemailer = require("nodemailer");
 const multiparty = require("multiparty");
 require("dotenv").config();
@@ -15,6 +15,7 @@ require("dotenv").config();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const User = require("./models/user2");
+const User2 = require("./models/user");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const zxh = "sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk";
@@ -22,7 +23,6 @@ const cors = require("cors");
 // const authRoutes = require("auth-routes");
 var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/ddsa-project";
-const { authUser, authRole } = require("./Auth");
 
 //connect through mongoose
 mongoose.connect(url, {
@@ -61,6 +61,15 @@ app.get("/profile", function (req, res) {
 });
 
 app.get("/admin", function (req, res) {
+  //   function checkCookie() {
+  //     var user = getCookie("username");
+  //     if (user === "admin" && password === "@Leeds21") {
+  //       res.render("admin");
+  //     } else {
+  //       res.render("login");
+  //     }
+  //   }
+  // });
   res.render("admin");
 });
 
@@ -316,7 +325,6 @@ app.post("/api/change-password", async (req, res) => {
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log("Running on port 3000"));
 
-
 //contact us form
 
 const PORT = process.env.PORT || 3000;
@@ -325,7 +333,6 @@ const PORT = process.env.PORT || 3000;
 // instantiate an express app
 // cors
 app.use(cors({ origin: "*" }));
-
 
 // const transporter = nodemailer.createTransport({
 //   host: "smtp.gmail.com",
@@ -354,7 +361,7 @@ app.post("/ContactUsTutorial/send", (req, res) => {
     Object.keys(fields).forEach(function (property) {
       data[property] = fields[property].toString();
     });
-    console.log("data",data);
+    console.log("data", data);
     const mail = {
       sender: `${data.name} <${data.email}>`,
       to: "almostlorelai@gmail.com", // receiver email,
@@ -364,15 +371,14 @@ app.post("/ContactUsTutorial/send", (req, res) => {
 
     //console.log("sendmail",mail);
     // transporter.sendMail(mail, (err, data) => {
-  
+
     // });
   });
-    if (true) {
+  if (true) {
     return res.status(200).send("Email successfully sent to recipient!");
-        
-      } else {
-       return res.status(500).send("Something went wrong.");
-      }
+  } else {
+    return res.status(500).send("Something went wrong.");
+  }
 });
 
 //Index page (static HTML)
@@ -381,10 +387,10 @@ app.get("/ContactUsTutorial", function (req, res) {
 });
 
 app.get("/ContactUsTutorialSubmit", function (req, res) {
- res.render("ContactUsTutorialSubmit");
- });
+  res.render("ContactUsTutorialSubmit");
+});
 
- app.get("/ContactUsTutorialError", function (req, res) {
+app.get("/ContactUsTutorialError", function (req, res) {
   res.render("ContactUsTutorialError");
-  });
+});
 /*************************************************/

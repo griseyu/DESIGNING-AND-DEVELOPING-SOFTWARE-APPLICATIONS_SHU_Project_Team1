@@ -31,11 +31,12 @@
 ### Work Strategy
 
 ### Communication
+We had regular meeting planned and unplanned. Mostly through Slack, but also Zoom and Screen
 
 
 ## Main functions of the application:
 
 
 ## Security
-
+THe application uses JWT with httpOnly cookies which has a good level of security
 

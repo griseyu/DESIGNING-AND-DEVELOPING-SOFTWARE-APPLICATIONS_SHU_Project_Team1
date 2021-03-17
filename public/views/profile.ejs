@@ -3,23 +3,17 @@
   <head>
     <link rel="stylesheet" href="../CSS/styles.css" />
     <link rel="stylesheet" href="../CSS/profile.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../main.js"></script>
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>My Profile</title>
   </head>
-
   <body>
     <header>
       <h1>Your Prescription</h1>
     </header>
-
     <%- include('partials/navBar.ejs') %>
-
     <div class="white-container">
       <h2><p id="welcome">
       </p></h2>
@@ -51,40 +45,31 @@
             </div>
           </div>
           <div>
-            
           </div>
           <p><a href="/makeUp">Retake the quiz</a>
             <p>
-    
             </p>
             <a id="changePassword" href="/change-password">Change my password</a>
           </p>
           <p>
-    
           </p>
           <a href="/logout">Log out</a>
           <p>
             Rate Us Before You Leave
           </p>
-    
           <div class="rating">
-    
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
             <span class="fa fa-star"></span>
-      
-          
           </div>
         </div>
       </div>
-      
     </div>
     <%- include('partials/footer.ejs') %>
   </body>
 </html>
-
 <script>
   function getCookie(cname) {
   const name = cname + "=";
@@ -103,6 +88,20 @@
 }
 
 
-  document.getElementById("welcome").textContent = " " + getCookie("username");
+ function checkCookie() {
+  var user=getCookie("username");
+  if (user === "" || !user) {
+    window.location.href = "/login";
+  }
 
+  if (user === "admin") {
+    window.location.href = "/admin";
+  }
+}
+
+checkCookie();
+
+
+document.getElementById("welcome").textContent = "Welcome back, " + getCookie("username");
 </script>
+

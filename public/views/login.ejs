@@ -137,6 +137,8 @@
           // document.getElementById("message-area").textContent = response.data.username
           // localStorage.setItem("username", response.data.username);
           window.location.href = "/profile";
+         const currentcookies =  document.cookie 
+         document.cookie = currentcookies + "username=" +  username;
 
   
         } else {

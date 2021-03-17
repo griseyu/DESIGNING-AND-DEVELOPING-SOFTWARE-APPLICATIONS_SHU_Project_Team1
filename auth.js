@@ -1,24 +1,18 @@
-// function authUser(req, res, next) {
-//   if (getCookie == null) {
-//     res.status(403);
-//     return res.send("You need to sign in");
-//   }
+const validateToken = (req, res, next) => {
+  const accessToken = req.cookies["getCookie"];
 
-//   next();
-// }
+  if (!accessToken)
+    return res.status(400).json({ error: "User not Authenticated!" });
 
-// function authRole(role) {
-//   return (req, res, next) => {
-//     if (req.user.role !== role) {
-//       res.status(401);
-//       return res.send("Not allowed");
-//     }
+  try {
+    const validToken = verify(token, "zxh");
+    if (validToken) {
+      req.authenticated = true;
+      return next();
+    }
+  } catch (err) {
+    return res.status(400).json({ error: err });
+  }
+};
 
-//     next();
-//   };
-// }
-
-// module.exports = {
-//   authUser,
-//   authRole,
-// };
+module.exports = { validateToken };

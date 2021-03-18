@@ -10,7 +10,7 @@
 * IDE/Shell
 
 - [x] Copy code:
-To copy code locally, in your shell/terminal copy following:
+To copy code locally, in your shell/terminal copy the following:
  **git clone https://github.com/jmin97/DESIGNING-AND-DEVELOPING-SOFTWARE-APPLICATIONS_SHU_Project_Team1.git**
  
 - [x] To install node:
@@ -20,13 +20,6 @@ Run in your shell/terminal
 - [x] Install dependencies: 
 **npm install**
 
-- [x] To run the application:
-1. Make sure you have above installed (check node version by putting **node -v** into terminal), 
-2. Open project in IDE or terminal/shell 
-3. put **node server.js** into terminal/shell or terminal section of IDE
-4. load localhost:3000 on your browser
-
-
 - [x] To set up a database in MongoDB:
 1. Drag from our code or download backup.zip from our repository 
 2. Then unzip it on your Desktop (so it is a folder called backup)
@@ -35,3 +28,9 @@ Run in your shell/terminal
 **mongorestore --db=ddsa-project --dir=/Users/!Name!/Desktop/backup/ddsa-project**
 
 Alternatively : download JSONS from jsonsBackup folder in this ropository and populate your MongoDB manually 
+
+- [x] To run the application:
+1. Make sure you have the above installed (check node version by putting **node -v** into terminal), 
+2. Open project in IDE or terminal/shell 
+3. run **node server.js** into terminal/shell or terminal section of IDE
+4. navigate to localhost:3000 on your browser

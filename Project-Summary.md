@@ -22,35 +22,30 @@ Sheffield Hallam University (@LecturerMick)
 
 ## Main functions of the application:
 The purpose of this application is to provide users with personalised recommendations for skin care, hair care and make up products based on a number of ingredient criteria selected by them; this is referred to as to as a prescription.
-On visiting the site, the user is presented with a home page containing featured products and video recommendations. From here the user can navigate between individual pages where their preferences can be selected in checkboxes.
-On submitting the selections, the user is directed to a new page containing a table of results displaying the suggested product name, a link to purchase the product from and a photograph of the product. On this page, the results can be saved to their account for future reference, or the selections can be made again by clicking a ‘back’ button to return the user to the selection page.
-The user must first register to use these features but can access the home page without logging in. After the user is logged in, they will be directed to their profile page where they will be presented with the option to view their previous prescriptions or create a new submission. The user can then choose to log out and be redirected to the home screen.
+
+The user must first register to use these features but can access the home page without logging in. After the user is logged in, they will be directed to their profile page where they will be presented with the option to view their suggested products. On submitting the selections, the user is directed to a new page containing a table of results displaying the suggested product name and a link to purchase the product from. On this page the selections can be made again by clicking a ‘back’ button to return the user to the selection page.The user can then choose to log out and be redirected to the home screen.
+
 The application is designed with a client side and server side. The server side handles interactions with the database including customer registration, login and product recommendation queries. The client side is used only to display this information to the customers ensuring a higher degree of security.
-The application has been developed with mobile first usability ensuring the pages are responsive to the size of screen the user is viewing it from. To achieve this, the menu bar is designed to collapse into a burger menu under a set screen size threshold as well as designing the on-screen containers to wrap around and stack vertically rather than horizontally when being viewed on smaller screens
+The application has been developed with mobile first usability ensuring the pages are responsive to the size of screen the user is viewing it from. 
 
 ## The concept
-Indivisual companies have their own product matching functionality, however, no global searching engines. So we innovated this principle by creating a database of products from different brands, which allowes the users to access the wider market using their preferences
+Individual companies have their own product matching functionalities but users are limited to viewing products specific to that company. We took this idea and innovated this principle by creating a database of products from different brands, which allows the user to access the wider market using their preferences.
 
 ## The design
-We were working based of mobile-first approach. As well as, modern HTML5 tags, css, JavaScript functionality to display responsive design of our application. We implemented accessability by constrasting the colours and make it obvious for items user can press.
+We designed the app based on the mobile-first approach as well as modern HTML5 tags, css and JavaScript functionality to enable responsive design. Accessibility was implemented throughout.
 
 ## Security
 The application uses JWT with httpOnly cookies which has a good level of security
-- Checks user is logged in: the main functionality of the application is only available to logged in users
-- Checks user is admin: admin user can delete users and see their latest search
+- Checks user is logged in: the main functionality of the application is only available to logged in users.
+- Checks user is admin: admin user can delete users.
 - Password hashing: in the database, passwords are hashed
 - Strong password requirements: Passwords must be minimum 8 characters long, with at least one lowercase letter, one upercase letter, one numeric digit and one special character
-
-## Work approach:
 
 ### Work Methodology - Agile, Scrum and Kanban
 We used different Agile approaches, such as Pair Programming, Kanban board, Version Control, Git
 
-### Work Strategy
-We palnned regular meeting and had unplanned meetings in a process 
-
-### Communication
-We had regular meeting planned and unplanned. Mostly through Slack, but also Zoom and Screen
+### Work Strategy and communication
+We palnned regular meetings to update the rest of the team on our individual progress and to tackle some issues together. We used zoom for our face-to-face meetings and slack for ongoing communication. We also used a Trello board to visualise the work.
 
 ## Story Board
 https://drive.google.com/file/d/1dDqBYnwczbdaLq7alTSVg0JuiTVv54MN/view?usp=sharing

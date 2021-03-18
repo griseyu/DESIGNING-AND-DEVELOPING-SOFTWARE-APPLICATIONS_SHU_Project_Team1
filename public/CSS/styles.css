@@ -25,7 +25,9 @@ header {
   text-align: center;
   border-radius: 55px;
 }
-
+.left {
+  text-align: left;
+}
 form {
   padding: 10px;
   text-align: center;
@@ -189,7 +191,6 @@ div.sidebar {
   border-radius: 5px;
   height: auto;
   width: auto;
-
 }
 
 /*Home page images */
@@ -549,31 +550,25 @@ a {
   font-weight: bold;
 }
 
-
 /* Contact Form */
-
 
 .col-md-12 {
   border-radius: 20px;
-    background: rgb(255, 255, 255, 0.7);
-    padding: 30px;
-    color:#255f28;
-    text-align: center;
-    max-width: 600px;
-    margin: auto;
-    margin-top: 20px;
-    border-color: var(--green);
-    border-width: 5px;
-
-
+  background: rgb(255, 255, 255, 0.7);
+  padding: 30px;
+  color: #255f28;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  border-color: var(--green);
+  border-width: 5px;
 }
 
 .btn-primary {
-
-  background-color:var(--green);
+  background-color: var(--green);
   color: white;
   border: none;
-
 }
 
 .createUsername {
@@ -583,4 +578,3 @@ a {
 .createPassword {
   text-align: left;
 }
-

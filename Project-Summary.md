@@ -36,6 +36,10 @@ We were working based of mobile-first approach. As well as, modern HTML5 tags, c
 
 ## Security
 The application uses JWT with httpOnly cookies which has a good level of security
+- Checks user is logged in: the main functionality of the application is only available to logged in users
+- Checks user is admin: admin user can delete users and see their latest search
+- Password hashing: in the database, passwords are hashed
+- Strong password requirements: Passwords must be minimum 8 characters long, with at least one lowercase letter, one upercase letter, one numeric digit and one special character
 
 ## Work approach:
 

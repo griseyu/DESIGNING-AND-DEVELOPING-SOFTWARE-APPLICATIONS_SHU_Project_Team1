@@ -39,11 +39,11 @@
 
         <div class=white-container> 
             <h2 id=deleteUserheading>Delete a user</h2>
-            <form id=deleteUserForm accept="/api/deleteUser" method="POST">
+            <form id=deleteUserForm action="/api/deleteUser" method="POST">
                 <label for="deleteUser">User you wish to delete:</label> <br>
                 <input type="text" id="deleteUser" name="deleteUser" placeholder="Username"><br>
                 <button id = "del-btn" class="btn btn-danger">Delete</button>    
-                <button>Delete</button>
+                <button type="submit">Delete</button>
             </form>
 
         </div>
@@ -51,30 +51,6 @@
         <%- include('partials/footer.ejs') %>
     <!-- Javascript links -->
     <script src="../main.js">
-    const form1 = document.getElementById('deleteUserForm')
-			form.addEventListener('submit', deleteUser)
-
-      async function deleteUser(event) {
-				event.preventDefault()
-				const username = document.getElementById('username').value
-
-				const result = await fetch('http://localhost:3000/api/deleteUser', {
-					method: 'POST',
-					headers: {
-						'Content-Type': 'application/json'
-					},
-					body: JSON.stringify({
-						username
-					})
-				}).then((res) => res.json())
-
-				if (result.status === 'ok') {
-					// if ok
-					alert('Success')
-				} else {
-					alert(result.error)
-				}
-			}
     </script>
     </body>
 </html>

@@ -328,11 +328,11 @@ app.post("/api/change-password", async (req, res) => {
 
 // Delete user
 app.post("/api/deleteUser", async (req, res) => {
-  const { username } = req.body;
-
+  const { deleteUser } = req.body;
+  console.log("server call", req.body);
   try {
     const response2 = await User.findOneAndRemove({
-      username,
+      username: deleteUser,
     });
     console.log("User deleted successfully: ", response2);
   } catch (error) {

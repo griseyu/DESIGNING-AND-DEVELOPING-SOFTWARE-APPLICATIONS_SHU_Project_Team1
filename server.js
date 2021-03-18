@@ -143,6 +143,10 @@ app.get("/makeUpResultsAPI", async function (req, res) {
   res.json(makeUpResults);
 });
 
+app.get("/blog", function (req, res) {
+  res.render("blog");
+});
+
 // Authorization
 
 app.use("/", express.static(path.join(__dirname, "static")));

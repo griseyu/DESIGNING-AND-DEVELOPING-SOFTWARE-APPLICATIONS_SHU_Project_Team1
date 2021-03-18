@@ -15,7 +15,7 @@
  - Slack and Zoom - Team communication
  - Screen - Pair Programming
  - draw.io, canva, pexels, unsplash, Presentation - Design tools
- 
+ - Express, mongoose, node.js, NodeMailer, multiparty, bcrypt, jwt, bodyParser, cors, jQuery, bootstrap - frameworks
 
 ## Stakeholders
 Sheffield Hallam University (@LecturerMick)

@@ -52,5 +52,15 @@ We palnned regular meeting and had unplanned meetings in a process
 ### Communication
 We had regular meeting planned and unplanned. Mostly through Slack, but also Zoom and Screen
 
+## Story Board
+https://drive.google.com/file/d/1dDqBYnwczbdaLq7alTSVg0JuiTVv54MN/view?usp=sharing
+
+## Sequens Diagram
+
+https://docs.google.com/document/d/1l5RY8Xbn_-rmWz6I-bYxac5J2zvNPaic9hNbPIv_Q4A/edit?usp=sharing
+
+## Flowchart
+
+https://drive.google.com/file/d/1Skc22oSz2fSPJ9cKN9JLeeTFm5oMihLY/view?usp=sharing
 
 

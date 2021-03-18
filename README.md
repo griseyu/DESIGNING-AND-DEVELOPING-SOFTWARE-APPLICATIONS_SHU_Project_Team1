@@ -18,7 +18,7 @@ To copy code locally, in your shell/terminal copy following:
 **npm install**
 
 - [x] Install dependencies: 
-**npm install express bcryptjs mongoose**
+**npm install**
 
 - [x] To run the application:
 1. Make sure you have above installed (check node version by putting **node -v** into terminal), 

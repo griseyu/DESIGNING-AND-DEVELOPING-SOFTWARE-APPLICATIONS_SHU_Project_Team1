@@ -98,6 +98,10 @@
 
 checkCookie();
 
+module.exports = {
+  profile: getCookie,
+};
+
 
 document.getElementById("welcome").textContent = "Welcome, " + getCookie("username");
 </script>

@@ -1,19 +1,18 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const hairCareSchema = new mongoose.Schema(
-    {
-        product: { type: String, required: true, unique: true },
-       
-        ingredients: { type: String, required: true },
+  {
+    product: { type: String, required: true, unique: true },
 
-        link: {type: String, required: true, unique: true},
-        
+    ingredients: { type: String, required: true },
 
-    },
-    { collection: 'hairCareProducts' });
+    link: { type: String, required: true, unique: true },
+  },
+  { collection: "hairCareProducts" }
+);
 
-const hairCareModel = mongoose.model('hairCareSchema', hairCareSchema)
+const hairCareModel = mongoose.model("hairCareSchema", hairCareSchema);
 
-    module.exports = { 
-        hairCareQueries: hairCareModel
-    };
+module.exports = {
+  hairCareQueries: hairCareModel,
+};

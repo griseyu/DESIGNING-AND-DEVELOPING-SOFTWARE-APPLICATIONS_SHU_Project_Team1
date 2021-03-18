@@ -182,12 +182,12 @@ app.post("/api/login", async (req, res) => {
     );
 
     res.cookie("token", token, {
-      maxAge: 60 * 60 * 24 * 30 * 1000,
+      maxAge: 1 * 24 * 3600 * 1000,
       httpOnly: true,
     });
 
     res.cookie("username", username, {
-      maxAge: 60 * 60 * 24 * 30 * 1000,
+      maxAge: 1 * 24 * 3600 * 1000,
     });
 
     const validateToken = (req, res, next) => {

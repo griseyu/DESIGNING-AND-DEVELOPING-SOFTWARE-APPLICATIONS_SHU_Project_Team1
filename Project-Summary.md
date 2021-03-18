@@ -34,7 +34,7 @@ The application has been developed with mobile first usability ensuring the page
 We used different Agile approaches, such as Pair Programming, Kanban board, Version Control, Git
 
 ### Work Strategy
-We palnned regular meeting and had unplanned meetings in case of emergencies 
+We palnned regular meeting and had unplanned meetings in a process 
 
 ### Communication
 We had regular meeting planned and unplanned. Mostly through Slack, but also Zoom and Screen

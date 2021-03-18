@@ -19,7 +19,6 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const zxh = "sdjkfh8923yhjdksbfma@#*(&@*!^#&@bhjb2qiuhesdbhjdsfg839ujkdhfjk";
 const cors = require("cors");
-// const authRoutes = require("auth-routes");
 var MongoClient = require("mongodb").MongoClient;
 var url = "mongodb://localhost:27017/ddsa-project";
 
@@ -60,15 +59,6 @@ app.get("/profile", function (req, res) {
 });
 
 app.get("/admin", function (req, res) {
-  //   function checkCookie() {
-  //     var user = getCookie("username");
-  //     if (user === "admin" && password === "@Leeds21") {
-  //       res.render("admin");
-  //     } else {
-  //       res.render("login");
-  //     }
-  //   }
-  // });
   res.render("admin");
 });
 
@@ -342,7 +332,7 @@ app.post("/api/deleteUser", async (req, res) => {
     throw error;
   }
 
-  res.json({ status: "ok" });
+  res.json({ status: "User deleted successfully" });
 });
 
 // listen on port 3000 and return statement to console
@@ -352,29 +342,7 @@ app.listen(3000, () => console.log("Running on port 3000"));
 
 const PORT = process.env.PORT || 3000;
 
-//let EMAIL = "c0049747@my.shu.ac.uk"
-// instantiate an express app
-// cors
 app.use(cors({ origin: "*" }));
-
-// const transporter = nodemailer.createTransport({
-//   host: "smtp.gmail.com",
-//   port: 587,
-//   service: "gmail",
-//   auth: {
-//     user: process.env.EMAIL,
-//     pass: process.env.PASS,
-//   },
-// });
-
-// verify connection configuration
-// transporter.verify(function (error, success) {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log("Server is ready to take our messages");
-//   }
-// });
 
 app.post("/ContactUsTutorial/send", (req, res) => {
   let form = new multiparty.Form();
@@ -391,11 +359,6 @@ app.post("/ContactUsTutorial/send", (req, res) => {
       subject: data.subject,
       text: `${data.name} <${data.email}> \n${data.message}`,
     };
-
-    //console.log("sendmail",mail);
-    // transporter.sendMail(mail, (err, data) => {
-
-    // });
   });
   if (true) {
     return res.status(200).send("Email successfully sent to recipient!");

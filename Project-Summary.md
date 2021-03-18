@@ -26,7 +26,16 @@ On visiting the site, the user is presented with a home page containing featured
 On submitting the selections, the user is directed to a new page containing a table of results displaying the suggested product name, a link to purchase the product from and a photograph of the product. On this page, the results can be saved to their account for future reference, or the selections can be made again by clicking a ‘back’ button to return the user to the selection page.
 The user must first register to use these features but can access the home page without logging in. After the user is logged in, they will be directed to their profile page where they will be presented with the option to view their previous prescriptions or create a new submission. The user can then choose to log out and be redirected to the home screen.
 The application is designed with a client side and server side. The server side handles interactions with the database including customer registration, login and product recommendation queries. The client side is used only to display this information to the customers ensuring a higher degree of security.
-The application has been developed with mobile first usability ensuring the pages are responsive to the size of screen the user is viewing it from. To achieve this, the menu bar is designed to collapse into a burger menu under a set screen size threshold as well as designing the on-screen containers to wrap around and stack vertically rather than horizontally when being viewed on smaller screens.
+The application has been developed with mobile first usability ensuring the pages are responsive to the size of screen the user is viewing it from. To achieve this, the menu bar is designed to collapse into a burger menu under a set screen size threshold as well as designing the on-screen containers to wrap around and stack vertically rather than horizontally when being viewed on smaller screens
+
+## The concept
+Indivisual companies have their own product matching functionality, however, no global searching engines. So we innovated this principle by creating a database of products from different brands, which allowes the users to access the wider market using their preferences
+
+## The design
+We were working based of mobile-first approach. As well as, modern HTML5 tags, css, JavaScript functionality to display responsive design of our application. We implemented accessability by constrasting the colours and make it obvious for items user can press.
+
+## Security
+The application uses JWT with httpOnly cookies which has a good level of security
 
 ## Work approach:
 
@@ -39,6 +48,5 @@ We palnned regular meeting and had unplanned meetings in a process
 ### Communication
 We had regular meeting planned and unplanned. Mostly through Slack, but also Zoom and Screen
 
-## Security
-THe application uses JWT with httpOnly cookies which has a good level of security
+
 

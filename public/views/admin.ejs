@@ -39,16 +39,18 @@
 
         <div class=white-container> 
             <h2 id=deleteUserheading>Delete a user</h2>
-            <form id=deleteUserForm>
+            <form id=deleteUserForm action="/api/deleteUser" method="POST">
                 <label for="deleteUser">User you wish to delete:</label> <br>
-                <input type="text" id="deleteUser" name="deleteUser" placeholder="Username"><br>     
-                <button>Delete</button>
+                <input type="text" id="deleteUser" name="deleteUser" placeholder="Username"><br>
+                <button id = "del-btn" class="btn btn-danger">Delete</button>    
+                <button type="submit">Delete</button>
             </form>
 
         </div>
         <a class="button" href="/logout">Log out</a>
         </div>
     <!-- Javascript links -->
-    <script src="../main.js"></script>
+    <script src="../main.js">
+    </script>
     </body>
 </html>

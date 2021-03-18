@@ -325,6 +325,26 @@ app.post("/api/change-password", async (req, res) => {
   }
 });
 
+// Delete user
+app.post("/api/deleteUser", async (req, res) => {
+  const { deleteUser } = req.body;
+  console.log("server call", req.body);
+  try {
+    const response2 = await User.findOneAndRemove({
+      username: deleteUser,
+    });
+    console.log("User deleted successfully: ", response2);
+  } catch (error) {
+    if (error.code === 11000) {
+      // duplicate key
+      return res.json({ status: "error", error: "Username already in use" });
+    }
+    throw error;
+  }
+
+  res.json({ status: "ok" });
+});
+
 // listen on port 3000 and return statement to console
 app.listen(3000, () => console.log("Running on port 3000"));
 

@@ -14,7 +14,7 @@ To copy code locally, in your shell/terminal copy following:
  **git clone https://github.com/jmin97/DESIGNING-AND-DEVELOPING-SOFTWARE-APPLICATIONS_SHU_Project_Team1.git**
  
 - [x] To install node:
-/n Run in your shell/terminal 
+Run in your shell/terminal 
 **npm install**
 
 - [x] Install dependencies: 

@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --green: #255f28;
+  --background: rgb(255, 255, 255, 0.7);
+}
+
+body,
+html {
+  color: white;
+  text-align: center;
+  font-family: helvetica;
+  background-size: 100%;
+  background-image: url("../Images/BgGreen.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: flexbox;
+  background: rgb(255, 255, 255, 0.7);
+  color: var(--green);
+  font-weight: bolder;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 55px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  display: flexbox;
+  background: rgb(255, 255, 255, 0.7);
+  color: var(--green);
+  font-weight: bolder;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: flexbox;
+  color: var(--green);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: var(--green);
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: var(--green);
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+/* design */
+.design {
+  padding: 4.5rem 0;
+}
+.title {
+  text-align: center;
+  padding: 1rem 0;
+}
+.title h2 {
+  font-family: var(--Playfair);
+  font-size: 2.4rem;
+}
+.title p {
+  text-transform: uppercase;
+  padding: 0.6rem 0;
+}
+.design-content {
+  margin: 2rem 0;
+}
+.design-item {
+  cursor: pointer;
+  margin: 1.5rem 0;
+}
+.design-img {
+  position: relative;
+  overflow: hidden;
+}
+.design-img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.design-img img {
+  transition: all 0.5s ease;
+}
+.design-item:hover img {
+  transform: scale(1.2);
+}
+.design-img span:first-of-type {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  background: var(--exDark);
+  color: #fff;
+  padding: 0.25rem 1rem;
+}
+.design-img span:last-of-type {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.design-title {
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+.design-title a {
+  color: var(--dark);
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: var(--Playfair);
+}
+
+/* blog */
+.blog {
+  background: #f9f9f9;
+  padding: 4.5rem 0;
+  color: #255f28;
+}
+.blog-content {
+  margin: 2rem 0;
+}
+.blog-img {
+  position: relative;
+}
+.blog-img span {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--exDark);
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.6rem;
+}
+.blog-text {
+  margin: 2.2rem 0;
+  padding: 0 1rem;
+  color: #255f28;
+}
+.blog-text span {
+  font-weight: 300;
+  display: block;
+  padding-bottom: 0.5rem;
+}
+.blog-text h2 {
+  font-family: var(--Playfair);
+  padding: 1rem 0;
+  font-size: 1.65rem;
+  font-weight: 500;
+}
+.blog-text p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  padding-bottom: 1.2rem;
+}
+.blog-text a {
+  font-family: var(--Roboto);
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--dark);
+  display: inline-block;
+  background: var(--dark);
+  color: #fff;
+  padding: 0.55rem 1.2rem;
+  transition: all 0.5s ease;
+}
+.blog-text a:hover {
+  background: var(--exDark);
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0;
+}
+
+footer {
+  padding: 10px 10px;
+  text-align: center;
+  border-color: var(--green);
+  border-radius: 5px;
+  border-top: white;
+  border-top-width: 20px;
+  margin-top: 55px;
+  background: rgb(255, 255, 255, 0.7);
+  color: var(--green);
+  font-weight: bolder;
+}
+
+footer .row {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .row address {
+  padding: 15px 0 5px 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerSocialLinks ul {
+  display: flex;
+  list-style: none;
+  padding-left: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerSocialLinks ul li {
+  flex-basis: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerSocialLinks ul li a i {
+  color: var(--green);
+  font-size: 1.4rem;
+}
+
+.footerLinks {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  flex-wrap: wrap-reverse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerLinks li:last-child {
+  border-right: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerLinks li a {
+  font-size: 0.8rem;
+  width: 100%;
+  display: inline-block;
+  padding: 2px 5px;
+  text-decoration: none;
+  color: var(--green);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerLinks li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 992px) {
+  .blog-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .design-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
